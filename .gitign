@@ -105,9 +105,3 @@ Thumbs.db
 !wp-content/mu-plugins/example-mu-plugin/
 !wp-content/plugins/
 !wp-content/themes/understrap/
-
-*.DS_Store
-
-
-wp-content/plugins/.DS_Store
-
