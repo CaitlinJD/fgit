@@ -104,6 +104,7 @@ Thumbs.db
 # add your own entries here
 !wp-content/mu-plugins/example-mu-plugin/
 !wp-content/plugins/
+!wp-content/plugins/ultimate-fields
 !wp-content/themes/understrap/
 
 *.DS_Store
