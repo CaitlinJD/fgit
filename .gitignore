@@ -34,6 +34,8 @@ wp-content/*
 !wp-content/plugins/
 !wp-content/themes/
 
+
+
 # ignore all mu-plugins, plugins, and themes
 # unless explicitly whitelisted at the end of this file
 wp-content/mu-plugins/*
@@ -104,6 +106,13 @@ Thumbs.db
 # add your own entries here
 !wp-content/mu-plugins/example-mu-plugin/
 !wp-content/themes/understrap/
+
+wp-content/themes/understrap/assets/*
+!wp-content/themes/understrap/assets/FGIT_Logos_ForClient/
+!wp-content/themes/understrap/assets/SocialMediaIconsSVGFiles/
+
+
+
 !wp-content/plugins/akismet/
 !wp-content/plugins/contact-form-7/
 !wp-content/plugins/ultimate-fields/
@@ -113,4 +122,3 @@ Thumbs.db
 
 
 wp-content/plugins/.DS_Store
-
