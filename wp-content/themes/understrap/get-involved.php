@@ -1,1 +1,1 @@
-<?php /* Template Name: Get Involved*/ ?>
+<?php /* Template Name: Get Involved */ ?>
