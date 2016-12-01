@@ -38,6 +38,7 @@ wp-content/*
 # unless explicitly whitelisted at the end of this file
 wp-content/mu-plugins/*
 wp-content/themes/*
+wp-content/plugins/*
 
 # ignore all files starting with . or ~
 .*
@@ -103,6 +104,10 @@ Thumbs.db
 # add your own entries here
 !wp-content/mu-plugins/example-mu-plugin/
 !wp-content/themes/understrap/
+!wp-content/plugins/akismet/
+!wp-content/plugins/contact-form-7/
+!wp-content/plugins/ultimate-fields/
+!wp-content/plugins/post-types/
 
 *.DS_Store
 
