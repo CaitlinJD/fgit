@@ -1,1 +1,1 @@
-<?php /* Template Name: Sponsors/ ?>
+<?php /* Template Name: Sponsors */ ?>
