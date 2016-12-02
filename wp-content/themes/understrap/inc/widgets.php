@@ -60,6 +60,16 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			'after_title'   => '',
 		) );
 
+		register_sidebar( array(
+			'name'          => __( 'Footer Newsletter', 'understrap' ),
+			'id'            => 'footernewsletter',
+			'description'   => 'Footer Newsletter',
+			'before_widget' => '',
+			'after_widget'  => '',
+			'before_title'  => '',
+			'after_title'   => '',
+		) );
+
 	}
 } // endif function_exists( 'understrap_widgets_init' ).
 add_action( 'widgets_init', 'understrap_widgets_init' );

@@ -108,6 +108,7 @@ Thumbs.db
 !wp-content/plugins/contact-form-7/
 !wp-content/plugins/ultimate-fields/
 !wp-content/plugins/post-types/
+wp-content/themes/understrap/assets
 
 *.DS_Store
 
