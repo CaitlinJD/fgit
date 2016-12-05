@@ -80,5 +80,5 @@ require get_template_directory() . '/inc/utilities.php';
 /**
  * Load menus.
  */
-require get_template_directory() . '/inc/menus.php';
 
+ remove_filter('the_content', 'wpautop');
