@@ -1,7 +1,7 @@
 <?php
 
 function my_custom_post_types(){
-    $post_types = array("event", "success stories-board member", "mentors-speaker");
+    $post_types = array("event", "success-board", "mentors-speaker",);
     foreach ($post_types as $type) {
         register_post_type($type, get_params($type));
         taxonomy_init($type);
