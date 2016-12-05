@@ -7591,3 +7591,106 @@ button,
 
 .gallery-caption {
   display: block; }
+
+.site-logo {
+  width: 37.5px;
+  height: 33.2px;
+  background: url("../assets/FGIT_Logos_forClient/FGIT_MobileWebsite/FGIT_Logo_Mobile.png") center/contain no-repeat; }
+  @media only screen and (min-width: 576px) {
+    .site-logo {
+      width: 93.75px;
+      height: 83px;
+      margin-top: 35px; } }
+  @media only screen and (min-width: 780px) {
+    .site-logo {
+      width: 234.9px;
+      height: 118px;
+      margin-top: 35px;
+      background: url("../assets/FGIT_Logos_forClient/FGIT_DesktopWeb/FGIT_logo_Desktop.png") center/contain no-repeat; } }
+
+#exCollapsingNavbar {
+  background-color: #ececec;
+  padding-left: 20px;
+  height: 100vh; }
+  @media only screen and (min-width: 576px) {
+    #exCollapsingNavbar {
+      display: block;
+      background-color: #fff;
+      height: auto;
+      float: right;
+      padding-top: 15px; }
+      #exCollapsingNavbar form {
+        display: none; } }
+  @media only screen and (min-width: 576px) and (min-width: 780px) {
+    #exCollapsingNavbar {
+      display: block;
+      background-color: #fff;
+      height: auto;
+      float: right;
+      padding-top: 30px; } }
+
+.no-padding {
+  padding: 0; }
+
+.container.no-padding {
+  padding: 0; }
+  @media only screen and (min-width: 576px) {
+    .container.no-padding {
+      padding: auto; } }
+
+.navbar-header {
+  padding-left: 10px; }
+
+.navbar-toggler {
+  border: transparent; }
+
+.dropdown-menu {
+  background: #ececec;
+  border: transparent;
+  padding-left: 15px; }
+  .dropdown-menu a:hover.nav-link {
+    background-color: transparent; }
+  @media only screen and (min-width: 576px) {
+    .dropdown-menu {
+      background-color: #fff; }
+      .dropdown-menu li {
+        text-align: center; } }
+
+/* SEARCH FORM  */
+form .input-group {
+  border-bottom: 1px solid black; }
+  form .input-group .submit {
+    background: url("../assets/SocialMediaIconsSVGFiles/grey-search.svg") center/contain no-repeat;
+    border: transparent; }
+  form .input-group .field {
+    border: transparent;
+    background-color: transparent; }
+
+.header-icons {
+  display: none; }
+  @media only screen and (min-width: 576px) {
+    .header-icons {
+      display: block;
+      padding-top: 25px;
+      float: right; }
+      .header-icons .header-icon {
+        display: block;
+        width: 30px;
+        height: 30px; }
+      .header-icons a {
+        display: inline-block; }
+      .header-icons form {
+        float: left; }
+        .header-icons form .input-group {
+          display: inline;
+          border: none; }
+          .header-icons form .input-group .field {
+            width: 230px;
+            height: 30px;
+            border: 2px solid #ececec;
+            border-radius: 40px; }
+          .header-icons form .input-group .input-group-btn {
+            float: left; } }
+  @media only screen and (min-width: 780px) {
+    .header-icons {
+      padding-top: 40px; } }
