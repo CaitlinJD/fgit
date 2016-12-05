@@ -78,3 +78,9 @@ if ( function_exists( 'add_image_size' ) ) {
     add_image_size( 'rectangle-thumb', 380, 320, true );
     add_image_size('square-thumb', 800, 800, true);
 }
+
+add_filter( 'wp_nav_menu_items','add_search_box', 1, 2 );
+function add_search_box( $items, $args ) {
+    $items .= '<li>' . get_search_form( false ) . '</li>';
+    return $items;
+}

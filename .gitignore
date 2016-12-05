@@ -106,6 +106,10 @@ Thumbs.db
 # add your own entries here
 !wp-content/mu-plugins/example-mu-plugin/
 !wp-content/themes/understrap/
+wp-content/themes/understrap/assets/**
+!wp-content/themes/understrap/assets/FGIT_Logos_ForClient/FGIT_DesktopWeb/*.png
+!wp-content/themes/understrap/assets/FGIT_Logos_ForClient/FGIT_MobileWeb/*.png
+!wp-content/themes/understrap/assets/SocialMediaIconsSVGFiles/*.svg
 
 wp-content/themes/understrap/node_modules/*
 
@@ -121,7 +125,10 @@ wp-content/themes/understrap/assets/*
 !wp-content/plugins/ultimate-fields/
 !wp-content/plugins/post-types/
 
+
 *.DS_Store
+_DS_Store
 
 
 wp-content/plugins/.DS_Store
+
