@@ -11,38 +11,43 @@ $the_theme = wp_get_theme();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<?php get_sidebar( 'footerfull' ); ?>
-
 <div class="wrapper" id="wrapper-footer">
 
-	<div class="<?php echo esc_html( $container ); ?>">
+		<div class="row flex-items-sm-middle">
+			<div class="footer-newsletter col-md-12">
+				<?php dynamic_sidebar( 'footerfull' ); ?>
+			</div>
+		</div>
 
-		<div class="row">
+		<div class="row flex-items-xs-center">
+					
+		<?php wp_nav_menu(
+					array(
+						'theme_location'  => 'FooterMenu',
+						'container_class' => 'col-xs-8 col-sm-8 col-md-11 col-lg-10',
+						'container_id'    => '',
+						'menu_class'      => 'row',
+						'fallback_cb'     => '',
+						'menu_id'         => 'footer-menu',
+						'walker'          => '',
+					)
+				); ?>
 
-			<div class="col-md-12">
+		</div>
 
-				<footer class="site-footer" id="colophon">
-
-					<div class="site-info">
-						<a href="<?php echo esc_url( __( 'http://wordpress.org/',
-						'understrap' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'understrap' ),
-						'WordPress' ); ?></a>
-						<span class="sep"> | </span>
-						<?php printf( __( 'Theme: %1$s by %2$s.', 'understrap' ), $the_theme->get( 'Name' ),
-						'<a href="http://understrap.com/">understrap.com</a>' ); ?>
-						(<?php printf( __( 'Version: %1$s', 'understrap' ), $the_theme->get( 'Version' ) ); ?>)
-					</div><!-- .site-info -->
-
-				</footer><!-- #colophon -->
-
+		<div class="row flex-items-xs-center">
+			<div class="col-xs-10 col-sm-8">
+				<div class="row flex-items-xs-center">
+					<ul class="social-media-menu">
+						<li><a href="https://www.facebook.com/fgi.toronto"><img src="<?php echo get_bloginfo('template_url') . '/assets/SocialMediaIconsSVGFiles/grey-fb.svg' ?>" alt="Facebook"/></a></li>
+						<li><a href="https://twitter.com/fgitoronto"><img src="<?php echo get_bloginfo('template_url') . '/assets/SocialMediaIconsSVGFiles/grey-twitter.svg' ?>" alt="Twitter"/></a></li>
+						<li><a href="https://www.instagram.com/fgitoronto"><img src= "<?php echo get_bloginfo('template_url') . '/assets/SocialMediaIconsSVGFiles/grey-insta.svg' ?>" alt="Instagram"/></a></li>
+						<li><a href="https://www.instagram.com/fgitoronto"><img src="<?php echo get_bloginfo('template_url') . '/assets/SocialMediaIconsSVGFiles/grey-email.svg' ?>" alt="Email"/></a></li>
+					</ul>
+				</div><!--end row-->					
 			</div><!--col end -->
-
 		</div><!-- row end -->
-
-	</div><!-- container end -->
-
 </div><!-- wrapper end -->
-
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

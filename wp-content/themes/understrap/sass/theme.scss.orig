@@ -10,5 +10,8 @@
 
 // Any additional imported files //
 @import "theme/theme";  // <--------- Thats where you can add your own design. Thats your part!
+<<<<<<< HEAD
 @import "theme/footer";
+=======
 @import "theme/theme_navigation";
+>>>>>>> master
