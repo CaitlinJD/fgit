@@ -67,6 +67,14 @@
   a:hover.nav-link {
     background-color: transparent;
   }
+
+  @media only screen and (min-width: 576px) {
+    background-color: #fff;
+
+    li {
+      text-align: center;
+    }
+  }
 }
 
 
