@@ -1,0 +1,134 @@
+.site-logo {
+  width: 37.5px;
+  height: 33.2px;
+  background: url('../assets/FGIT_Logos_forClient/FGIT_MobileWebsite/FGIT_Logo_Mobile.png') center/contain no-repeat;
+  @media only screen and (min-width: 576px) {
+    width: 93.75px;
+    height: 83px;
+    margin-top: 35px;
+  }
+  @media only screen and (min-width: 780px) {
+    width: 234.9px;
+    height: 118px;
+    margin-top: 35px;
+    background: url('../assets/FGIT_Logos_forClient/FGIT_DesktopWeb/FGIT_logo_Desktop.png') center/contain no-repeat;
+  }
+}
+
+#exCollapsingNavbar {
+  background-color: #ececec;
+  padding-left: 20px;
+  height: 100vh;
+  @media only screen and (min-width: 576px) {
+    display: block;
+    background-color: #fff;
+    height: auto;
+    float: right;
+    padding-top: 15px;
+   form {
+     display: none;
+   }
+    @media only screen and (min-width: 780px) {
+      display: block;
+      background-color: #fff;
+      height: auto;
+      float: right;
+      padding-top: 30px;
+    }
+
+  }
+
+
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.container.no-padding {
+  padding: 0;
+  @media only screen and (min-width: 576px) {
+    padding: auto;
+  }
+}
+
+.navbar-header {
+  padding-left: 10px;
+}
+
+.navbar-toggler {
+  border: transparent;
+}
+
+.dropdown-menu {
+  background: #ececec;
+  border: transparent;
+  padding-left: 15px;
+  a:hover.nav-link {
+    background-color: transparent;
+  }
+}
+
+
+/* SEARCH FORM  */
+
+form {
+  .input-group {
+    border-bottom: 1px solid black;
+    .input-group-btn {
+    }
+    .submit {
+      background: url('../assets/SocialMediaIconsSVGFiles/grey-search.svg') center/contain no-repeat;
+      border: transparent;
+    }
+    .field {
+      border: transparent;
+      background-color: transparent;
+    }
+  }
+
+}
+
+.header-icons {
+  display: none;
+
+  @media only screen and (min-width: 576px) {
+    display: block;
+    padding-top: 25px;
+    float: right;
+
+    .header-icon {
+      display: block;
+      width: 30px;
+      height: 30px;
+    }
+
+    a {
+      display: inline-block;
+    }
+
+    form {
+      float: left;
+      .input-group {
+        display: inline;
+         border: none;
+
+        .field {
+          width: 230px;
+          height: 30px;
+          border: 2px solid #ececec;
+          border-radius: 40px;
+        }
+
+        .input-group-btn {
+          float: left;
+        }
+      }
+
+    }
+  }
+  @media only screen and (min-width: 780px) {
+    padding-top: 40px;
+  }
+
+}

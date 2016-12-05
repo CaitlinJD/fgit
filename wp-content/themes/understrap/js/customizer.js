@@ -10,11 +10,34 @@
 ( function( $ ) {
 
     // Update the site title in real time...
-    wp.customize( 'blogname', function( value ) {
-        value.bind( function( newval ) {
-            console.log(newval);
-            $( '.navbar-header a' ).html( newval );
-        } );
-    } );
+    //wp.customize( 'blogname', function( value ) {
+       // value.bind( function( newval ) {
+         //   console.log(newval);
+          //  $( '.navbar-header a' ).html( newval );
+      //  } );
+   // } );
+
+
+
 
 } )( jQuery );
+
+jQuery(document).ready(function($) {
+    // Header search bar
+    $("#s").hide();
+    $("#searchsubmit").on("click", function(e) {
+        console.log("this is the search in the header");
+        if ( $("#s").is(":visible")) {
+            if ($('#s').attr('value') == "") {
+                e.preventDefault();
+                $("#s").toggle();
+            }
+        } else {
+            e.preventDefault();
+            $("#s").toggle();
+        }
+    })
+
+})
+
+
