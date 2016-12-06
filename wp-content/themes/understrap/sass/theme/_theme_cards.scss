@@ -1,0 +1,19 @@
+
+.board-member {
+  @media only screen and (min-width: 576px) {
+    display: none;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.card-img-overlay.member {
+  background: #000;
+  height: 70px;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.3);
+}
