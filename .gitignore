@@ -123,4 +123,7 @@ _DS_Store
 
 
 wp-content/plugins/.DS_Store
+*.map
 
+
+*.orig
