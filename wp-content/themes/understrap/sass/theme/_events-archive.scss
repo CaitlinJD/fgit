@@ -1,0 +1,22 @@
+.event-preview-section
+{
+   font: 2em;
+}
+
+.past-events-section
+{
+    .red-block
+    {
+        display: block;
+        background-color: $primary-color;
+        height: 14px;
+        width: 6px;
+    }
+
+    .event-link
+    {
+        font-size: $paragraph-primary-size;
+        color: $primary-color;
+    }
+
+}

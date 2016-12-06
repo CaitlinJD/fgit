@@ -1,0 +1,21 @@
+.event-main-section
+{
+    p
+    {
+        font-size: $paragraph-primary-size;
+    }
+}
+
+.event-secondary-section
+{
+    .extra-info
+    {
+        font-size: $paragraph-secondary-size;
+    }
+
+    .event-map
+    {
+        width: 298px;
+        height: 282px;
+    }
+}

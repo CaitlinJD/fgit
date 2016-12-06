@@ -1,6 +1,10 @@
+<<<<<<< HEAD
+<?php /**   Template Name: Home Page  */
+=======
 <?php /* Template Name: Home Page */ ?>
 
 <?php
+>>>>>>> refs/remotes/CaitlinJD/master
 
 get_header();
 
@@ -35,7 +39,12 @@ if ( class_exists( 'WooCommerce' ) ) {
             <!-- Do the left sidebar check -->
             <?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
 
+<<<<<<< HEAD
 			<main class="site-main" id="main">
+            HELLOOOO
+=======
+            <main class="site-main" id="main">
+>>>>>>> refs/remotes/CaitlinJD/master
 
                 <?php while ( have_posts() ) : the_post(); ?>
 
