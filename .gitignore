@@ -116,6 +116,7 @@ wp-content/themes/understrap/css/
 !wp-content/plugins/contact-form-7/
 !wp-content/plugins/ultimate-fields/
 !wp-content/plugins/post-types/
+!wp-content/plugins/eventbrite/
 
 
 *.DS_Store

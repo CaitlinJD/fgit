@@ -1,0 +1,57 @@
+/* Board Members & Success Stories Cards */
+
+.tax-membercategory {
+  button.member-btn {
+    @media only screen and (min-width: 576px) {
+      display: none;
+    }
+  }
+
+  .card-img-overlay.member {
+    background: #000;
+    height: 100px;
+    @media only screen and (min-width: 576px) {
+      height: 73px;
+      position: absolute;
+      top: auto;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  .card {
+    border: none;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 0;
+    @media only screen and (min-width: 576px) {
+      border: none;
+      padding-bottom: 20px;
+    }
+  }
+
+  img {
+    display: none;
+    filter: brightness(80%);
+    &:hover {
+      filter: brightness(100%);
+    }
+    @media only screen and (min-width: 576px) {
+      display: block;
+    }
+
+  }
+
+  .img-replacement {
+    height: 160px;
+    width: 100%;
+    background-color: #000;
+    @media only screen and (min-width: 576px) {
+      display: none;
+    }
+  }
+
+  .page-header {
+    padding: 10px;
+  }
+}

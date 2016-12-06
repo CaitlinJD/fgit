@@ -76,3 +76,9 @@ require get_template_directory() . '/inc/woocommerce.php';
  * Load a utilities library.
  */
 require get_template_directory() . '/inc/utilities.php';
+
+/**
+ * Load menus.
+ */
+
+ remove_filter('the_content', 'wpautop');
