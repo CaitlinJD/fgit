@@ -1,0 +1,29 @@
+.board-member-box
+{
+    min-width: 240px;
+    min-height: 240px;
+    position: relative;
+
+    img
+    {
+        -webkit-filter: saturate(50%); /* Safari 6.0 - 9.0 */
+        filter: saturate(50%);
+    }
+
+    img:hover
+    {
+        -webkit-filter: saturate(100%); /* Safari 6.0 - 9.0 */
+        filter: saturate(100%);
+    }
+   .board-member-box-info
+   {
+       background-color: black;
+       height: 73px;
+       padding: 10px 15px 10px 15px;
+       text-align: center;   
+       position: absolute;
+       z-index: 1;    
+
+   }
+
+}

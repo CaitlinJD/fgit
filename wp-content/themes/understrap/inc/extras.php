@@ -78,3 +78,6 @@ if ( function_exists( 'add_image_size' ) ) {
     add_image_size( 'rectangle-thumb', 380, 320, true );
     add_image_size('square-thumb', 800, 800, true);
 }
+
+ //$var = new event_build;
+// $var -> build_event();

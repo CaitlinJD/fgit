@@ -1,0 +1,37 @@
+.mentor-section
+{
+    .mentor-section-box
+    {
+        width: 380px;
+        height: 261px;
+        background-color: black;
+        position: relative;
+
+        .mentor-name
+        {
+            font-size: $section-title;
+            letter-spacing: 2px;
+        }
+
+        hr
+        {
+            color: $primary-color;
+            width: 50px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .mentor-quote
+        {
+            line-height: 34px;
+            font-size: $paragraph-title;
+        }
+
+        .mentor-button
+        {
+            position: absolute;
+        }
+
+
+    }
+}
