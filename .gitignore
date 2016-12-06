@@ -34,8 +34,6 @@ wp-content/*
 !wp-content/plugins/
 !wp-content/themes/
 
-
-
 # ignore all mu-plugins, plugins, and themes
 # unless explicitly whitelisted at the end of this file
 wp-content/mu-plugins/*
@@ -111,19 +109,18 @@ wp-content/themes/understrap/assets/**
 !wp-content/themes/understrap/assets/FGIT_Logos_ForClient/FGIT_MobileWeb/*.png
 !wp-content/themes/understrap/assets/SocialMediaIconsSVGFiles/*.svg
 
+wp-content/themes/understrap/node_modules/
 wp-content/themes/understrap/node_modules/*
-
 wp-content/themes/understrap/assets/*
 !wp-content/themes/understrap/assets/FGIT_Logos_ForClient/
 !wp-content/themes/understrap/assets/SocialMediaIconsSVGFiles/
 
-
-
-
+wp-content/themes/understrap/src/
 !wp-content/plugins/akismet/
 !wp-content/plugins/contact-form-7/
 !wp-content/plugins/ultimate-fields/
 !wp-content/plugins/post-types/
+!wp-content/plugins/eventbrite/
 
 
 *.DS_Store
@@ -131,4 +128,7 @@ _DS_Store
 
 
 wp-content/plugins/.DS_Store
+*.map
 
+
+*.orig
