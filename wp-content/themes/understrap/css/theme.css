@@ -7768,3 +7768,221 @@ button,
 
 .gallery-caption {
   display: block; }
+
+.footer-newsletter {
+  background-color: #bc2c2d;
+  height: 70px;
+  margin-bottom: 2em; }
+  .footer-newsletter .form-container {
+    margin-top: 15px;
+    border: 2px solid #fff;
+    padding: 0;
+    border-radius: 7px;
+    overflow: hidden;
+    height: 40px; }
+    .footer-newsletter .form-container .wpcf7-form .input-containers {
+      margin: 0;
+      padding: 0; }
+    .footer-newsletter .form-container .wpcf7-form input {
+      padding-left: 15px;
+      padding-right: 15px;
+      border: 0;
+      height: 40px; }
+    .footer-newsletter .form-container .wpcf7-form input[type="email"] {
+      background-color: #bc2c2d;
+      color: white;
+      font-family: "Roboto", sans-serif;
+      font-size: 0.85em; }
+    .footer-newsletter .form-container .wpcf7-form input[type="submit"] {
+      padding-left: 5px;
+      padding-right: 5px;
+      background-color: white;
+      color: #bc2c2d;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-family: "Roboto", sans-serif;
+      font-size: 0.85em;
+      border: 3px solid #fff; }
+
+.social-media-menu {
+  list-style-type: none; }
+  .social-media-menu li {
+    display: inline; }
+    .social-media-menu li a {
+      margin-left: 5px;
+      margin-right: 5px; }
+      .social-media-menu li a img {
+        width: 50px; }
+
+#footer-menu {
+  text-align: center;
+  margin-bottom: 2em;
+  justify-content: space-between;
+  flex-direction: column; }
+  #footer-menu li {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 5px; }
+    #footer-menu li a {
+      color: black;
+      text-transform: uppercase;
+      font-family: Helvetica, sans-serif;
+      font-weight: 600;
+      font-size: 0.85em; }
+    #footer-menu li a:hover {
+      color: #bc2c2d;
+      text-decoration: none; }
+
+@media only screen and (min-width: 576px) {
+  #footer-menu {
+    flex-direction: row; } }
+
+.site-logo {
+  width: 37.5px;
+  height: 33.2px;
+  background: url("../assets/FGIT_Logos_forClient/FGIT_MobileWebsite/FGIT_Logo_Mobile.png") center/contain no-repeat; }
+  @media only screen and (min-width: 576px) {
+    .site-logo {
+      width: 93.75px;
+      height: 83px;
+      margin-top: 35px; } }
+  @media only screen and (min-width: 780px) {
+    .site-logo {
+      width: 234.9px;
+      height: 118px;
+      margin-top: 35px;
+      background: url("../assets/FGIT_Logos_forClient/FGIT_DesktopWeb/FGIT_logo_Desktop.png") center/contain no-repeat; } }
+
+#exCollapsingNavbar {
+  background-color: #ececec;
+  padding-left: 20px;
+  height: 100vh; }
+  @media only screen and (min-width: 576px) {
+    #exCollapsingNavbar {
+      display: block;
+      background-color: #fff;
+      height: auto;
+      float: right;
+      padding-top: 15px; }
+      #exCollapsingNavbar form {
+        display: none; } }
+  @media only screen and (min-width: 576px) and (min-width: 780px) {
+    #exCollapsingNavbar {
+      display: block;
+      background-color: #fff;
+      height: auto;
+      float: right;
+      padding-top: 30px; } }
+
+.no-padding {
+  padding: 0; }
+
+.container.no-padding {
+  padding: 0; }
+  @media only screen and (min-width: 576px) {
+    .container.no-padding {
+      padding: auto; } }
+
+.navbar-header {
+  padding-left: 10px; }
+
+.navbar-toggler {
+  border: transparent; }
+
+.dropdown-menu {
+  background: #ececec;
+  border: transparent;
+  padding-left: 15px; }
+  .dropdown-menu a:hover.nav-link {
+    background-color: transparent; }
+  @media only screen and (min-width: 576px) {
+    .dropdown-menu {
+      background-color: #fff; }
+      .dropdown-menu li {
+        text-align: center; } }
+
+/* SEARCH FORM  */
+form .input-group {
+  border-bottom: 1px solid black; }
+  form .input-group .submit {
+    background: url("../assets/SocialMediaIconsSVGFiles/grey-search.svg") center/contain no-repeat;
+    border: transparent; }
+  form .input-group .field {
+    border: transparent;
+    background-color: transparent; }
+
+.header-icons {
+  display: none; }
+  @media only screen and (min-width: 576px) {
+    .header-icons {
+      display: block;
+      padding-top: 25px;
+      float: right; }
+      .header-icons .header-icon {
+        display: block;
+        width: 30px;
+        height: 30px; }
+      .header-icons a {
+        display: inline-block; }
+      .header-icons form {
+        float: left; }
+        .header-icons form .input-group {
+          display: inline;
+          border: none; }
+          .header-icons form .input-group .field {
+            width: 230px;
+            height: 30px;
+            border: 2px solid #ececec;
+            border-radius: 40px; }
+          .header-icons form .input-group .input-group-btn {
+            float: left; } }
+  @media only screen and (min-width: 780px) {
+    .header-icons {
+      padding-top: 40px; } }
+
+/* Board Members & Success Stories Cards */
+@media only screen and (min-width: 576px) {
+  .tax-membercategory button.member-btn {
+    display: none; } }
+
+.tax-membercategory .card-img-overlay.member {
+  background: #000;
+  height: 100px; }
+  @media only screen and (min-width: 576px) {
+    .tax-membercategory .card-img-overlay.member {
+      height: 73px;
+      position: absolute;
+      top: auto;
+      right: 0;
+      bottom: 0;
+      left: 0; } }
+
+.tax-membercategory .card {
+  border: none;
+  border-bottom: 2px solid #fff;
+  margin-bottom: 0; }
+  @media only screen and (min-width: 576px) {
+    .tax-membercategory .card {
+      border: none;
+      padding-bottom: 20px; } }
+
+.tax-membercategory img {
+  display: none;
+  filter: brightness(80%); }
+  .tax-membercategory img:hover {
+    filter: brightness(100%); }
+  @media only screen and (min-width: 576px) {
+    .tax-membercategory img {
+      display: block; } }
+
+.tax-membercategory .img-replacement {
+  height: 160px;
+  width: 100%;
+  background-color: #000; }
+  @media only screen and (min-width: 576px) {
+    .tax-membercategory .img-replacement {
+      display: none; } }
+
+.tax-membercategory .page-header {
+  padding: 10px; }
