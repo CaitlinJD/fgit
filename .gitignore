@@ -123,12 +123,7 @@ _DS_Store
 
 
 wp-content/plugins/.DS_Store
-
-
 *.map
 
-*.map
 
-wp-content/themes/understrap/css/theme.min.css.map
-
-wp-content/themes/understrap/css/theme.min.css.map
+*.orig
