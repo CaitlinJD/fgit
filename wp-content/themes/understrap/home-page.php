@@ -32,6 +32,8 @@ if ( class_exists( 'WooCommerce' ) ) {
 
         <div class="row">
 
+            <?php echo "<h1>HOME-PAGE.php</h1>"; ?>
+
             <!-- Do the left sidebar check -->
             <?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
 

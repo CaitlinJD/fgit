@@ -7694,3 +7694,17 @@ form .input-group {
   @media only screen and (min-width: 780px) {
     .header-icons {
       padding-top: 40px; } }
+
+@media only screen and (min-width: 576px) {
+  .board-member {
+    display: none; } }
+
+.flex {
+  display: flex; }
+
+.card-img-overlay.member {
+  background: #000;
+  height: 70px; }
+
+.card {
+  background-color: rgba(0, 0, 0, 0.3); }
