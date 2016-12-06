@@ -35,7 +35,7 @@ if ( is_front_page() && is_home() ) {
 			<?php if ( 'masonry' === $posts_style ) : ?>
 
 			<div class="card-columns"><?php endif; ?>
-			
+
 				<main class="site-main" id="main">
 
 					<?php if ( have_posts() ) : ?>
