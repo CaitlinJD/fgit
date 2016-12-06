@@ -124,6 +124,7 @@ wp-content/themes/understrap/assets/*
 !wp-content/plugins/contact-form-7/
 !wp-content/plugins/ultimate-fields/
 !wp-content/plugins/post-types/
+!wp-content/plugins/eventbrite/
 
 
 *.DS_Store
@@ -131,4 +132,6 @@ _DS_Store
 
 
 wp-content/plugins/.DS_Store
+*.map
 
+wp-content/themes/understrap/css/theme.min.css.map
