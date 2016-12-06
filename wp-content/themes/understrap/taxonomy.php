@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying archive pages.
+ * The template for displaying archive pages for CPT taxonomies (BoardMembers/SuccessStories).
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
@@ -30,10 +30,9 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
                     <header class="page-header">
                        <h1><?php
-                        echo ( is_tax('membercategory', 'board-member')? 'Ignite the others, Empowered by us.' :
-                            (is_tax('membercategory','success-stories')? 'Our Members. Stories that Touch' : '') );
+                        echo ( is_tax('membercategory', 'board-member')? 'Ignite the others, <br>Empowered by us.' :
+                            (is_tax('membercategory','success-stories')? 'Our Members. <br>Stories that Touch' : '') );
                         ?> </h1>
-                    </header><!-- .page-header -->
 
                     <div class="page-content">
                         <p>
@@ -45,23 +44,27 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
                     </div>
 
+                    </header><!-- .page-header -->
+
                     <?php /* Start the Loop */ ?>
-                    <div class="row">
-                    <?php while ( have_posts() ) : the_post(); ?>
+                    <div class="col-xs-12">
+                        <div class="row">
+                            <?php while ( have_posts() ) : the_post(); ?>
 
-                        <?php
+                                <?php
 
-                        /*
-                         * Include the Post-Format-specific template for the content.
-                         * If you want to override this in a child theme, then include a file
-                         * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-                         */
-                        get_template_part( 'loop-templates/content', 'archive' );
-                        ?>
+                                /*
+                                 * Include the Post-Format-specific template for the content.
+                                 * If you want to override this in a child theme, then include a file
+                                 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+                                 */
+                                get_template_part( 'loop-templates/content', 'archive' );
+                                ?>
 
 
-                    <?php endwhile; ?>
-                    </div>
+                            <?php endwhile; ?>
+                        </div> <!-- end of row -->
+                    </div> <!-- end of col-xs-12 -->
                 <?php else : ?>
 
                     <?php get_template_part( 'loop-templates/content', 'none' ); ?>
