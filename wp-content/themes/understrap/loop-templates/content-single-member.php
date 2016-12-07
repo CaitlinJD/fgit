@@ -22,29 +22,29 @@
             <?php $key_1_value = get_post_meta( get_the_ID(), 'website_url', true );
             // check if the custom field has a value
             if ( ! empty( $key_1_value ) ) : ?>
-                <a href="<?php get_post_meta( get_the_ID(), 'website_url', true ) ?>">
-            <img src="<?php echo get_blog_info('template_url')?>/">
+                <a href="<?php echo get_post_meta( get_the_ID(), 'website_url', true ) ?>" target="_blank">
+            <img src="<?php echo get_bloginfo('template_url')?>/assets/SocialMediaIconsSVGFiles/black-site.png" class="black-icons">
                 </a>
             <?php endif; ?>
 
             <?php $key_1_value = get_post_meta( get_the_ID(), 'facebook_url', true );
             if ( ! empty( $key_1_value ) ) : ?>
-                <a href="<?php get_post_meta( get_the_ID(), 'facebook_url', true ) ?>">
-                    <img src="<?php echo get_bloginfo('template_url')?>/assets/SocialMediaIconsSVGFiles/black-fb.svg">
+                <a href="<?php echo get_post_meta( get_the_ID(), 'facebook_url', true ) ?>" target="_blank">
+                    <img class="black-icons" src="<?php echo get_bloginfo('template_url')?>/assets/SocialMediaIconsSVGFiles/black-fb.png">
                 </a>
             <?php endif; ?>
 
             <?php $key_1_value = get_post_meta( get_the_ID(), 'instagram_url', true );
             if ( ! empty( $key_1_value ) ) : ?>
-                <a href="<?php get_post_meta( get_the_ID(), 'instagram_url', true ) ?>">
-                    <img src="<?php echo get_blog_info('template_url')?>/">
+                <a href="<?php echo get_post_meta( get_the_ID(), 'instagram_url', true ) ?>" target="_blank">
+                    <img class="black-icons" src="<?php echo get_bloginfo('template_url')?>/assets/SocialMediaIconsSVGFiles/black-insta.png">
                 </a>
             <?php endif; ?>
 
             <?php $key_1_value = get_post_meta( get_the_ID(), 'twitter_url', true );
             if ( ! empty( $key_1_value ) ) : ?>
-                <a href="<?php get_post_meta( get_the_ID(), 'twitter_url', true ) ?>">
-                    <img src="<?php echo get_blog_info('template_url')?>/">
+                <a href="<?php echo get_post_meta( get_the_ID(), 'twitter_url', true ) ?>" target="_blank">
+                    <img class="black-icons" src="<?php echo get_bloginfo('template_url')?>/assets/SocialMediaIconsSVGFiles/black-twitter.png">
                 </a>
             <?php endif; ?>
 
