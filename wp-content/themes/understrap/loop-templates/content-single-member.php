@@ -8,7 +8,7 @@
 ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
     <div class="img-bkg" style="background: url('<?php echo get_the_post_thumbnail( 'rectangle-thumb' ) ?>') center left/cover no-repeat"></div>
-    <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+    <?php echo get_the_post_thumbnail( $post->ID, 'full' ); ?>
     <header class="entry-header">
         <p>BOARD MEMBER</p>
         <p><?php echo get_post_meta( get_the_ID(), 'bio_position', true ); ?> </p>
