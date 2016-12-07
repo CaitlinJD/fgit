@@ -81,9 +81,13 @@
             <p><b>Favourite Canadian designer </b> <?php echo get_post_meta( get_the_ID(), 'fave_designer', true ); ?> </p>
         <?php endif; ?>
 
-        <h2 class="margin-top">&ldquo;<?php echo get_post_meta( get_the_ID(), 'bio_quote', true ); ?>&rdquo;
-            <br> ~ <?php echo get_post_meta( get_the_ID(), 'quote_author', true ); ?>
-        </h2>
+        <?php $key_1_value = get_post_meta( get_the_ID(), 'bio_quote', true );
+        if ( ! empty( $key_1_value ) ) : ?>
+            <h2 class="margin-top">&ldquo;<?php echo get_post_meta( get_the_ID(), 'bio_quote', true ); ?>&rdquo;
+                <br> ~ <?php echo get_post_meta( get_the_ID(), 'quote_author', true ); ?>
+            </h2>
+        <?php endif; ?>
+
 
 
     </div><!-- .entry-content -->
