@@ -12,7 +12,7 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 	function understrap_scripts() {
 		wp_enqueue_style( 'understrap-styles', get_stylesheet_directory_uri() . '/css/theme.min.css', array(),
 		'0.5.0' );
-		wp_enqueue_style( 'Playfair-Font', 'https://fonts.googleapis.com/css?family=Playfair+Display|Roboto:400,700', array(),
+		wp_enqueue_style( 'Playfair-Font', 'https://fonts.googleapis.com/css?family=Playfair+Display|Roboto:300,400,500,700', array(),
 		'0.5.0' );
 
 		wp_enqueue_script( 'jquery' );
