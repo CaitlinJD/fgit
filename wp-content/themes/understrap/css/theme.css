@@ -7680,6 +7680,18 @@ button,
       font-size: 1.8rem;
       line-height: 3rem; } }
 
+.single-member .black-icons {
+  width: 30px;
+  height: 30px; }
+
+.single-member .entry-meta {
+  margin: 1.5rem 0; }
+  @media only screen and (min-width: 576px) {
+    .single-member .entry-meta {
+      margin: 2rem 0; } }
+  .single-member .entry-meta img {
+    margin-right: 0.5rem; }
+
 .board-member-box {
   min-width: 240px;
   min-height: 240px;
