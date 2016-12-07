@@ -18,7 +18,7 @@
         <p class="sm-line-ht"><?php echo get_post_meta( get_the_ID(), 'employment_position', true ); ?> </p>
 
         <div class="entry-meta">
-
+            <!-- Social Media -->
             <?php $key_1_value = get_post_meta( get_the_ID(), 'website_url', true );
             // check if the custom field has a value
             if ( ! empty( $key_1_value ) ) : ?>
@@ -56,31 +56,17 @@
 
 
     <div class="entry-content col-xs-12 col-sm-12 col-md-8">
-        <?php $key_1_value = get_post_meta( get_the_ID(), 'fave_store', true );
-        if ( ! empty( $key_1_value ) ) : ?>
-            <p><b>Favourite Toronto Store </b> <?php echo get_post_meta( get_the_ID(), 'fave_store', true ); ?> </p>
-        <?php endif; ?>
+        <!-- Question and Answers -->
+        <?php
+        $question_answers = get_uf('question__answers');
+        if ($question_answers) {
+            foreach ($question_answers as $question_answer) {
+                echo "<p><b>" . $question_answer['question'] . " </b> " . $question_answer['answer'] . "</p>";
+            }
+        }
+        ?>
 
-        <?php $key_1_value = get_post_meta( get_the_ID(), 'fave_clothing', true );
-        if ( ! empty( $key_1_value ) ) : ?>
-            <p><b>Favourite piece of clothing </b> <?php echo get_post_meta( get_the_ID(), 'fave_clothing', true ); ?> </p>
-        <?php endif; ?>
-
-        <?php $key_1_value = get_post_meta( get_the_ID(), 'style_icon', true );
-        if ( ! empty( $key_1_value ) ) : ?>
-            <p><b>Style Icon </b> <?php echo get_post_meta( get_the_ID(), 'style_icon', true ); ?> </p>
-        <?php endif; ?>
-
-        <?php $key_1_value = get_post_meta( get_the_ID(), 'fave_website', true );
-        if ( ! empty( $key_1_value ) ) : ?>
-            <p><b>Favourite Website </b> <?php echo get_post_meta( get_the_ID(), 'fave_website', true ); ?> </p>
-        <?php endif; ?>
-
-        <?php $key_1_value = get_post_meta( get_the_ID(), 'fave_designer', true );
-        if ( ! empty( $key_1_value ) ) : ?>
-            <p><b>Favourite Canadian designer </b> <?php echo get_post_meta( get_the_ID(), 'fave_designer', true ); ?> </p>
-        <?php endif; ?>
-
+        <!-- Quote -->
         <?php $key_1_value = get_post_meta( get_the_ID(), 'bio_quote', true );
         if ( ! empty( $key_1_value ) ) : ?>
             <h2 class="margin-top">&ldquo;<?php echo get_post_meta( get_the_ID(), 'bio_quote', true ); ?>&rdquo;
