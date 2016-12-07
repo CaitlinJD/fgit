@@ -11,6 +11,19 @@
 // Any additional imported files //
 @import "theme/theme";  // <--------- Thats where you can add your own design. Thats your part!
 @import "theme/footer";
-@import "theme/theme_navigation";
+@import "theme/homepage";
+@import "theme/bio-archive";
+@import "theme/bio-single";
+@import "theme/board-members-archive";
+@import "theme/board-members-single";
+@import "theme/events-archive";
+@import "theme/events-single";
+@import "theme/gallery";
+@import "theme/get-involved";
+@import "theme/memberships";
+@import "theme/news";
+@import "theme/sponsors";
+
 
 @import "theme/theme_cards";
+@import "theme/theme_navigation";

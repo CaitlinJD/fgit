@@ -1,0 +1,75 @@
+.home-banner
+{
+    background-size: cover;
+    padding: 2em 0 2em 0;
+    height: 70vh;
+
+}
+.banner-title
+    {
+        font-family: $secondary-font;
+        font-size: $home-section-title;
+        color: $secondary-color;
+        margin-top: 3em;
+        line-height: 52px;
+    }
+
+#home-banner-button
+{
+    background-color: white;
+    color: $primary-color;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 1em;
+}
+
+.home-secondary-content
+{
+      padding-top: 2.5em;
+      padding-bottom: 2.5em;
+
+    h3
+    {
+        margin-bottom: 1em;
+    }
+
+    p
+    {
+        margin-bottom: 2em;
+    }
+}
+
+.home-third-content
+{
+      padding-top: 2.5em;
+      padding-bottom: 2.5em;
+      background-color: black;
+      color: $secondary-color;
+
+      h3{
+        font-family: $secondary-font;
+        color: $secondary-color;
+        font-size: 32px;
+    }
+}
+
+.home-fourth-content
+{
+      padding-top: 2.5em;
+      padding-bottom: 2.5em;
+      color: black;
+
+      h3{
+        font-family: $secondary-font;
+        color: $third-color;
+        font-size: 32px;
+    }
+}
+.twit-feed-container
+{
+    h3{
+        font-family: $secondary-font;
+        color: $primary-color;
+        font-size: 32px;
+    }
+}

@@ -28,43 +28,79 @@ if ( class_exists( 'WooCommerce' ) ) {
 
 <div class="wrapper" id="page-wrapper">
 
-    <div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
+    <div id="content" tabindex="-1">
 
-        <div class="row">
+    <main class="site-main" id="main">	
+            
+             
+                <div class="row home-banner" style="background-image: url(<?php echo uf('banner_image'); ?>">
 
-            <!-- Do the left sidebar check -->
-            <?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
+                    <div class="offset-xs-2 col-xs-5">
+                    
+                        <h2 class="banner-title">
+                        <?php echo uf( 'banner_title'); ?>
+                        <h2>
+                        <a id="home-banner-button" class="article-button" href="<?php echo uf('banner_image'); ?>">Upcoming Events</a>
+                    </div>
 
-			<main class="site-main" id="main">
+                </div> 
 
-                <?php while ( have_posts() ) : the_post(); ?>
+                <div class="row flex-items-sm-center home-secondary-content">
 
-                    <?php get_template_part( 'loop-templates/content', 'page' ); ?>
+                    <div class="col-xs-4 offset-xs-2 article-container">
+                        <h3><?php echo uf('article_title'); ?></h3>
+                        <hr>
+                        <p><?php echo uf('article_content'); ?></p>
+                        <a class="article-button" href="#">MEMBERSHIP</a>
+                        
+                    </div>
 
-                    <?php
-                    // If comments are open or we have at least one comment, load up the comment template.
-                    if ( comments_open() || get_comments_number() ) :
-                        comments_template();
-                    endif;
-                    ?>
+                    <div class="col-xs-4 offset-xs-1 twit-feed-container">
+                        <h3>Keep In Touch With Us</h3>
+                        <div>
+                        <?php
+                        echo "<pre>";
+                        //print it out
+                        print_r ($twitter_data);
+                        echo "</pre>";
+                        ?>
+</div>
+                    </div>
 
-                <?php endwhile; // end of the loop. ?>
+                </div>
+                
 
-            </main><!-- #main -->
+                <div class="row flex-items-sm-center home-third-content">                
 
-        </div><!-- #primary -->
+                    <div class="col-xs-5 offset-xs-2">
+                    <?php $homeArticleData = get_post_meta( get_the_ID(), 'home_articles', true );?>
+                            <h3><?php echo $homeArticleData[0]['home_article_title']; ?></h3>
+                            <p><?php echo $homeArticleData[0]['home_article_content']; ?></p>
+                            <a class="article-button" href="#">NEWSLETTER SIGNUP</a>
+                    </div>
 
-        <!-- Do the right sidebar check -->
-        <?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
+                    <div class="col-xs-5 article-container">
+                    </div>
 
-            <?php if ( ! $is_woocommerce ) : get_sidebar( 'right' ); ?>
-            <?php endif; ?>
+                </div>
 
-        <?php endif; ?>
+                <div class="row flex-items-sm-center home-fourth-content">
+                
+                    <div class="col-xs-5 offset-xs-2">
+                    <?php $homeArticleData = get_post_meta( get_the_ID(), 'home_articles', true );?>
+                            <h3><?php echo $homeArticleData[1]['home_article_title']; ?></h3>
+                            <p><?php echo $homeArticleData[1]['home_article_content']; ?></p>
+                            <a class="article-button" href="#">NEWSLETTER SIGNUP</a>
+                    </div>
 
-    </div><!-- .row -->
+                    <div class="col-xs-5 article-container">
+                    </div>
 
-</div><!-- Container end -->
+                </div>
+
+     </main><!-- #main -->
+
+</div><!-- content end -->
 
 </div><!-- Wrapper end -->
 
