@@ -35,7 +35,7 @@ if ( class_exists( 'WooCommerce' ) ) {
             <!-- Do the left sidebar check -->
             <?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
 
-            <main class="site-main" id="main">
+			<main class="site-main" id="main">
 
                 <?php while ( have_posts() ) : the_post(); ?>
 
