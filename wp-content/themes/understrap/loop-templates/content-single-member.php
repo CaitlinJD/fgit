@@ -23,7 +23,9 @@
             <?php $key_1_value = get_post_meta( get_the_ID(), 'website_url', true );
             // check if the custom field has a value
             if ( ! empty( $key_1_value ) ) : ?>
+                <a href="<?php get_post_meta( get_the_ID(), 'website_url', true ) ?>"
             <img src="<?php echo get_blog_info('template_url')?>/">
+            <?php endif; ?>
 
 
 
