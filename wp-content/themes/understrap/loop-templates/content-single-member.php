@@ -25,6 +25,8 @@
             if ( ! empty( $key_1_value ) ) : ?>
             <img src="<?php echo get_blog_info('template_url')?>/">
 
+
+
         </div><!-- .entry-meta -->
 
     </header><!-- .entry-header -->
