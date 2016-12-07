@@ -1,20 +1,56 @@
+.tax-membercategory {
+    header {
+        padding: 20px;
+    }
+
+    .entry-title {
+        font-size: 1.5em;
+        margin: 2rem 0;
+        @media only screen and (min-width: 576px) {
+            font-size: 2.2rem;
+        }
+    }
+    hr {
+        @media only screen and (min-width: 576px) {
+            display: none;
+        }
+    }
+
+    h1 {
+        font-size: 2em;
+        line-height: 2.5rem;
+    }
+
+    .card-img-overlay p {
+        color: #fff;
+        line-height: 0.5rem;
+    }
+
+    .entry-content {
+        margin-bottom: 2em;
+    }
+}
+
+
 .board-member-box
 {
     min-width: 240px;
     min-height: 240px;
     position: relative;
-
+    /*
     img
     {
         -webkit-filter: saturate(50%); /* Safari 6.0 - 9.0 */
-        filter: saturate(50%);
+    /* filter: saturate(50%);
     }
+
 
     img:hover
     {
         -webkit-filter: saturate(100%); /* Safari 6.0 - 9.0 */
-        filter: saturate(100%);
+    /*    filter: saturate(100%);
     }
+    */
    .board-member-box-info
    {
        background-color: black;
