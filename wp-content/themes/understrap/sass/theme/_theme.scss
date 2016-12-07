@@ -2,9 +2,14 @@
 
 /** GENERAL STYLES **/
 
+body {
+    font-size: $paragraph-primary-size;
+}
+
 p
 {
-    font-size: $paragraph-title;
+    font-size: 1em;
+    line-height: 1.2em;
     font-family: $primary-font;
 }
 
@@ -88,4 +93,8 @@ hr
 h1, h2, h3 {
     font-family: $secondary-font;
     color: $primary-color;
+}
+
+.roboto {
+    font-family: $primary-font;
 }
