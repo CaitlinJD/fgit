@@ -7742,6 +7742,10 @@ hr {
   border: 2px solid #bc2c2d;
   padding: 15px 20px 15px 20px; }
 
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  color: #bc2c2d; }
+
 .footer-newsletter {
   background-color: #bc2c2d;
   height: 70px;
