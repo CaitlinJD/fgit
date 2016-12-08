@@ -4,7 +4,7 @@
 
 p
 {
-    font-size: $paragraph-title;
+    font-size: $paragraph-primary-size;
     font-family: $primary-font;
 }
 
@@ -56,20 +56,35 @@ p
     padding: 10px 15px 10px 15px;
     font-family: $primary-font;
     font-size: $button-title;
+    font-weight: 700;
+
+     @media only screen and (min-width: 992px ) {
+        padding: 15px 25px 15px 25px;
+        font-size: $button-title;
+        }
 }
 
 .article-container
 {
     h3
     {
-        font-size: $paragraph-primary-size;   
+        font-size: $section-title;   
+        font-weight: 700;
+        line-height: 26px;
+    }
+    
+    p
+    {
+        line-height: 22px;
     }
 
     hr
     {
         border: 4px solid $primary-color;
         width: 70px;
+        margin-left: 0;
     }
+
     
 
 }
@@ -87,4 +102,5 @@ p
     background-color: none;
     border: 2px solid $primary-color;
     padding: 15px 20px 15px 20px;
+    
 }
