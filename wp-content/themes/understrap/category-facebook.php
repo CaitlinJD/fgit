@@ -17,6 +17,7 @@
                     <p class="card-text">New York Fashion Week is over, but the street style lives on. Here are some of our favorite moments from outside the shows.</p>
                     <a href="https://www.facebook.com/fgi.toronto/?fref=ts class="card-link">Read More +</a>
 
+
                     </div>
                     <div class="col-md-4 card">
                     <img src="https://media.timeout.com/images/102862539/image.jpg">

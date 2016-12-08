@@ -2,9 +2,14 @@
 
 /** GENERAL STYLES **/
 
+body {
+    font-size: $paragraph-primary-size;
+}
+
 p
 {
-    font-size: $paragraph-title;
+    font-size: 1em;
+    line-height: 1.2em;
     font-family: $primary-font;
 }
 
@@ -66,8 +71,11 @@ p
 
 hr
 {
-    border: 4px solid $primary-color;
+    border: 1.5px solid $primary-color;
     width: 70px;
+    @media only screen and (min-width: 576px) {
+        border: 4px solid $primary-color;
+    }
 }
 
 .event-title
@@ -88,4 +96,8 @@ hr
 h1, h2, h3 {
     font-family: $secondary-font;
     color: $primary-color;
+}
+
+.roboto {
+    font-family: $primary-font;
 }
