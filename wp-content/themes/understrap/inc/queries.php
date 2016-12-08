@@ -33,4 +33,3 @@ function pre_events_query($query) {
 
 add_action( 'pre_get_posts', 'pre_events_query' );
 
-?>

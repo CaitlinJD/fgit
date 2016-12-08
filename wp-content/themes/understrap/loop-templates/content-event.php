@@ -11,6 +11,16 @@
 
     <header class="entry-header">
 
+        <?php
+        $date = date_create( uf('events_meta_start_date'));
+        $format_date = date_format($date, "l, F d, Y");
+        $date->format("l, F d, Y");
+        echo $format_date;
+        echo $date->format("l, F d, Y");
+        ?>
+
+
+
         <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
             '</a></h2>' ); ?>
 

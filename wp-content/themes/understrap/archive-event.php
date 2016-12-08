@@ -12,7 +12,6 @@ get_header();
 
 <?php
 $container   = get_theme_mod( 'understrap_container_type' );
-$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
 <?php get_template_part( 'global-templates/variables', 'none' ); ?>
@@ -24,18 +23,27 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
         <div class="row">
 
-            <!-- Do the left sidebar check -->
-            <?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
-
             <main class="site-main" id="main">
 
                 <?php if ( have_posts() ) : ?>
 
                     <header class="page-header">
-                        <?php
-                        the_archive_title( '<h1 class="page-title">', '</h1>' );
-                        the_archive_description( '<div class="taxonomy-description">', '</div>' );
-                        ?>
+                        <?php if ( get_post_type() != 'event') : ?>
+                            <!-- Default heading -->
+                            <?php
+                            the_archive_title( '<h1 class="page-title">', '</h1>' );
+                            the_archive_description( '<div class="taxonomy-description">', '</div>' );
+                            ?>
+
+                        <?php else : ?>
+                            <!-- Event post type heading -->
+                            <?php $category = get_term_by( 'slug', get_query_var('term'), get_query_var('taxonomy') );
+                            echo "<h1>".$category->name."</h1>";
+                            echo "<p>".$category->description."</p>";
+                            echo "<a href='#'>Buy Tickets</a>";
+                            ?>
+                        <?php endif; ?>
+
                     </header><!-- .page-header -->
 
                     <?php /* Start the Loop */ ?>
@@ -74,13 +82,6 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
             <?php understrap_pagination(); ?>
 
         </div><!-- #primary -->
-
-        <!-- Do the right sidebar check -->
-        <?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
-
-            <?php get_sidebar( 'right' ); ?>
-
-        <?php endif; ?>
 
     </div> <!-- .row -->
 
