@@ -83,3 +83,9 @@ require get_template_directory() . '/inc/utilities.php';
 
  remove_filter('the_content', 'wpautop');
 
+
+/**
+ * Load custom post queries.
+ */
+require get_template_directory() . '/inc/queries.php';
+

@@ -48,7 +48,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
                          * If you want to override this in a child theme, then include a file
                          * called content-___.php (where ___ is the Post Format name) and that will be used instead.
                          */
-                        get_template_part( 'loop-templates/content', get_post_format() );
+                        get_template_part( 'loop-templates/content', get_post_type() );
                         ?>
 
                     <?php endwhile; ?>
@@ -59,7 +59,16 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
                 <?php endif; ?>
 
-            </main><!-- #main -->
+                <?php if ( have_posts() ) : ?>
+                    <?php if ( get_post_type() == 'event' ) {
+                        get_template_part('loop-templates/events-past');
+                    } ?>
+
+                <?php endif; ?>
+
+
+
+            </main> <!-- #main -->
 
             <!-- The pagination component -->
             <?php understrap_pagination(); ?>
@@ -80,3 +89,5 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 </div><!-- Wrapper end -->
 
 <?php get_footer(); ?>
+
+
