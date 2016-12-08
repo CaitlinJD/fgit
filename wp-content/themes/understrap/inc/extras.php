@@ -84,7 +84,3 @@ function add_search_box( $items, $args ) {
     $items .= '<li>' . get_search_form( false ) . '</li>';
     return $items;
 }
-
-
-$var = new event_build;
-$var -> build_event();

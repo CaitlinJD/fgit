@@ -10,6 +10,19 @@ class event_post extends event_call {
         update_post_meta($this->post_id,$meta_key,$value);
       }
     }
+      wp_set_object_terms( 128, 'past-events', 'eventcategory', false);
+
+     // Updating event taxonomy
+      $curdate=date('Y-m-d H:i:s');
+      $eventdate = $this->event["events_meta_end_date"];
+
+      if($curdate > $eventdate)
+      {
+          wp_set_object_terms($this->post_id, 'past-events', 'eventcategory', false);
+      } else {
+          wp_set_object_terms($this->post_id, 'upcoming-events', 'eventcategory', false);
+      }
+
   }
   public function create_event_post () {
     $post_id = wp_insert_post(
