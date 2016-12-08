@@ -33,9 +33,9 @@ if ( class_exists( 'WooCommerce' ) ) {
     <main class="site-main" id="main">	
             
              
-                <div class="row home-banner" style="background-image: url(<?php echo uf('banner_image'); ?>">
+                <div class="row home-banner section-container" style="background-image: url(<?php echo uf('banner_image'); ?>">
 
-                    <div class="offset-xs-2 col-xs-5">
+                    <div class="offset-xs-1 offset-md-2 col-xs-8 col-md-6 col-lg-5">
                     
                         <h2 class="banner-title">
                         <?php echo uf( 'banner_title'); ?>
@@ -45,9 +45,9 @@ if ( class_exists( 'WooCommerce' ) ) {
 
                 </div> 
 
-                <div class="row flex-items-sm-center home-secondary-content">
+                <div class="row flex-items-sm-center section-container home-secondary-content">
 
-                    <div class="col-xs-4 offset-xs-2 article-container">
+                    <div class="offset-xs-1 offset-md-2 col-xs-10 col-md-5 article-container">
                         <h3><?php echo uf('article_title'); ?></h3>
                         <hr>
                         <p><?php echo uf('article_content'); ?></p>
@@ -55,27 +55,43 @@ if ( class_exists( 'WooCommerce' ) ) {
                         
                     </div>
 
-                    <div class="col-xs-4 offset-xs-1 twit-feed-container">
+                    <div class="offset-xs-1 offset-md-0  col-xs-10 col-md-4 twitter-wrapper">
                         <h3>Keep In Touch With Us</h3>
-                        <div>
-                        <?php
-                        echo "<pre>";
-                        //print it out
-                        print_r ($twitter_data);
-                        echo "</pre>";
-                        ?>
-</div>
+                        <div class="twit-feed-container">
+                            <?php getTwitterInfo($twitter_data); ?>
+                        </div>
                     </div>
 
                 </div>
+
+                <div style="display: none;" class="row flex-items-sm-center section-container home-events-content">
+                            
+                        <?php while ( have_posts() ) : the_post(); ?>	
+
+                            <?php if ( has_post_thumbnail() ) : ?>
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php the_post_thumbnail( 'medium' ); ?>
+                                </a>
+                            <?php endif; ?>
+
+                             <?php the_title( sprintf( '<h3 class="entry-title"><span><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></span></h3>' ); ?>
+                            <a class="read-more-link" href="<?php the_permalink(); ?>">Read More</a>	
+                            
+                        <?php endwhile; ?>
+                        
+                </div>
                 
 
-                <div class="row flex-items-sm-center home-third-content">                
+                <div class="row flex-items-sm-center section-container home-third-content">                
 
-                    <div class="col-xs-5 offset-xs-2">
+                    <div class="col-xs-10 col-md-8 offset-xs-1">
                     <?php $homeArticleData = get_post_meta( get_the_ID(), 'home_articles', true );?>
                             <h3><?php echo $homeArticleData[0]['home_article_title']; ?></h3>
-                            <p><?php echo $homeArticleData[0]['home_article_content']; ?></p>
+                            <hr>
+                            <div class="row">
+                                <p class="col-md-6"><?php echo $homeArticleData[0]['home_first_paragraph']; ?></p>
+                                <p class="col-md-6"><?php echo $homeArticleData[0]['home_second_paragraph']; ?></p>
+                            </div>
                             <a class="article-button" href="#">NEWSLETTER SIGNUP</a>
                     </div>
 
@@ -84,16 +100,17 @@ if ( class_exists( 'WooCommerce' ) ) {
 
                 </div>
 
-                <div class="row flex-items-sm-center home-fourth-content">
+                <div class="row flex-items-sm-center section-container home-fourth-content">
                 
-                    <div class="col-xs-5 offset-xs-2">
+                    <div class="col-xs-10 col-md-8 offset-xs-1">
                     <?php $homeArticleData = get_post_meta( get_the_ID(), 'home_articles', true );?>
                             <h3><?php echo $homeArticleData[1]['home_article_title']; ?></h3>
-                            <p><?php echo $homeArticleData[1]['home_article_content']; ?></p>
+                            <hr>
+                            <div class="row">
+                                <p class="col-xs-12 col-md-6"><?php echo $homeArticleData[1]['home_first_paragraph']; ?></p>
+                                <p class="col-xs-12 col-md-6"><?php echo $homeArticleData[1]['home_second_paragraph']; ?></p>
+                            </div>
                             <a class="article-button" href="#">NEWSLETTER SIGNUP</a>
-                    </div>
-
-                    <div class="col-xs-5 article-container">
                     </div>
 
                 </div>

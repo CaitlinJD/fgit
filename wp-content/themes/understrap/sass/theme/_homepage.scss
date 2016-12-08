@@ -1,17 +1,41 @@
 .home-banner
 {
-    background-size: cover;
-    padding: 2em 0 2em 0;
-    height: 70vh;
+    background-size: cover; 
 
+}
+
+.section-container
+{
+    padding: 4em 0 4em 0;
+
+    hr
+    {
+        border: 4px solid $primary-color;
+        width: 70px;
+        margin-left: 0;
+    }
+    
 }
 .banner-title
     {
+        margin-top: 1em;
         font-family: $secondary-font;
-        font-size: $home-section-title;
+        font-size: 24px;
+        line-height: 30px;
         color: $secondary-color;
-        margin-top: 3em;
-        line-height: 52px;
+        margin-bottom: 0.5em;
+
+        @media only screen and (min-width: 576px ) {
+            margin-top: 1em;
+            font-size: 26px;
+            line-height: 30px;
+        }
+
+         @media only screen and (min-width: 992px ) {
+            line-height: 52px;
+            font-size: $home-section-title;
+        }
+       
     }
 
 #home-banner-button
@@ -20,7 +44,7 @@
     color: $primary-color;
     text-transform: uppercase;
     font-weight: 700;
-    margin-top: 1em;
+    margin-top: 2em;
 }
 
 .home-secondary-content
@@ -36,6 +60,10 @@
     p
     {
         margin-bottom: 2em;
+    }
+    .article-container
+    {
+        width: 80%;
     }
 }
 
@@ -65,11 +93,54 @@
         font-size: 32px;
     }
 }
-.twit-feed-container
-{
-    h3{
+
+.twitter-wrapper{
+
+    h3
+    {
         font-family: $secondary-font;
         color: $primary-color;
         font-size: 32px;
+    }
+
+    .twit-feed-container
+    {
+            overflow: scroll;
+            height: 300px;
+
+        .tweet-div
+        {
+            padding: 10px;
+            border-bottom: 1px solid #D3D3D3;
+
+            .user-pic
+            {
+                margin-right: 10px; 
+                width: 30px; 
+                height: 30px; 
+                align: left;
+                display: inline; 
+                border-radius: 20px;
+            }
+
+            h4
+            {
+                display: inline;
+                font-size: 12px;
+                font-weight: bold;
+                span
+                {
+                    
+                    color: grey;
+                }
+            }
+
+            p
+            {
+                font-size: 12px;
+                margin-bottom: 1em;
+                margin-top: 1em;
+            }
+        }
     }
 }

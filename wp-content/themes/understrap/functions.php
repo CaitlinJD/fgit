@@ -88,3 +88,10 @@ require get_template_directory() . '/inc/utilities.php';
  */
 require get_template_directory() . '/inc/twitter-json.php';
 
+/**
+
+ * Load custom post queries.
+
+ */
+
+require get_template_directory() . '/inc/queries.php';

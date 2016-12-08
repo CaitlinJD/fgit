@@ -1,3 +1,5 @@
+<?php /* Template Name: Sand Box */ ?>
+
 <?php
     function buildBaseString($baseURI, $method, $params) {
         $r = array();
@@ -19,10 +21,10 @@
     $url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
 
 
-    $oauth_access_token = " 24305766-brjaqdEK99qX6ARiZAcdhQk4HNRCgwIeGN9WHRakA";
-    $oauth_access_token_secret = " GzkwH1NNPK3FcBHOC2OnbsdmS2qGeWp9np2EGwvSg7DWg";
-    $consumer_key = "jvqKOJv9FFyTBWbb7MHP74lLU";
-    $consumer_secret = "DKQt1c4pIIeIWKXTEiTwizoRHCgYxHXgkA0V76DujKWO3ux7Dx";
+    $oauth_access_token = "24305766-brjaqdEK99qX6ARiZAcdhQk4HNRCgwIeGN9WHRakA";
+    $oauth_access_token_secret = "GzkwH1NNPK3FcBHOC2OnbsdmS2qGeWp9np2EGwvSg7DWg";
+    $consumer_key = "ThRCM5NyZmE4T5SQHj6MPtM2K";
+    $consumer_secret = "ynUdFNA4YNQSTpnN1kRdqeFNSL3g7n0pvzVIQOLqiG60wUyxRH";
 
     $oauth = array( 'oauth_consumer_key' => $consumer_key,
                     'oauth_nonce' => time(),
@@ -57,10 +59,26 @@
     $twitter_data = json_decode($json);
 
 
+    function getTwitterInfo($twitter_data){
+       
+        foreach ($twitter_data as $tweet) {
+            $user_name = $tweet->user->name;
+            $user_screen_name = $tweet->user->screen_name;
+            $user_image = $tweet->user->profile_image_url;
+            $tweet_text = $tweet->text;
+            $tweet_media = $tweet->entities->media[0]->media_url;
+        
+        echo '<div class="tweet-div">';
+        echo '<img class="user-pic" src="'.$user_image.'" />';
+        echo '<h4>'.$user_name.'<span> '.$user_screen_name.'</span></h4>';
+        echo "<p>".$tweet->text."<p>";
+        if( !$tweet_media == ''){echo '<img style="height: 100px;" src="'.$tweet_media.'" />';};
+        echo "</div>";
 
 
-
-
-
+        }
+       
+            
+    }
 
 ?>
