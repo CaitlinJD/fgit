@@ -2,6 +2,10 @@
 
 .tax-membercategory {
   button.member-btn {
+    background-color: $primary-color;
+    border: none;
+    padding: 0.3rem;
+    color: #fff;
     @media only screen and (min-width: 576px) {
       display: none;
     }
@@ -10,13 +14,16 @@
   .card-img-overlay.member {
     background: #000;
     height: 100px;
+    padding: 30px;
     @media only screen and (min-width: 576px) {
       height: 73px;
+      padding: 20px 5px;
       position: absolute;
       top: auto;
       right: 0;
       bottom: 0;
       left: 0;
+
     }
   }
 
@@ -29,15 +36,17 @@
       padding-bottom: 20px;
     }
   }
+  .entry-content {
+    img {
+      display: none;
+      filter: brightness(80%);
+      &:hover {
+        filter: brightness(100%);
+      }
+      @media only screen and (min-width: 576px) {
+        display: block;
+      }
 
-  img {
-    display: none;
-    filter: brightness(80%);
-    &:hover {
-      filter: brightness(100%);
-    }
-    @media only screen and (min-width: 576px) {
-      display: block;
     }
 
   }

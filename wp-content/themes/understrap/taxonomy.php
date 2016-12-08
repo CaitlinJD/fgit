@@ -28,7 +28,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
                 <?php if ( have_posts() ) : ?>
 
-                    <header class="page-header">
+                    <header class="page-header col-xs-10 col-sm-8 col-md-7">
                        <h1><?php
                         echo ( is_tax('membercategory', 'board-member')? 'Ignite the others, <br>Empowered by us.' :
                             (is_tax('membercategory','success-stories')? 'Our Members. <br>Stories that Touch' : '') );
@@ -47,7 +47,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
                     </header><!-- .page-header -->
 
                     <?php /* Start the Loop */ ?>
-                    <div class="col-xs-12">
+                    <div class="col-xs-12 entry-content">
                         <div class="row">
                             <?php while ( have_posts() ) : the_post(); ?>
 

@@ -1,2 +1,103 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
+/** GENERAL STYLES **/
+
+body {
+    font-size: $paragraph-primary-size;
+}
+
+p
+{
+    font-size: 1em;
+    line-height: 1.2em;
+    font-family: $primary-font;
+}
+
+.bold
+{
+    font-weight: 600;
+}
+
+.white-font
+{
+    color: white;
+}
+
+.red-font
+{
+    color: $primary-color;
+}
+
+.light-font-weight
+{
+    font-weight: 300;
+}
+
+.medium-font-weight
+{
+    font-weight: 500;
+}
+.page-intro
+{
+    .page-title
+    {
+        font-family: $secondary-font;
+        font-size: $page-title;
+        color: $primary-color;
+
+    }
+    
+    .intro-text
+    {
+        font-size: $paragraph-title;
+        font-family: $primary-font;
+    }
+}
+
+.article-button
+{
+    background-color: $primary-color;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    font-family: $primary-font;
+    font-size: $button-title;
+}
+
+.article-container {
+    h3 {
+        font-size: $paragraph-primary-size;
+    }
+}
+
+hr
+{
+    border: 1.5px solid $primary-color;
+    width: 70px;
+    @media only screen and (min-width: 576px) {
+        border: 4px solid $primary-color;
+    }
+}
+
+.event-title
+{
+    font-size: $paragraph-title;
+    font-family: $secondary-font;
+}
+
+.load-more-button
+{
+    width: 130px;
+    height: 46px;
+    background-color: none;
+    border: 2px solid $primary-color;
+    padding: 15px 20px 15px 20px;
+}
+
+h1, h2, h3 {
+    font-family: $secondary-font;
+    color: $primary-color;
+}
+
+.roboto {
+    font-family: $primary-font;
+}
