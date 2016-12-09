@@ -38,7 +38,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			 itemtype="http://schema.org/SiteNavigationElement">
 
 			<div class="<?php echo esc_html( $container ); ?> no-padding" >
-                <div class="flex header-container">
+                <div class="header-container">
 
                     <div class="navbar-header">
 
@@ -57,7 +57,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
                     </div>
 
-                    <div class="menu-icons flex">
+                    <div class="menu-icons">
                         <div class="header-icons">
                             <?php echo get_search_form() ?>
                             <a href="https://www.facebook.com/fgi.toronto" target="_blank">
