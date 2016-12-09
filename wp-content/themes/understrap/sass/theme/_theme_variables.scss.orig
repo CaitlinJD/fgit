@@ -35,8 +35,8 @@ $menu-font-size: 14px;
 $menu-link-rollover: #bc2c2d;
 <<<<<<< HEAD
 $enable-flex: true;
-=======
-$enable-flex: true;
 $btn-primary-bg: transparent;
 $btn-primary-color: #fff;
->>>>>>> master
+=======
+$enable-flex: true;
+>>>>>>> bd91996d4c8488ed6edc96ade3c1b18710ba6750
