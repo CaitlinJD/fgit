@@ -83,3 +83,15 @@ require get_template_directory() . '/inc/utilities.php';
 
  remove_filter('the_content', 'wpautop');
 
+ /**
+ * Load JSON functions.
+ */
+require get_template_directory() . '/inc/twitter-json.php';
+
+/**
+
+ * Load custom post queries.
+
+ */
+
+require get_template_directory() . '/inc/queries.php';
