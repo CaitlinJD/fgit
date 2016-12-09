@@ -1,8 +1,6 @@
 .sponsorship-main-content
 {
-    h2{
-    font-size: $page-title;
-    }
+
     p
     {
         line-height: 22px;
@@ -11,6 +9,11 @@
 .sponsor-logo-section
 {
     margin-top: 2em;
+
+    img
+    {
+        margin-bottom: 2em;
+    }
     
 }
 
