@@ -37,20 +37,20 @@ if ( class_exists( 'WooCommerce' ) ) {
              
                 <div class="row section-container">
 
-                    <div class="offset-xs-1 offset-md-2 col-xs-10 col-md-6 col-lg-6 sponsorship-main-content">
+                    <div class="offset-xs-1 offset-md-2 col-xs-10 col-md-8 col-lg-6 page-intro sponsorship-main-content">
                     <?php while ( have_posts() ) : the_post(); ?>	
-                        <h2><?php the_title(); ?></h2>
+                        <h2 class="page-title"><?php the_title(); ?></h2>
                        <p><?php the_content(); ?></p>
                        <?php endwhile; ?>
                     </div>
 
-                    <div class="offset-sm-2 offset-md-2 col-md-8 sponsor-logo-section">
+                    <div class="offset-xs-3 offset-md-2 col-md-8 col-xs-6 sponsor-logo-section">
                         
                         <?php $sponsorship_logos = get_post_meta( get_the_ID(), 'sponsorship_logos', true );
                             foreach($sponsorship_logos as $logo){                             
                                 
                                 $image_array = (wp_get_attachment_image_src($logo['sponsorship_logo'], 'medium'));
-                                echo "<img class='col-md-3' src='".$image_array[0]."' />";
+                                echo "<img class='col-xs-12 col-sm-6 col-md-4 col-lg-3' src='".$image_array[0]."' />";
                             }
                         ?>
                                  
@@ -59,7 +59,7 @@ if ( class_exists( 'WooCommerce' ) ) {
                 </div>  
 
                 <div class="row">
-                    <div class="offset-md-2 col-md-4 article-container sponsorship-secondary-container">
+                    <div class="offset-md-2 offset-xs-1 col-xs-10 col-md-5 col-lg-4 article-container sponsorship-secondary-container">
                         <h3 class="white-font"><?php uf('sponsorship_secondary_title'); ?></h3>
                         <hr>
                         <?php uf('sponsorship_secondary_content'); ?>
