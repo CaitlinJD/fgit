@@ -5,18 +5,30 @@
 
 .past-events-section
 {
-    .red-block
+    .inline-block {
+        display: inline-block;
+    }
+    div.red-block
     {
-        display: block;
         background-color: $primary-color;
         height: 14px;
         width: 6px;
     }
 
-    .event-link
+    a.event-link
     {
         font-size: $paragraph-primary-size;
         color: $primary-color;
     }
 
+}
+
+.post-type-archive-event {
+    article {
+        background-color: grey;
+    }
+
+    .even-article {
+        background-color: red;
+    }
 }

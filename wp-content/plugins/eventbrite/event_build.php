@@ -10,9 +10,7 @@ class event_build extends event_call {
     foreach ($this->events->events as $event) {
 
       $event = $event->event;
-        echo "<pre>";
-        print_r($event);
-        echo "</pre>";
+
       $ev = array();
 
       //if ($event->status == "Live") {
@@ -24,6 +22,7 @@ class event_build extends event_call {
         $ev['events_meta_start_date'] = $event->start_date;
         $ev['events_meta_end_date'] = $event->end_date;
         $ev['events_meta_id'] = $event->id;
+        $ev['logo'] = $event->logo;
 
         /* Ticket Info */
 

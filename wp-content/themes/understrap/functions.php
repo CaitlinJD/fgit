@@ -89,3 +89,5 @@ require get_template_directory() . '/inc/utilities.php';
  */
 require get_template_directory() . '/inc/queries.php';
 
+require get_template_directory() . '/inc/menus.php';
+

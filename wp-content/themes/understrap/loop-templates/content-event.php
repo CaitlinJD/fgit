@@ -8,53 +8,36 @@
 ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+    <div class="row">
+        <header class="entry-header col-xs-12 col-sm-6  <?php echo(is_archive()? 'content-right' : ''); ?>">
+            <?php if (is_single()) : ?>
+                <?php the_post_thumbnail( 'large' ); ?>
+            <?php endif; ?>
 
-    <header class="entry-header">
+            <?php
+            $ev_date = get_uf('events_meta_start_date');
+            echo date('l, F d, Y', strtotime($ev_date));
+            ?>
 
-        <?php
-        $date = date_create( uf('events_meta_start_date'));
-        $format_date = date_format($date, "l, F d, Y");
-        $date->format("l, F d, Y");
-        echo $format_date;
-        echo $date->format("l, F d, Y");
-        ?>
+            <h2><?php the_title() ?></h2>
+            <hr>
 
+            <?php if (is_archive()) : ?>
+                <?php the_excerpt() ?>
+            <?php else : ?>
+                <?php the_content() ?>
+            <?php endif; ?>
 
+        </header><!-- .entry-header -->
 
-        <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-            '</a></h2>' ); ?>
+        <div class="entry-content col-sm-6 col-md-6 <?php echo(is_archive()? 'hidden-xs-down pic-left' : ''); ?>">
+            <?php if (is_archive() ) : ?>
+                <?php the_post_thumbnail( 'large' ); ?>
+            <?php else : ?>
 
-        <?php if ( 'post' == get_post_type() ) : ?>
+            <?php endif; ?>
+        </div><!-- .entry-content -->
 
-            <div class="entry-meta">
-                <?php understrap_posted_on(); ?>
-            </div><!-- .entry-meta -->
-
-        <?php endif; ?>
-
-    </header><!-- .entry-header -->
-
-    <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
-
-    <div class="entry-content">
-
-        <?php
-        the_excerpt();
-        ?>
-
-        <?php
-        wp_link_pages( array(
-            'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-            'after'  => '</div>',
-        ) );
-        ?>
-
-    </div><!-- .entry-content -->
-
-    <footer class="entry-footer">
-
-        <?php understrap_entry_footer(); ?>
-
-    </footer><!-- .entry-footer -->
+    </div> <!-- end of row -->
 
 </article><!-- #post-## -->

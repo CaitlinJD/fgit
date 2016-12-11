@@ -38,6 +38,13 @@ jQuery(document).ready(function($) {
         }
     })
 
+    // Events archive - switch order of image and content on even numbered articles
+    $("article:odd").addClass("even-article");
+    $("article:odd").find(".content-right").addClass("push-md-6");
+    $("article:odd").find(".pic-left").addClass("pull-md-6");
+
+
+
 })
 
 

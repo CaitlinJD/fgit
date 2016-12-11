@@ -35,3 +35,46 @@
 
     }
 }
+
+
+.tax-partnercategory {
+    article {
+        position: relative;
+        color: #fff;
+        p {
+            font-size: 1.1em;
+        }
+        .img-bkg {
+            height: 370px;
+            opacity: 0.48;
+        }
+        .overlay {
+            position: absolute;
+            background-color: #000;
+            height: 261px;
+            margin-top: 50px;
+        }
+
+        .relative-position {
+            height: 100%;
+            padding: 2em;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .post-link {
+            position: absolute;
+            bottom: -20px;
+            background-color: $primary-color;
+            border: none;
+            padding: 0.5rem 0.8rem;
+            color: #fff;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+    }
+}

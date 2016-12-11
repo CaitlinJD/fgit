@@ -7,8 +7,9 @@
  * @package understrap
  */
 
-get_header();
-?>
+get_header(); ?>
+
+<h1></h1>
 
 <?php
 $container   = get_theme_mod( 'understrap_container_type' );
@@ -27,22 +28,24 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
                 <?php if ( have_posts() ) : ?>
 
-                    <header class="page-header">
-                        <?php if ( get_post_type() != 'event') : ?>
-                            <!-- Default heading -->
-                            <?php
-                            the_archive_title( '<h1 class="page-title">', '</h1>' );
-                            the_archive_description( '<div class="taxonomy-description">', '</div>' );
-                            ?>
+                    <header class="page-header row">
+                        <div class="col-xs-12 col-sm-8 col-md-6">
+                            <?php if ( get_post_type() != 'event') : ?>
+                                <!-- Default heading -->
+                                <?php
+                                the_archive_title( '<h1 class="page-title">', '</h1>' );
+                                the_archive_description( '<div class="taxonomy-description">', '</div>' );
+                                ?>
 
-                        <?php else : ?>
-                            <!-- Event post type heading -->
-                            <?php $category = get_term_by( 'slug', get_query_var('term'), get_query_var('taxonomy') );
-                            echo "<h1>".$category->name."</h1>";
-                            echo "<p>".$category->description."</p>";
-                            echo "<a href='#'>Buy Tickets</a>";
-                            ?>
-                        <?php endif; ?>
+                            <?php else : ?>
+                                <!-- Event post type heading -->
+                                <?php $category = get_term_by( 'slug', get_query_var('term'), get_query_var('taxonomy') );
+                                echo "<h1 class=\"page-title\">".$category->name."</h1>";
+                                echo "<p class='taxonomy-description'>".$category->description."</p>";
+                                echo "<a href='#'>Buy Tickets</a>";
+                                ?>
+                            <?php endif; ?>
+                        </div> <!-- end of col -->
 
                     </header><!-- .page-header -->
 
@@ -60,26 +63,25 @@ $container   = get_theme_mod( 'understrap_container_type' );
                         ?>
 
                     <?php endwhile; ?>
+                    </div>
 
                 <?php else : ?>
 
                     <?php get_template_part( 'loop-templates/content', 'none' ); ?>
 
                 <?php endif; ?>
+                <?php
+                if ( is_post_type_archive('event')) {
+                   get_template_part('loop-templates/events-past');
+                }
+                ?>
 
-                <?php if ( have_posts() ) : ?>
-                    <?php if ( get_post_type() == 'event' ) {
-                        get_template_part('loop-templates/events-past');
-                    } ?>
 
-                <?php endif; ?>
 
 
 
             </main> <!-- #main -->
 
-            <!-- The pagination component -->
-            <?php understrap_pagination(); ?>
 
         </div><!-- #primary -->
 

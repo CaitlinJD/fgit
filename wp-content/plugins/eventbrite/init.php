@@ -19,8 +19,8 @@ class event_call {
 
     public function event_auth () {
       $auth = array(
-        'app_key'  => 'PVRZ5VK5OXKCAMJWBU',
-        'user_key' => '1480436860195012467540'
+        'app_key'  => '3W5DVETALEZAHLCBNC',
+        'user_key' => '12641973343200862867'
       );
       return $auth;
     }

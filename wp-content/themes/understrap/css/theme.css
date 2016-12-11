@@ -7618,15 +7618,23 @@ button,
 .event-preview-section {
   font: 2em; }
 
-.past-events-section .red-block {
-  display: block;
+.past-events-section .inline-block {
+  display: inline-block; }
+
+.past-events-section div.red-block {
   background-color: #bc2c2d;
   height: 14px;
   width: 6px; }
 
-.past-events-section .event-link {
+.past-events-section a.event-link {
   font-size: 16px;
   color: #bc2c2d; }
+
+.post-type-archive-event article {
+  background-color: grey; }
+
+.post-type-archive-event .even-article {
+  background-color: red; }
 
 .img-bkg {
   width: 100%;
@@ -7782,6 +7790,36 @@ button,
     font-size: 26px; }
   .mentor-section .mentor-section-box .mentor-button {
     position: absolute; }
+
+.tax-partnercategory article {
+  position: relative;
+  color: #fff; }
+  .tax-partnercategory article p {
+    font-size: 1.1em; }
+  .tax-partnercategory article .img-bkg {
+    height: 370px;
+    opacity: 0.48; }
+  .tax-partnercategory article .overlay {
+    position: absolute;
+    background-color: #000;
+    height: 261px;
+    margin-top: 50px; }
+  .tax-partnercategory article .relative-position {
+    height: 100%;
+    padding: 2em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .tax-partnercategory article .post-link {
+    position: absolute;
+    bottom: -20px;
+    background-color: #bc2c2d;
+    border: none;
+    padding: 0.5rem 0.8rem;
+    color: #fff; }
+    .tax-partnercategory article .post-link:hover {
+      text-decoration: none; }
 
 /** GENERAL STYLES **/
 body {
