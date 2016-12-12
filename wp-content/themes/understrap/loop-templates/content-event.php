@@ -23,7 +23,7 @@
             <hr>
 
             <?php if (is_archive()) : ?>
-                <?php the_excerpt() ?>
+                <?php echo get_the_excerpt(); ?>
             <?php else : ?>
                 <?php the_content() ?>
             <?php endif; ?>

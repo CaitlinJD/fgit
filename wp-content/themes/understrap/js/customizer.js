@@ -43,6 +43,17 @@ jQuery(document).ready(function($) {
     $("article:odd").find(".content-right").addClass("push-md-6");
     $("article:odd").find(".pic-left").addClass("pull-md-6");
 
+    // Ticket Price : Change $0.00 to Free
+    console.log('checking price');
+    if ($(".price-mem") == '$0.00') {
+        console.log('member price is 0');
+        $(".price-mem").text('Free');
+    }
+    if ($(".price-nonmem") == '$0.00') {
+        console.log('non-member price is 0');
+        $(".price-nonmem").text('Free');
+    }
+
 
 
 })

@@ -3,6 +3,9 @@
 class event_build extends event_call {
   public function __construct(){
     $this->events = parent::get_events_data();
+     echo "<pre>";
+      print_r($this->events);
+      echo "</pre>";
   }
 
   public function build_event () {
@@ -26,9 +29,10 @@ class event_build extends event_call {
 
         /* Ticket Info */
 
-        $ev['events_meta_ticket_price'] = $event->tickets[0]->ticket->price;
+        $ev['events_meta_ticket_price_member'] = $event->tickets[0]->ticket->price;
         $ev['events_meta_ticket_sold'] = $event->tickets[0]->ticket->quantity_sold;
         $ev['events_meta_ticket_avail'] = $event->tickets[0]->ticket->quantity_available;
+        $ev['events_meta_ticket_price_nonmember'] = $event->tickets[1]->ticket->price;
 
         /* Address Info */
 

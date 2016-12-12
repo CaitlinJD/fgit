@@ -85,38 +85,6 @@ function add_search_box( $items, $args ) {
     return $items;
 }
 
-// Replaces the excerpt "Read More" text by a link
-function new_excerpt_more($more) {
-    global $post;
-    return ' ... <div><a class="btn btn-secondary understrap-read-more-link" href="'. get_permalink($post->ID) . '">LEARN MORE</a></div>';
-}
-add_filter('excerpt_more', 'new_excerpt_more');
 
-
-//Insert button after first paragraph of single post content
-//add_filter( 'the_content', 'prefix_insert_post_ads' );
-function prefix_insert_post_ads( $content ) {
-    $ad_code = '<button>Buy Tickets</button>';
-    if ( is_single() && ( get_post_type() == 'event' )&& ! is_admin() ) {
-        return prefix_insert_after_paragraph( $ad_code, 2, $content );
-    }
-    return $content;
-}
-// Parent Function that makes the magic happen
-function prefix_insert_after_paragraph( $insertion, $paragraph_id, $content ) {
-    $paragraphs = explode ( "</p>", $content );
-   // echo "<pre>"; print_r($paragraphs); echo "</pre";
-    foreach ($paragraphs as $index => $paragraph) {
-        if ( trim( $paragraph ) ) {
-            $paragraphs[$index] .= $closing_p;
-            echo "<button>Buy Tickets</button>";
-        }
-        if ( $paragraph_id == $index + 1 ) {
-            $paragraphs[$index] .= $insertion;
-            //echo "<button>Buy Tickets</button>";
-        }
-    }
-    return implode( '', $paragraphs );
-}
 
 
