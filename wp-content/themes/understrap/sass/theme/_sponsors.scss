@@ -21,13 +21,14 @@
 {
     padding: 3em 1.5em 3em 1.5em;
     background-color: black;
-    margin-top: 2em;
     margin-bottom: 4em;
 
     h3
     {
         font-size: 32px;
         font-weight: 500;
+        font-family: $secondary-font;
+
     }
 
     hr
