@@ -24,11 +24,13 @@
 }
 
 .post-type-archive-event {
-    article {
-        background-color: grey;
-    }
+    .upcoming-events {
+        article {
+            background-color: grey;
+        }
 
-    .even-article {
-        background-color: red;
+        .even-article {
+            background-color: red;
+        }
     }
 }

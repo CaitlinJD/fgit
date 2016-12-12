@@ -49,6 +49,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
                     </header><!-- .page-header -->
 
+                    <div class="upcoming-events">
                     <?php /* Start the Loop */ ?>
                     <?php while ( have_posts() ) : the_post(); ?>
 

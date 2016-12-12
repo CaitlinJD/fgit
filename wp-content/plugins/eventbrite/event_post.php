@@ -33,7 +33,7 @@ class event_post extends event_call {
         update_post_meta($this->post_id,$meta_key,$value);
       }
     }
-    echo $this->event["logo"]." // ".$this->post_id."<br>";
+    //echo $this->event["logo"]." // ".$this->post_id."<br>";
       //self::Generate_Featured_Image ($this->event['logo']);
 
      // Updating event taxonomy

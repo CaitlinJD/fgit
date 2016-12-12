@@ -19,3 +19,70 @@
         height: 282px;
     }
 }
+
+
+
+
+.details {
+    line-height: 0.4em;
+}
+
+.detail-title:not(:first-child) {
+    margin-top: 2em;
+}
+
+
+
+
+/*Mobile Specific Styles */
+.mobile {
+    .black-bkg {
+        background-color: #000;
+        color: #fff;
+        padding: 2em 20px;
+    }
+    .additional-info {
+        padding: 2em 20px;
+    }
+    hr {
+        margin-left: 0;
+    }
+
+    .event-img {
+        img{
+            width: 100%;
+        }
+    }
+
+    .last-btn {
+        text-align: center;
+        padding: 3em 0;
+
+    }
+
+    a {
+        color: $primary-color;
+        &:hover {
+            font-weight: bold;
+        }
+    }
+}
+
+/* BUY TICKETS btn */
+.ticket-btn {
+    margin: 2em 0;
+    a {
+        background-color: $primary-color;
+        color: #fff;
+        padding: 0.8em 1.8em;
+        font-size: 0.875em;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        img {
+            display: none;
+        }
+    }
+}

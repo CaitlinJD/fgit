@@ -11,9 +11,9 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="single-wrapper">
 
-    <!--<div class="<?php// echo esc_html( $container ); ?>" id="content" tabindex="-1"> -->
+    <div class="<?php echo esc_html( $container ); ?> no-padding" id="content" tabindex="-1">
 
-        <!-- <div class="row"> -->
+        <div class="row">
 
             <main class="site-main" id="main">
 
@@ -27,9 +27,9 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
         </div><!-- #primary -->
 
-    <!--</div><!-- .row -->
+    </div><!-- .row -->
 
-<!--</div><!-- Container end -->
+</div><!-- Container end -->
 
 </div><!-- Wrapper end -->
 
