@@ -63,8 +63,8 @@ $eventTitle = get_the_title();
 
     <!-- DESKTOP -->
     <div class="desktop hidden-xs-down col-sm-12">
-        <div class="row">
-        <div class="event-content col-sm-6">
+        <div class="row custom-padding">
+        <div class="event-content col-sm-6 col-md-7">
             <div class="event-wording">
                 <header class="entry-header">
                     <?php
@@ -85,16 +85,16 @@ $eventTitle = get_the_title();
                     </div>
                 </div><!-- .entry-content -->
                 <div class="info-wording">
-                    <p><b>Ticket Price</b></p>
+                    <p class="detail-title"><b>Ticket Price</b></p>
                     <?php if (get_uf('events_meta_ticket_price_member') ): ?>
-                        <p>FGI Members - <span class="price-mem">$<?php echo uf('events_meta_ticket_price_member'); ?></span></p>
+                        <p class="details">FGI Members - <span class="price-mem">$<?php echo uf('events_meta_ticket_price_member'); ?></span></p>
                     <?php endif; ?>
                     <?php if (get_uf('events_meta_ticket_price_nonmember') ): ?>
-                        <p>Non-Members - <span class="price-nonmem">$<?php echo uf('events_meta_ticket_price_nonmember'); ?></span></p>
+                        <p class="details">Non-Members - <span class="price-nonmem">$<?php echo uf('events_meta_ticket_price_nonmember'); ?></span></p>
                     <?php endif; ?>
 
-                    <p><b>Location</b></p>
-                    <p><?php echo uf('events_meta_venue_address'); ?></p>
+                    <p class="detail-title"><b>Location</b></p>
+                    <p class="details"><?php echo uf('events_meta_venue_address'); ?></p>
 
                     <div class="ticket-btn">
                         <?php echo '<a href="http://www.eventbrite.com/event/' . $eventID . '?ref=ebtn" target="_blank"><img border="0" src="http://www.eventbrite.com/custombutton?eid=' . $eventID . '" alt="Register for ' . $eventTitle . ' on Eventbrite" />Buy Tickets</a>'; ?>
@@ -104,7 +104,7 @@ $eventTitle = get_the_title();
 
         </div><!-- .event-content -->
 
-        <div class="images col-sm-6">
+        <div class="images col-sm-6 col-md-5">
             <div class="event-img ">
                 <?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
             </div><!-- .event-img -->

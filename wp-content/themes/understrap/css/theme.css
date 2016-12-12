@@ -7908,13 +7908,30 @@ button,
   width: 298px;
   height: 282px; }
 
-.details {
-  line-height: 0.4em; }
+/* Desktop Specific Styles */
+@media only screen and (min-width: 576px) {
+  .single-event .container {
+    margin: 0;
+    width: 100%; } }
 
-.detail-title:not(:first-child) {
-  margin-top: 2em; }
+.single-event a {
+  color: #bc2c2d; }
+  .single-event a:hover {
+    text-decoration: none; }
 
-/*Mobile Specific Styles */
+.desktop {
+  background-color: #e6e6e6; }
+  .desktop .custom-padding {
+    padding: 3em 10%; }
+  .desktop .images {
+    padding-left: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .desktop .images img {
+      width: 100%; }
+
+/* Mobile Specific Styles */
 .mobile .black-bkg {
   background-color: #000;
   color: #fff;
@@ -7933,11 +7950,6 @@ button,
   text-align: center;
   padding: 3em 0; }
 
-.mobile a {
-  color: #bc2c2d; }
-  .mobile a:hover {
-    font-weight: bold; }
-
 /* BUY TICKETS btn */
 .ticket-btn {
   margin: 2em 0; }
@@ -7950,6 +7962,13 @@ button,
       text-decoration: none; }
     .ticket-btn a img {
       display: none; }
+
+/* Ticket info and Location */
+.details {
+  line-height: 0.4em; }
+
+.detail-title:not(:first-child) {
+  margin-top: 2em; }
 
 .event-preview-section {
   font: 2em; }
@@ -8256,6 +8275,9 @@ h2 {
   background-color: none;
   border: 2px solid #bc2c2d;
   padding: 15px 20px 15px 20px; }
+
+.no-padding {
+  padding: 0; }
 
 .footer-newsletter {
   background-color: #bc2c2d;
@@ -8653,13 +8675,30 @@ h2 {
   width: 298px;
   height: 282px; }
 
-.details {
-  line-height: 0.4em; }
+/* Desktop Specific Styles */
+@media only screen and (min-width: 576px) {
+  .single-event .container {
+    margin: 0;
+    width: 100%; } }
 
-.detail-title:not(:first-child) {
-  margin-top: 2em; }
+.single-event a {
+  color: #bc2c2d; }
+  .single-event a:hover {
+    text-decoration: none; }
 
-/*Mobile Specific Styles */
+.desktop {
+  background-color: #e6e6e6; }
+  .desktop .custom-padding {
+    padding: 3em 10%; }
+  .desktop .images {
+    padding-left: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .desktop .images img {
+      width: 100%; }
+
+/* Mobile Specific Styles */
 .mobile .black-bkg {
   background-color: #000;
   color: #fff;
@@ -8678,11 +8717,6 @@ h2 {
   text-align: center;
   padding: 3em 0; }
 
-.mobile a {
-  color: #bc2c2d; }
-  .mobile a:hover {
-    font-weight: bold; }
-
 /* BUY TICKETS btn */
 .ticket-btn {
   margin: 2em 0; }
@@ -8695,6 +8729,13 @@ h2 {
       text-decoration: none; }
     .ticket-btn a img {
       display: none; }
+
+/* Ticket info and Location */
+.details {
+  line-height: 0.4em; }
+
+.detail-title:not(:first-child) {
+  margin-top: 2em; }
 
 .info-box {
   background-color: black;

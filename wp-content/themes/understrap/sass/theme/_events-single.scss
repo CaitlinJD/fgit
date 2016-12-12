@@ -23,18 +23,43 @@
 
 
 
-.details {
-    line-height: 0.4em;
+
+/* Desktop Specific Styles */
+.single-event {
+    .container {
+        @media only screen and (min-width: 576px) {
+            margin: 0;
+            width: 100%;
+        }
+    }
+
+    a {
+        color: $primary-color;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+.desktop {
+    background-color: #e6e6e6;
+
+    .custom-padding {
+        padding: 3em 10%;
+    }
+
+    .images {
+        padding-left: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        img {
+            width: 100%;
+        }
+    }
 }
 
-.detail-title:not(:first-child) {
-    margin-top: 2em;
-}
 
-
-
-
-/*Mobile Specific Styles */
+/* Mobile Specific Styles */
 .mobile {
     .black-bkg {
         background-color: #000;
@@ -60,12 +85,6 @@
 
     }
 
-    a {
-        color: $primary-color;
-        &:hover {
-            font-weight: bold;
-        }
-    }
 }
 
 /* BUY TICKETS btn */
@@ -85,4 +104,14 @@
             display: none;
         }
     }
+}
+
+/* Ticket info and Location */
+
+.details {
+    line-height: 0.4em;
+}
+
+.detail-title:not(:first-child) {
+    margin-top: 2em;
 }
