@@ -1,5 +1,62 @@
+.membership-main-content
+{
+    .intro-bold
+    {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    p{
+        font-size: $paragraph-secondary-size;
+    }
+}
+
 .info-box
 {
     background-color: black;
-    padding: 1em 0.5em 1em 0.5em;
+    padding: 2em 1.5em 2em 1.5em;
+    color: white;
+    margin-bottom: 2em;
+    
+    h3
+    {
+        font-family: $secondary-font;
+        font-size: $paragraph-title;
+        font-weight: 500;
+
+    }
+
+    .subheading
+    {
+        font-size: $section-title;
+        font-weight: 600;
+    }
+    
+    p
+    {
+        font-size: $paragraph-primary-size;
+    }
+
+    .membership-price
+    {
+        font-weight: bold;
+        font-size: $section-title;
+    }
+
+    .price-info
+    {
+        font-size: $paragraph-third-size;
+    }
+}
+
+.membership-benefits-container
+{
+    margin: 2em 1em 2em 1em;
+    
+    li
+    {
+        font-size: $paragraph-primary-size;
+        line-height: 26px;
+        margin-bottom: 1em;
+    }
 }

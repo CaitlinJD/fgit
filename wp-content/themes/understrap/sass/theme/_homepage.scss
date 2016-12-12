@@ -7,13 +7,6 @@
 .section-container
 {
     padding: 4em 0 4em 0;
-
-    hr
-    {
-        border: 4px solid $primary-color;
-        width: 70px;
-        margin-left: 0;
-    }
     
 }
 .banner-title
@@ -106,6 +99,7 @@
     .twit-feed-container
     {
             overflow: scroll;
+            overflow-x: hidden;
             height: 300px;
 
         .tweet-div
