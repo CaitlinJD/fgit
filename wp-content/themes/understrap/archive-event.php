@@ -33,7 +33,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
                             <?php if ( get_post_type() != 'event') : ?>
                                 <!-- Default heading -->
                                 <?php
-                                the_archive_title( '<h1 class="page-title">', '</h1>' );
+                                the_archive_title( '<h1 class="page-title red-font">', '</h1>' );
                                 the_archive_description( '<div class="taxonomy-description">', '</div>' );
                                 ?>
 
@@ -42,7 +42,6 @@ $container   = get_theme_mod( 'understrap_container_type' );
                                 <?php $category = get_term_by( 'slug', get_query_var('term'), get_query_var('taxonomy') );
                                 echo "<h1 class=\"page-title\">".$category->name."</h1>";
                                 echo "<p class='taxonomy-description'>".$category->description."</p>";
-                                echo "<a href='#'>Buy Tickets</a>";
                                 ?>
                             <?php endif; ?>
                         </div> <!-- end of col -->
@@ -74,6 +73,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
                 <?php
                 if ( is_post_type_archive('event')) {
                    get_template_part('loop-templates/events-past');
+
                 }
                 ?>
 
@@ -84,11 +84,10 @@ $container   = get_theme_mod( 'understrap_container_type' );
             </main> <!-- #main -->
 
 
-        </div><!-- #primary -->
+        </div> <!-- .row --> <!-- #primary -->
 
-    </div> <!-- .row -->
+    </div> <!-- Container end -->
 
-</div><!-- Container end -->
 
 </div><!-- Wrapper end -->
 

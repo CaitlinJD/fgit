@@ -14,16 +14,20 @@
                 <?php the_post_thumbnail( 'large' ); ?>
             <?php endif; ?>
 
-            <?php
-            $ev_date = get_uf('events_meta_start_date');
-            echo date('l, F d, Y', strtotime($ev_date));
-            ?>
+            <div class="event-date">
+                <?php
+                $ev_date = get_uf('events_meta_start_date');
+                echo date('l, F d, Y', strtotime($ev_date));
+                ?>
+            </div>
 
             <h2><?php the_title() ?></h2>
             <hr>
 
             <?php if (is_archive()) : ?>
+                <div class="the-excerpt">
                 <?php echo get_the_excerpt(); ?>
+                </div>
             <?php else : ?>
                 <?php the_content() ?>
             <?php endif; ?>

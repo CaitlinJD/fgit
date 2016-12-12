@@ -16,6 +16,7 @@ function pre_events_query($query) {
                 )
             ));
             $query->set('posts_per_page', -1);
+
         }
 
         if (is_front_page()) {

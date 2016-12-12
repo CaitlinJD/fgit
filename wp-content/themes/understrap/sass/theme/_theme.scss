@@ -91,7 +91,7 @@ p
 
 hr
 {
-    border: 1.5px solid $primary-color;
+    border: 2px solid $primary-color;
     width: 70px;
     @media only screen and (min-width: 576px) {
         border: 3px solid $primary-color;
@@ -102,13 +102,24 @@ hr
 }
 
 h1 {
+    font-family: $secondary-font;
+    font-size: 2em;
+    @media only screen and (min-width: 576px) {
+        font-size: 3em;
+    }
 
 }
 
 h2 {
     font-size: 1.625em;
     font-family: $secondary-font;
+    line-height: 1.5em;
     margin: 0.8em 0;
+}
+
+h3 {
+    font-size: 1.3em;
+    font-family: $secondary-font;
 }
 
 .event-title
@@ -129,4 +140,8 @@ h2 {
 
 .no-padding {
     padding: 0;
+}
+
+.inline-block {
+    display: inline-block;
 }

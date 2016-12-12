@@ -7941,7 +7941,8 @@ button,
   padding: 2em 20px; }
 
 .mobile hr {
-  margin-left: 0; }
+  margin-left: 0;
+  -webkit-margin-start: 0; }
 
 .mobile .event-img img {
   width: 100%; }
@@ -7973,23 +7974,67 @@ button,
 .event-preview-section {
   font: 2em; }
 
-.past-events-section .inline-block {
-  display: inline-block; }
-
-.past-events-section div.red-block {
-  background-color: #bc2c2d;
-  height: 14px;
-  width: 6px; }
-
 .past-events-section a.event-link {
   font-size: 1em;
   color: #bc2c2d; }
 
-.post-type-archive-event .upcoming-events article {
-  background-color: grey; }
+.post-type-archive-event header.row {
+  padding: 1em 20px 2em; }
+  .post-type-archive-event header.row h1 {
+    color: #bc2c2d; }
+  .post-type-archive-event header.row .taxonomy-description {
+    display: none; }
+    @media only screen and (min-width: 576px) {
+      .post-type-archive-event header.row .taxonomy-description {
+        display: block; } }
 
-.post-type-archive-event .upcoming-events .even-article {
-  background-color: red; }
+.post-type-archive-event .upcoming-events {
+  /* READ MORE btn */ }
+  .post-type-archive-event .upcoming-events article {
+    color: #fff;
+    padding: 1.5em 20px;
+    background-color: #000;
+    border-bottom: 2px solid #fff; }
+    @media only screen and (min-width: 576px) {
+      .post-type-archive-event .upcoming-events article {
+        background-color: grey;
+        border-bottom: none; } }
+    .post-type-archive-event .upcoming-events article hr {
+      margin-left: none; }
+  @media only screen and (min-width: 576px) {
+    .post-type-archive-event .upcoming-events .even-article {
+      background-color: red; } }
+  .post-type-archive-event .upcoming-events .understrap-read-more-link {
+    margin: 2em 0;
+    background-color: #bc2c2d;
+    color: #fff;
+    padding: 0.8em 1.8em;
+    font-size: 0.875em;
+    border: none;
+    border-radius: 0; }
+    .post-type-archive-event .upcoming-events .understrap-read-more-link:hover {
+      text-decoration: none; }
+
+.post-type-archive-event .past-events {
+  padding: 1.5em 20px; }
+  .post-type-archive-event .past-events .second-title {
+    font-size: 1.3em; }
+  .post-type-archive-event .past-events article {
+    margin-bottom: 2em; }
+    .post-type-archive-event .past-events article div.red-block {
+      background-color: #bc2c2d;
+      height: 14px;
+      width: 6px; }
+    .post-type-archive-event .past-events article .event-date {
+      color: #7f8c8d; }
+    .post-type-archive-event .past-events article h3 {
+      margin: 0.3em 0; }
+    .post-type-archive-event .past-events article .event-link {
+      color: #bc2c2d;
+      font-size: 0.9em;
+      text-decoration: underline; }
+      .post-type-archive-event .past-events article .event-link:hover {
+        text-decoration: none; }
 
 .img-bkg {
   width: 100%;
@@ -8252,7 +8297,7 @@ p {
   line-height: 22px; }
 
 hr {
-  border: 1.5px solid #bc2c2d;
+  border: 2px solid #bc2c2d;
   width: 70px; }
   @media only screen and (min-width: 576px) {
     hr {
@@ -8260,10 +8305,22 @@ hr {
       width: 70px;
       margin-left: 0; } }
 
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2em; }
+  @media only screen and (min-width: 576px) {
+    h1 {
+      font-size: 3em; } }
+
 h2 {
   font-size: 1.625em;
   font-family: "Playfair Display", serif;
+  line-height: 1.5em;
   margin: 0.8em 0; }
+
+h3 {
+  font-size: 1.3em;
+  font-family: "Playfair Display", serif; }
 
 .event-title {
   font-size: 26px;
@@ -8278,6 +8335,9 @@ h2 {
 
 .no-padding {
   padding: 0; }
+
+.inline-block {
+  display: inline-block; }
 
 .footer-newsletter {
   background-color: #bc2c2d;
@@ -8647,23 +8707,67 @@ h2 {
 .event-preview-section {
   font: 2em; }
 
-.past-events-section .inline-block {
-  display: inline-block; }
-
-.past-events-section div.red-block {
-  background-color: #bc2c2d;
-  height: 14px;
-  width: 6px; }
-
 .past-events-section a.event-link {
   font-size: 1em;
   color: #bc2c2d; }
 
-.post-type-archive-event .upcoming-events article {
-  background-color: grey; }
+.post-type-archive-event header.row {
+  padding: 1em 20px 2em; }
+  .post-type-archive-event header.row h1 {
+    color: #bc2c2d; }
+  .post-type-archive-event header.row .taxonomy-description {
+    display: none; }
+    @media only screen and (min-width: 576px) {
+      .post-type-archive-event header.row .taxonomy-description {
+        display: block; } }
 
-.post-type-archive-event .upcoming-events .even-article {
-  background-color: red; }
+.post-type-archive-event .upcoming-events {
+  /* READ MORE btn */ }
+  .post-type-archive-event .upcoming-events article {
+    color: #fff;
+    padding: 1.5em 20px;
+    background-color: #000;
+    border-bottom: 2px solid #fff; }
+    @media only screen and (min-width: 576px) {
+      .post-type-archive-event .upcoming-events article {
+        background-color: grey;
+        border-bottom: none; } }
+    .post-type-archive-event .upcoming-events article hr {
+      margin-left: none; }
+  @media only screen and (min-width: 576px) {
+    .post-type-archive-event .upcoming-events .even-article {
+      background-color: red; } }
+  .post-type-archive-event .upcoming-events .understrap-read-more-link {
+    margin: 2em 0;
+    background-color: #bc2c2d;
+    color: #fff;
+    padding: 0.8em 1.8em;
+    font-size: 0.875em;
+    border: none;
+    border-radius: 0; }
+    .post-type-archive-event .upcoming-events .understrap-read-more-link:hover {
+      text-decoration: none; }
+
+.post-type-archive-event .past-events {
+  padding: 1.5em 20px; }
+  .post-type-archive-event .past-events .second-title {
+    font-size: 1.3em; }
+  .post-type-archive-event .past-events article {
+    margin-bottom: 2em; }
+    .post-type-archive-event .past-events article div.red-block {
+      background-color: #bc2c2d;
+      height: 14px;
+      width: 6px; }
+    .post-type-archive-event .past-events article .event-date {
+      color: #7f8c8d; }
+    .post-type-archive-event .past-events article h3 {
+      margin: 0.3em 0; }
+    .post-type-archive-event .past-events article .event-link {
+      color: #bc2c2d;
+      font-size: 0.9em;
+      text-decoration: underline; }
+      .post-type-archive-event .past-events article .event-link:hover {
+        text-decoration: none; }
 
 .event-main-section p {
   font-size: 1em; }
@@ -8708,7 +8812,8 @@ h2 {
   padding: 2em 20px; }
 
 .mobile hr {
-  margin-left: 0; }
+  margin-left: 0;
+  -webkit-margin-start: 0; }
 
 .mobile .event-img img {
   width: 100%; }

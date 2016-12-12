@@ -5,15 +5,7 @@
 
 .past-events-section
 {
-    .inline-block {
-        display: inline-block;
-    }
-    div.red-block
-    {
-        background-color: $primary-color;
-        height: 14px;
-        width: 6px;
-    }
+
 
     a.event-link
     {
@@ -24,13 +16,88 @@
 }
 
 .post-type-archive-event {
+    header.row {
+        padding: 1em 20px 2em;
+        h1 {
+            color: $primary-color;
+        }
+        .taxonomy-description {
+            display: none;
+            @media only screen and (min-width: 576px) {
+                display: block;
+            }
+        }
+    }
     .upcoming-events {
         article {
-            background-color: grey;
+            color: #fff;
+            padding: 1.5em 20px;
+            background-color: #000;
+            border-bottom: 2px solid #fff;
+            @media only screen and (min-width: 576px) {
+                background-color: grey;
+                border-bottom: none;
+            }
+
+            hr {
+                margin-left: none;
+            }
         }
 
         .even-article {
-            background-color: red;
+            @media only screen and (min-width: 576px) {
+                background-color: red;
+            }
+        }
+
+        /* READ MORE btn */
+        .understrap-read-more-link {
+            margin: 2em 0;
+            background-color: $primary-color;
+            color: #fff;
+            padding: 0.8em 1.8em;
+            font-size: 0.875em;
+            border: none;
+            border-radius: 0;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+        }
+    }
+
+
+    .past-events {
+        padding: 1.5em 20px;
+        .second-title {
+            font-size: 1.3em;
+        }
+        article {
+            margin-bottom: 2em;
+            div.red-block
+            {
+                background-color: $primary-color;
+                height: 14px;
+                width: 6px;
+            }
+            .event-date {
+                color: #7f8c8d;
+            }
+
+            h3 {
+                margin: 0.3em 0;
+            }
+            .event-link {
+                color: $primary-color;
+                font-size: 0.9em;
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
         }
     }
 }
+
