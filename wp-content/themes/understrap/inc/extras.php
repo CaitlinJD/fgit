@@ -85,6 +85,12 @@ function add_search_box( $items, $args ) {
     return $items;
 }
 
+// Limit the number of words in the_excerpt
+function custom_excerpt_length( $length ) {
+    return 30;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
 
 
 

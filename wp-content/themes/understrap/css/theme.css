@@ -7988,6 +7988,14 @@ button,
       .post-type-archive-event header.row .taxonomy-description {
         display: block; } }
 
+.post-type-archive-event .page-header {
+  padding: 1em 10%; }
+
+@media only screen and (min-width: 576px) {
+  .post-type-archive-event .container {
+    margin: 0;
+    width: 100%; } }
+
 .post-type-archive-event .upcoming-events {
   /* READ MORE btn */ }
   .post-type-archive-event .upcoming-events article {
@@ -7997,15 +8005,24 @@ button,
     border-bottom: 2px solid #fff; }
     @media only screen and (min-width: 576px) {
       .post-type-archive-event .upcoming-events article {
-        background-color: grey;
-        border-bottom: none; } }
+        color: #000;
+        background-color: #e6e6e6;
+        border-bottom: none;
+        padding: 3em 10%; } }
     .post-type-archive-event .upcoming-events article hr {
       margin-left: none; }
+    .post-type-archive-event .upcoming-events article .img-bkg {
+      width: 100%;
+      height: 100%; }
+    .post-type-archive-event .upcoming-events article h2 {
+      margin: 0.3em 0; }
   @media only screen and (min-width: 576px) {
     .post-type-archive-event .upcoming-events .even-article {
-      background-color: red; } }
+      background-color: #333333;
+      color: #fff;
+      font-weight: 300; } }
   .post-type-archive-event .upcoming-events .understrap-read-more-link {
-    margin: 2em 0;
+    margin: 2em 0 0;
     background-color: #bc2c2d;
     color: #fff;
     padding: 0.8em 1.8em;
@@ -8017,8 +8034,13 @@ button,
 
 .post-type-archive-event .past-events {
   padding: 1.5em 20px; }
+  @media only screen and (min-width: 576px) {
+    .post-type-archive-event .past-events {
+      padding: 2em 10%; } }
   .post-type-archive-event .past-events .second-title {
     font-size: 1.3em; }
+  .post-type-archive-event .past-events .article-wrapper {
+    margin: 0; }
   .post-type-archive-event .past-events article {
     margin-bottom: 2em; }
     .post-type-archive-event .past-events article div.red-block {
@@ -8721,6 +8743,14 @@ h3 {
       .post-type-archive-event header.row .taxonomy-description {
         display: block; } }
 
+.post-type-archive-event .page-header {
+  padding: 1em 10%; }
+
+@media only screen and (min-width: 576px) {
+  .post-type-archive-event .container {
+    margin: 0;
+    width: 100%; } }
+
 .post-type-archive-event .upcoming-events {
   /* READ MORE btn */ }
   .post-type-archive-event .upcoming-events article {
@@ -8730,15 +8760,24 @@ h3 {
     border-bottom: 2px solid #fff; }
     @media only screen and (min-width: 576px) {
       .post-type-archive-event .upcoming-events article {
-        background-color: grey;
-        border-bottom: none; } }
+        color: #000;
+        background-color: #e6e6e6;
+        border-bottom: none;
+        padding: 3em 10%; } }
     .post-type-archive-event .upcoming-events article hr {
       margin-left: none; }
+    .post-type-archive-event .upcoming-events article .img-bkg {
+      width: 100%;
+      height: 100%; }
+    .post-type-archive-event .upcoming-events article h2 {
+      margin: 0.3em 0; }
   @media only screen and (min-width: 576px) {
     .post-type-archive-event .upcoming-events .even-article {
-      background-color: red; } }
+      background-color: #333333;
+      color: #fff;
+      font-weight: 300; } }
   .post-type-archive-event .upcoming-events .understrap-read-more-link {
-    margin: 2em 0;
+    margin: 2em 0 0;
     background-color: #bc2c2d;
     color: #fff;
     padding: 0.8em 1.8em;
@@ -8750,8 +8789,13 @@ h3 {
 
 .post-type-archive-event .past-events {
   padding: 1.5em 20px; }
+  @media only screen and (min-width: 576px) {
+    .post-type-archive-event .past-events {
+      padding: 2em 10%; } }
   .post-type-archive-event .past-events .second-title {
     font-size: 1.3em; }
+  .post-type-archive-event .past-events .article-wrapper {
+    margin: 0; }
   .post-type-archive-event .past-events article {
     margin-bottom: 2em; }
     .post-type-archive-event .past-events article div.red-block {

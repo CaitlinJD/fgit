@@ -36,7 +36,7 @@
 
         <div class="entry-content col-sm-6 col-md-6 <?php echo(is_archive()? 'hidden-xs-down pic-left' : ''); ?>">
             <?php if (is_archive() ) : ?>
-                <?php the_post_thumbnail( 'large' ); ?>
+                <div class="img-bkg" style="background: url('<?php echo the_post_thumbnail_url('large') ?>') center right/cover no-repeat"></div>
             <?php else : ?>
 
             <?php endif; ?>

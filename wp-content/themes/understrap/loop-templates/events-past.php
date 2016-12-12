@@ -26,10 +26,11 @@ $query = new WP_Query($args);
 
 
         while ( $query->have_posts() ) : $query->the_post(); ?>
+            <div class="article-wrapper col-xs-12 col-sm-6">
 
             <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-                <header class="entry-header col-xs-12 col-sm-6">
+                <header class="entry-header">
 
                     <div>
                         <div class="red-block inline-block"></div>
@@ -50,7 +51,7 @@ $query = new WP_Query($args);
 
             </article><!-- #post-## -->
 
-
+            </div>
         <?php endwhile; ?>
 
         <!-- The pagination component -->
