@@ -2,16 +2,27 @@
 
 <?php get_header(); ?>
 
-<h1>yolo </h1>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
 
 
-<div class="bannerimage" style="background: url(' <?php echo $homeinfo ?>'); background-size: cover">
-
             <?php while ( have_posts() ) : the_post(); ?>
 
-                <?php get_template_part( 'template-parts/content', 'page' ); ?>
+                <?php get_template_part( 'loop-templates/content', 'page' ); ?>
+                <?php
+
+                 $involved_data = ( get_post_meta( get_the_ID(), 'get_involved_data', true ));
+
+                echo "<pre>";
+                print_r ($involved_data);
+                echo "</pre>";
+
+                 foreach($involved_data as $child) {
+                     echo $child["title"]. "\n";
+                     echo $child["content"]. "\n";
+                    }
+
+                 ?>
 
                 <?php //the_post_navigation(); ?>
 

@@ -28,43 +28,96 @@ if ( class_exists( 'WooCommerce' ) ) {
 
 <div class="wrapper" id="page-wrapper">
 
-    <div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
+    <div id="content" tabindex="-1">
 
-        <div class="row">
+    <main class="site-main" id="main">	
+            
+             
+                <div class="row home-banner section-container" style="background-image: url(<?php echo uf('banner_image'); ?>">
 
-            <!-- Do the left sidebar check -->
-            <?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
+                    <div class="offset-xs-1 offset-md-2 col-xs-8 col-md-6 col-lg-5">
+                    
+                        <h2 class="banner-title">
+                        <?php echo uf( 'banner_title'); ?>
+                        <h2>
+                        <a id="home-banner-button" class="article-button" href="<?php echo uf('banner_image'); ?>">Upcoming Events</a>
+                    </div>
 
-			<main class="site-main" id="main">
+                </div> 
 
-                <?php while ( have_posts() ) : the_post(); ?>
+                <div class="row flex-items-sm-center section-container home-secondary-content">
 
-                    <?php get_template_part( 'loop-templates/content', 'page' ); ?>
+                    <div class="offset-xs-1 offset-md-2 col-xs-10 col-md-5 article-container">
+                        <h3><?php echo uf('article_title'); ?></h3>
+                        <hr>
+                        <p><?php echo uf('article_content'); ?></p>
+                        <a class="article-button" href="#">MEMBERSHIP</a>
+                        
+                    </div>
 
-                    <?php
-                    // If comments are open or we have at least one comment, load up the comment template.
-                    if ( comments_open() || get_comments_number() ) :
-                        comments_template();
-                    endif;
-                    ?>
+                    <div class="offset-xs-1 offset-md-0  col-xs-10 col-md-4 twitter-wrapper">
+                        <h3>Keep In Touch With Us</h3>
+                        <div class="twit-feed-container">
+                            <?php getTwitterInfo($twitter_data); ?>
+                        </div>
+                    </div>
 
-                <?php endwhile; // end of the loop. ?>
+                </div>
 
-            </main><!-- #main -->
+                <div style="display: none;" class="row flex-items-sm-center section-container home-events-content">
+                            
+                        <?php while ( have_posts() ) : the_post(); ?>	
 
-        </div><!-- #primary -->
+                            <?php if ( has_post_thumbnail() ) : ?>
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php the_post_thumbnail( 'medium' ); ?>
+                                </a>
+                            <?php endif; ?>
 
-        <!-- Do the right sidebar check -->
-        <?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
+                             <?php the_title( sprintf( '<h3 class="entry-title"><span><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></span></h3>' ); ?>
+                            <a class="read-more-link" href="<?php the_permalink(); ?>">Read More</a>	
+                            
+                        <?php endwhile; ?>
+                        
+                </div>
+                
 
-            <?php if ( ! $is_woocommerce ) : get_sidebar( 'right' ); ?>
-            <?php endif; ?>
+                <div class="row flex-items-sm-center section-container home-third-content">                
 
-        <?php endif; ?>
+                    <div class="col-xs-10 col-md-8 offset-xs-1">
+                    <?php $homeArticleData = get_post_meta( get_the_ID(), 'home_articles', true );?>
+                            <h3><?php echo $homeArticleData[0]['home_article_title']; ?></h3>
+                            <hr>
+                            <div class="row">
+                                <p class="col-md-6"><?php echo $homeArticleData[0]['home_first_paragraph']; ?></p>
+                                <p class="col-md-6"><?php echo $homeArticleData[0]['home_second_paragraph']; ?></p>
+                            </div>
+                            <a class="article-button" href="#">NEWSLETTER SIGNUP</a>
+                    </div>
 
-    </div><!-- .row -->
+                    <div class="col-xs-5 article-container">
+                    </div>
 
-</div><!-- Container end -->
+                </div>
+
+                <div class="row flex-items-sm-center section-container home-fourth-content">
+                
+                    <div class="col-xs-10 col-md-8 offset-xs-1">
+                    <?php $homeArticleData = get_post_meta( get_the_ID(), 'home_articles', true );?>
+                            <h3><?php echo $homeArticleData[1]['home_article_title']; ?></h3>
+                            <hr>
+                            <div class="row">
+                                <p class="col-xs-12 col-md-6"><?php echo $homeArticleData[1]['home_first_paragraph']; ?></p>
+                                <p class="col-xs-12 col-md-6"><?php echo $homeArticleData[1]['home_second_paragraph']; ?></p>
+                            </div>
+                            <a class="article-button" href="#">NEWSLETTER SIGNUP</a>
+                    </div>
+
+                </div>
+
+     </main><!-- #main -->
+
+</div><!-- content end -->
 
 </div><!-- Wrapper end -->
 

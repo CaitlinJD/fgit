@@ -1,0 +1,47 @@
+.sponsorship-main-content
+{
+
+    p
+    {
+        line-height: 22px;
+    }
+}
+.sponsor-logo-section
+{
+    margin-top: 2em;
+
+    img
+    {
+        margin-bottom: 2em;
+    }
+    
+}
+
+.sponsorship-secondary-container
+{
+    padding: 3em 1.5em 3em 1.5em;
+    background-color: black;
+    margin-bottom: 4em;
+
+    h3
+    {
+        font-size: 32px;
+        font-weight: 500;
+        font-family: $secondary-font;
+
+    }
+
+    hr
+    {
+     margin-left: 0;
+    }
+    p
+    {
+        color: white;
+        font-weight: 600;       
+    }
+    a
+    {
+        text-transform: uppercase;
+    }
+}
