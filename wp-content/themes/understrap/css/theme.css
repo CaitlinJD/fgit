@@ -7772,6 +7772,13 @@ button,
 .bio-qa {
   font-size: 20px; }
 
+.single-partner img.black-icons {
+  width: 30px;
+  height: 30px; }
+
+.single-partner h2 {
+  color: #000; }
+
 .mentor-section .mentor-section-box {
   width: 380px;
   height: 261px;
@@ -7793,33 +7800,45 @@ button,
 
 .tax-partnercategory article {
   position: relative;
-  color: #fff; }
+  color: #fff;
+  display: flex;
+  align-items: center; }
   .tax-partnercategory article p {
     font-size: 1.1em; }
   .tax-partnercategory article .img-bkg {
-    height: 370px;
-    opacity: 0.48; }
+    display: none; }
+    @media only screen and (min-width: 576px) {
+      .tax-partnercategory article .img-bkg {
+        display: block;
+        height: 370px;
+        opacity: 0.48; } }
   .tax-partnercategory article .overlay {
-    position: absolute;
     background-color: #000;
-    height: 261px;
-    margin-top: 50px; }
+    border-bottom: 2px solid #fff; }
+    @media only screen and (min-width: 576px) {
+      .tax-partnercategory article .overlay {
+        position: absolute;
+        border-bottom: none; } }
   .tax-partnercategory article .relative-position {
     height: 100%;
-    padding: 2em;
+    padding: 2em 0.3em;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center; }
   .tax-partnercategory article .post-link {
-    position: absolute;
-    bottom: -20px;
     background-color: #bc2c2d;
     border: none;
     padding: 0.5rem 0.8rem;
     color: #fff; }
     .tax-partnercategory article .post-link:hover {
       text-decoration: none; }
+    @media only screen and (min-width: 576px) {
+      .tax-partnercategory article .post-link {
+        position: absolute;
+        bottom: -20px; } }
+  .tax-partnercategory article h2 {
+    color: #fff; }
 
 /** GENERAL STYLES **/
 body {
