@@ -1,6 +1,5 @@
 <?php /* Template Name: Sponsors */ ?>
 
-<?php /* Template Name: Home Page */ ?>
 
 <?php
 
@@ -47,6 +46,8 @@ if ( class_exists( 'WooCommerce' ) ) {
                     <div class="offset-xs-3 offset-md-2 col-md-8 col-xs-6 sponsor-logo-section">
                         
                         <?php $sponsorship_logos = get_post_meta( get_the_ID(), 'sponsorship_logos', true );
+
+                        
                             foreach($sponsorship_logos as $logo){                             
                                 
                                 $image_array = (wp_get_attachment_image_src($logo['sponsorship_logo'], 'medium'));
