@@ -37,6 +37,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
 
+gulp.task('default',['watch']);
+
 
 // Run:
 // gulp sass + cssnano + rename
