@@ -23,21 +23,28 @@
 } )( jQuery );
 
 jQuery(document).ready(function($) {
-    // Header search bar
-    $("#s").hide();
-    $("#searchsubmit").on("click", function(e) {
+    // Header search bar DESKTOP Menu
+    $('.header-icons').find(".form-control").hide();
+    $('.header-icons').find("#searchsubmit").on("click", function(e) {
         console.log("this is the search in the header");
-        if ( $("#s").is(":visible")) {
-            if ($('#s').attr('value') == "") {
+        if ( $('.header-icons').find("#s").is(":visible")) {
+            if ($('.header-icons').find('#s').attr('value') == "") {
                 e.preventDefault();
-                $("#s").toggle();
+                $('.header-icons').find("#s").toggle();
             }
         } else {
             e.preventDefault();
-            $("#s").toggle();
+            $('.header-icons').find("#s").toggle();
         }
     })
 
+    //Header search bar MOBILE Menu
+    $('#exCollapsingNavbar').find("#searchsubmit").on("click", function(e) {
+        console.log("this is the search in the header");
+        if ($('#exCollapsingNavbar').find('#s').attr('value') == "") {
+            e.preventDefault();
+        }
+    })
     // Events archive - switch order of image and content on even numbered articles
     $(".upcoming-events").children("article:odd").addClass("even-article");
     $(".upcoming-events").children("article:odd").find(".content-right").addClass("push-md-6");

@@ -60,6 +60,10 @@ nav {
       padding: 0 20px;
       height: 100vh;
 
+      #main-menu{
+        float: none;
+      }
+
       @media only screen and (min-width: 576px) {
         background-color: #fff;
         padding: 1em 0;
@@ -68,6 +72,7 @@ nav {
           display: none;
         }
       }
+
       ul li a {
         color: #000;
         font-weight: bold;
