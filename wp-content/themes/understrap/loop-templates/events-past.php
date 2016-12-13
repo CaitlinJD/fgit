@@ -3,7 +3,7 @@ wp_reset_postdata();
 $args = array(
     "post_type"=>"event",
     "posts_per_page"=>4,
-    "paged" => 2,
+    "paged" => 1,
     'tax_query' => array(
         array(
             'taxonomy' => 'eventcategory',
