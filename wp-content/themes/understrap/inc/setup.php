@@ -119,8 +119,13 @@ if ( ! function_exists( 'all_excerpts_get_more_link' ) ) {
 	 * @return string
 	 */
 	function all_excerpts_get_more_link( $post_excerpt ) {
+        if ( get_uf("read_more_text") ) {
+            $btn_text = get_uf("read_more_text");
+        } else {
+            $btn_text = "LEARN MORE" ;
+        }
 
-		return $post_excerpt . ' ... <div><a class="btn btn-secondary understrap-read-more-link" href="'. get_permalink($post->ID) . '">LEARN MORE</a></div>';
+		return $post_excerpt . ' ... <div><a class="btn btn-secondary understrap-read-more-link" href="'. get_permalink($post->ID) . '">'.$btn_text.'</a></div>';
 	}
 }
 add_filter( 'wp_trim_excerpt', 'all_excerpts_get_more_link' );

@@ -22,9 +22,11 @@ $query = new WP_Query($args);
         <!--  Event post type heading -->
         <?php
         $category = get_term_by( 'term_taxonomy_id', 3, get_query_var('taxonomy') );
-        echo "<div class='col-xs-12 col-sm-12'><p class='second-title'><b>".$category->name."</b></p></div>";
+        echo "<div class='col-xs-12 col-sm-12'><p class='second-title'><b>".$category->name."</b></p></div>"; ?>
 
+        <div class="row">
 
+        <?php
         while ( $query->have_posts() ) : $query->the_post(); ?>
             <div class="article-wrapper col-xs-12 col-sm-6">
 
@@ -44,7 +46,7 @@ $query = new WP_Query($args);
 
                     <h3><?php the_title() ?></h3>
 
-                    <a href="<?php the_permalink() ?>" class="event-link">Learn more</a>
+                    <a href="<?php the_permalink() ?>" class="event-link"><?php echo ( get_uf("read_more_text")? get_uf("read_more_text") : "Learn More"); ?></a>
 
 
                 </header><!-- .entry-header -->

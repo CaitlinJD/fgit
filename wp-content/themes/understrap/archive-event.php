@@ -65,10 +65,6 @@ $container   = get_theme_mod( 'understrap_container_type' );
                     <?php endwhile; ?>
                     </div>
 
-                <?php else : ?>
-
-                    <?php get_template_part( 'loop-templates/content', 'none' ); ?>
-
                 <?php endif; ?>
                 <?php
                 if ( is_post_type_archive('event')) {

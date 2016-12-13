@@ -16,10 +16,11 @@
 }
 
 .post-type-archive-event {
-    header.row {
+    header {
         padding: 1em 20px 2em;
         h1 {
             color: $primary-color;
+            margin-bottom: 0.4em;
         }
         .taxonomy-description {
             display: none;
@@ -98,10 +99,10 @@
             font-size: 1.3em;
         }
         .article-wrapper {
-            margin: 0;
+
         }
         article {
-            margin-bottom: 2em;
+          
             div.red-block
             {
                 background-color: $primary-color;

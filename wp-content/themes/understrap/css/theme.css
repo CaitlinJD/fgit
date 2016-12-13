@@ -8005,14 +8005,15 @@ button,
   font-size: 1em;
   color: #bc2c2d; }
 
-.post-type-archive-event header.row {
+.post-type-archive-event header {
   padding: 1em 20px 2em; }
-  .post-type-archive-event header.row h1 {
-    color: #bc2c2d; }
-  .post-type-archive-event header.row .taxonomy-description {
+  .post-type-archive-event header h1 {
+    color: #bc2c2d;
+    margin-bottom: 0.4em; }
+  .post-type-archive-event header .taxonomy-description {
     display: none; }
     @media only screen and (min-width: 576px) {
-      .post-type-archive-event header.row .taxonomy-description {
+      .post-type-archive-event header .taxonomy-description {
         display: block; } }
 
 .post-type-archive-event .page-header {
@@ -8066,24 +8067,20 @@ button,
       padding: 2em 10%; } }
   .post-type-archive-event .past-events .second-title {
     font-size: 1.3em; }
-  .post-type-archive-event .past-events .article-wrapper {
-    margin: 0; }
-  .post-type-archive-event .past-events article {
-    margin-bottom: 2em; }
-    .post-type-archive-event .past-events article div.red-block {
-      background-color: #bc2c2d;
-      height: 14px;
-      width: 6px; }
-    .post-type-archive-event .past-events article .event-date {
-      color: #7f8c8d; }
-    .post-type-archive-event .past-events article h3 {
-      margin: 0.3em 0; }
-    .post-type-archive-event .past-events article .event-link {
-      color: #bc2c2d;
-      font-size: 0.9em;
-      text-decoration: underline; }
-      .post-type-archive-event .past-events article .event-link:hover {
-        text-decoration: none; }
+  .post-type-archive-event .past-events article div.red-block {
+    background-color: #bc2c2d;
+    height: 14px;
+    width: 6px; }
+  .post-type-archive-event .past-events article .event-date {
+    color: #7f8c8d; }
+  .post-type-archive-event .past-events article h3 {
+    margin: 0.3em 0; }
+  .post-type-archive-event .past-events article .event-link {
+    color: #bc2c2d;
+    font-size: 0.9em;
+    text-decoration: underline; }
+    .post-type-archive-event .past-events article .event-link:hover {
+      text-decoration: none; }
 
 .img-bkg {
   width: 100%;
@@ -8302,7 +8299,7 @@ p {
   line-height: 1.3em; }
   @media only screen and (min-width: 576px) {
     p {
-      line-height: 1.375em; } }
+      line-height: 1.425em; } }
 
 .bold {
   font-weight: 600; }
@@ -8766,14 +8763,15 @@ h3 {
   font-size: 1em;
   color: #bc2c2d; }
 
-.post-type-archive-event header.row {
+.post-type-archive-event header {
   padding: 1em 20px 2em; }
-  .post-type-archive-event header.row h1 {
-    color: #bc2c2d; }
-  .post-type-archive-event header.row .taxonomy-description {
+  .post-type-archive-event header h1 {
+    color: #bc2c2d;
+    margin-bottom: 0.4em; }
+  .post-type-archive-event header .taxonomy-description {
     display: none; }
     @media only screen and (min-width: 576px) {
-      .post-type-archive-event header.row .taxonomy-description {
+      .post-type-archive-event header .taxonomy-description {
         display: block; } }
 
 .post-type-archive-event .page-header {
@@ -8827,24 +8825,20 @@ h3 {
       padding: 2em 10%; } }
   .post-type-archive-event .past-events .second-title {
     font-size: 1.3em; }
-  .post-type-archive-event .past-events .article-wrapper {
-    margin: 0; }
-  .post-type-archive-event .past-events article {
-    margin-bottom: 2em; }
-    .post-type-archive-event .past-events article div.red-block {
-      background-color: #bc2c2d;
-      height: 14px;
-      width: 6px; }
-    .post-type-archive-event .past-events article .event-date {
-      color: #7f8c8d; }
-    .post-type-archive-event .past-events article h3 {
-      margin: 0.3em 0; }
-    .post-type-archive-event .past-events article .event-link {
-      color: #bc2c2d;
-      font-size: 0.9em;
-      text-decoration: underline; }
-      .post-type-archive-event .past-events article .event-link:hover {
-        text-decoration: none; }
+  .post-type-archive-event .past-events article div.red-block {
+    background-color: #bc2c2d;
+    height: 14px;
+    width: 6px; }
+  .post-type-archive-event .past-events article .event-date {
+    color: #7f8c8d; }
+  .post-type-archive-event .past-events article h3 {
+    margin: 0.3em 0; }
+  .post-type-archive-event .past-events article .event-link {
+    color: #bc2c2d;
+    font-size: 0.9em;
+    text-decoration: underline; }
+    .post-type-archive-event .past-events article .event-link:hover {
+      text-decoration: none; }
 
 .event-main-section p {
   font-size: 1em; }
