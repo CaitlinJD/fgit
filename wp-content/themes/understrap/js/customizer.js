@@ -50,14 +50,12 @@ jQuery(document).ready(function($) {
     $(".upcoming-events").children("article:odd").find(".content-right").addClass("push-md-6");
     $(".upcoming-events").children("article:odd").find(".pic-left").addClass("pull-md-6");
 
+
     // Ticket Price : Change $0.00 to Free
-    console.log('checking price');
-    if ($(".price-mem") == '$0.00') {
-        console.log('member price is 0');
+    if ($(".price-mem").html() == '$0.00') {
         $(".price-mem").text('Free');
     }
-    if ($(".price-nonmem") == '$0.00') {
-        console.log('non-member price is 0');
+    if ($(".price-nonmem").html() == '$0.00') {
         $(".price-nonmem").text('Free');
     }
 
