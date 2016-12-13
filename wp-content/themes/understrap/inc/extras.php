@@ -133,3 +133,9 @@ function prefix_insert_after_paragraph( $insertion, $paragraph_id, $content ) {
 }
 
 
+$var = new raw_twitter_build;
+$var -> build_tweet();
+
+
+//$var = new event_build;
+//$var -> build_event();

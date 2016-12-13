@@ -76,23 +76,68 @@ if ( ! function_exists( 'change_logo_class' ) ) {
 
 if ( function_exists( 'add_image_size' ) ) {
     add_image_size( 'rectangle-thumb', 380, 320, true );
-<<<<<<< HEAD
-    add_image_size('square-thumb', 800, 800, true);
-}
-
- //$var = new event_build;
-// $var -> build_event();
-=======
     add_image_size('square-thumb', 400, 400, true);
 }
 
 add_filter( 'wp_nav_menu_items','add_search_box', 1, 2 );
 function add_search_box( $items, $args ) {
-    $items .= '<li>' . get_search_form( false ) . '</li>';
+    $items = '<li>' . get_search_form( false ) . '</li>'.$items;
     return $items;
 }
 
+// Limit the number of words in the_excerpt
+function custom_excerpt_length( $length ) {
+    return 30;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
+
+
+// Add Quote part way through the content
+add_filter('the_content','prepend_this');
+
+function prepend_this($content) {
+    $term = wp_get_post_terms( get_the_ID(), "partnercategory" );
+    if ($term[0]->taxonomy == "partnercategory" && is_single() && !is_admin() ) {
+        if (get_uf('bio_quote')) {
+            $quote = "<h2 class='quote'>&ldquo;" . get_uf('bio_quote') . "&rdquo;</h2>";
+        } else {
+            $quote = '';
+        }
+        $ad_code = $quote;
+        if (is_single() && !is_admin()) {
+            return prefix_insert_after_paragraph($ad_code, 3, $content);
+        }
+    }
+    return $content;
+}
+
+// Parent Function that makes the magic happen
+function prefix_insert_after_paragraph( $insertion, $paragraph_id, $content ) {
+    $closing_p = '</p>';
+    $paragraphs = explode( $closing_p, $content );
+    $par_num = count($paragraphs);
+    // Check if number of paragraph is less than 3
+    if ($par_num < $paragraph_id ) {
+        $paragraph_id = $par_num;
+    }
+    foreach ($paragraphs as $index => $paragraph) {
+        if ( trim( $paragraph ) ) {
+            $paragraphs[$index] .= $closing_p;
+        }
+        if ( $paragraph_id == $index + 1 ) {
+            $paragraphs[$index] .= $insertion;
+        }
+    }
+    return implode( '', $paragraphs );
+}
+
+
+<<<<<<< HEAD
+=======
 $var = new event_build;
 $var -> build_event();
->>>>>>> refs/remotes/CaitlinJD/master
+
+$var = new raw_twitter_build;
+$var -> build_tweet();
+>>>>>>> e20899ea5203cf0c0fbc66179f966822dab25b41
