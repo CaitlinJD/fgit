@@ -81,7 +81,7 @@ if ( function_exists( 'add_image_size' ) ) {
 
 add_filter( 'wp_nav_menu_items','add_search_box', 1, 2 );
 function add_search_box( $items, $args ) {
-    $items .= '<li>' . get_search_form( false ) . '</li>';
+    $items = '<li>' . get_search_form( false ) . '</li>'.$items;
     return $items;
 }
 
