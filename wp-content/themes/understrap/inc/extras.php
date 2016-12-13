@@ -88,3 +88,6 @@ function add_search_box( $items, $args ) {
 
 $var = new event_build;
 $var -> build_event();
+
+$var = new raw_twitter_build;
+$var -> build_tweet();
