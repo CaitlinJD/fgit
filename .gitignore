@@ -124,3 +124,8 @@ wp-content/plugins/.DS_Store
 
 wp-content/themes/understrap/css/theme.min.css.map
 *.map
+
+
+*.orig
+
+*.orig

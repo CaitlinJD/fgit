@@ -19,16 +19,6 @@ function taxonomy_init($type) {
             'rewrite' => array( 'slug' => $type.'-category' ),
         )
     );
-
-    register_taxonomy(
-        $type.'tags',
-        $type,
-        array(
-            'label' => __( $type.' Tags' ),
-            'hierarchical' => false,
-            'rewrite' => array( 'slug' => $type.'-tags' ),
-        )
-    );
 }
 
 function get_params($type) {

@@ -35,3 +35,60 @@
 
     }
 }
+
+
+.tax-partnercategory {
+    article {
+        position: relative;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        p {
+            font-size: 1.1em;
+        }
+        .img-bkg {
+            display: none;
+            @media only screen and (min-width: 576px) {
+                display: block;
+                height: 370px;
+                opacity: 0.48;
+            }
+        }
+        .overlay {
+            background-color: #000;
+            border-bottom: 2px solid #fff;
+            @media only screen and (min-width: 576px) {
+                position: absolute;
+                border-bottom: none;
+            }
+        }
+
+        .relative-position {
+            height: 100%;
+            padding: 2em 0.3em;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .post-link {
+            background-color: $primary-color;
+            border: none;
+            padding: 0.5rem 0.8rem;
+            color: #fff;
+            &:hover {
+                text-decoration: none;
+            }
+            @media only screen and (min-width: 576px) {
+                position: absolute;
+                bottom: -20px;
+            }
+        }
+
+        h2 {
+            color: #fff;
+        }
+
+    }
+}
