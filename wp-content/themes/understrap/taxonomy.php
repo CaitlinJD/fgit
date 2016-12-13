@@ -29,10 +29,13 @@ $container   = get_theme_mod( 'understrap_container_type' );
                 <?php if ( have_posts() ) : ?>
 
                     <header class="page-header col-xs-10 col-sm-8 col-md-7">
-                       <h1><?php
-                        echo ( is_tax('membercategory', 'board-member')? 'Ignite the others, <br>Empowered by us.' :
-                            (is_tax('membercategory','success-stories')? 'Our Members. <br>Stories that Touch' : '') );
-                        ?> </h1>
+                        <?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+                        $saved_data = get_term_meta($term->term_id,'ba_textarea_field_id');
+
+                        echo "<h1>".$saved_data[0]."</h1>";
+                        ?>
+
+                       <h1> </h1>
 
                     <div class="page-content">
                         <p>

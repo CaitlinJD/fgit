@@ -115,7 +115,7 @@ wp-content/themes/understrap/node_modules/
 !wp-content/plugins/contact-form-7/
 !wp-content/plugins/ultimate-fields/
 !wp-content/plugins/post-types/
-#!wp-content/plugins/Tax-meta-class/
+!wp-content/plugins/Tax-meta-class/
 
 *.DS_Store
 _DS_Store
