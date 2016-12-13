@@ -111,7 +111,6 @@ wp-content/themes/understrap/assets/**
 !wp-content/themes/understrap/assets/SocialMediaIconsSVGFiles/*.png
 
 wp-content/themes/understrap/node_modules/
-wp-content/themes/understrap/src/
 !wp-content/plugins/akismet/
 !wp-content/plugins/contact-form-7/
 !wp-content/plugins/ultimate-fields/
