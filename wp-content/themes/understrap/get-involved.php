@@ -2,7 +2,12 @@
 
 <?php
 
+<<<<<<< HEAD
 get_header();
+=======
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+>>>>>>> origin/master
 
 $container   = get_theme_mod( 'understrap_container_type' );
 $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
@@ -14,6 +19,7 @@ $is_woocommerce = false;
 $this_page_id   = get_queried_object_id();
 if ( class_exists( 'WooCommerce' ) ) {
 
+<<<<<<< HEAD
     if ( is_woocommerce() || is_shop() || get_option( 'woocommerce_shop_page_id' ) === $this_page_id ||
         get_option( 'woocommerce_cart_page_id' ) == $this_page_id || get_option( 'woocommerce_checkout_page_id' ) == $this_page_id ||
         get_option( 'woocommerce_pay_page_id' ) == $this_page_id || get_option( 'woocommerce_thanks_page_id' ) === $this_page_id ||
@@ -27,6 +33,25 @@ if ( class_exists( 'WooCommerce' ) ) {
 ?>
 
 <div class="wrapper" id="page-wrapper">
+=======
+            <?php while ( have_posts() ) : the_post(); ?>
+
+                <?php get_template_part( 'loop-templates/content', 'page' ); ?>
+                <?php
+
+                 $involved_data = ( get_post_meta( get_the_ID(), 'get_involved_data', true ));
+
+                echo "<pre>";
+                print_r ($involved_data);
+                echo "</pre>";
+
+                 foreach($involved_data as $child) {
+                     echo $child["title"]. "\n";
+                     echo $child["content"]. "\n";
+                    }
+
+                 ?>
+>>>>>>> origin/master
 
     <div id="content" tabindex="-1">
 
