@@ -7,11 +7,18 @@
 
 ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-    <div class="img-bkg col-xs-12" style="background: url('<?php echo the_post_thumbnail_url('full') ?>') center right/cover no-repeat"></div>
+    <?php if (get_the_post_thumbnail()) : ?>
+        <div class="img-bkg col-xs-12" style="background: url('<?php echo the_post_thumbnail_url('full') ?>') center right/cover no-repeat"></div>
+    <?php endif; ?>
+
     <header class="entry-header col-xs-12 col-sm-12 col-md-8">
         <!-- Taxonomy Term -->
-        <?php $category = get_term_by( 'id', get_query_var('term_id'), get_query_var('taxonomy') );?>
-        <?php var_dump($category); ?>
+        <?php
+            $post_id = get_the_ID();
+            $category = wp_get_post_terms( $post_id, 'partnercategory');
+            echo "<p class=\"red-font sm-line-ht\"><b>".$category[0]->name."</b></p>";
+        ?>
+
 
         <!-- Name -->
         <?php the_title( '<h2 class="entry-title roboto">', '</h2>' ); ?>
@@ -52,28 +59,27 @@
 
     </header><!-- .entry-header -->
 
+    <!-- Highlights box -->
+    <?php if (get_uf('box_title') || get_uf('box_content') ) : ?>
+    <aside class="highlight-box">
+        <?php if ( get_uf('box_title') ) : ?>
+            <h2><?php echo get_post_meta( get_the_ID(), 'box_title', true ); ?></h2>
+        <?php endif; ?>
+        <hr>
+        <?php if ( get_uf('box_content') ) : ?>
+            <p><?php echo uf('box_content'); ?></p>
+        <?php endif; ?>
+    </aside>
+    <?php endif; ?>
 
     <div class="entry-content col-xs-12 col-sm-12 col-md-8">
         <!-- Content -->
         <?php the_content() ?>
 
-        <!-- Quote -->
-        <?php if ( get_uf('bio_quote') ) : ?>
-            <h2 class="margin-top">&ldquo;<?php echo get_post_meta( get_the_ID(), 'bio_quote', true ); ?>&rdquo;</h2>
-        <?php endif; ?>
 
 
 
     </div><!-- .entry-content -->
 
-    <aside class="highlight-box">
-        <?php if ( get_uf('box_title') ) : ?>
-            <h2><?php echo get_post_meta( get_the_ID(), 'box_title', true ); ?></h2>
-        <?php endif; ?>
-
-        <?php if ( get_uf(' box_content') ) : ?>
-            <p><?php echo get_post_meta( get_the_ID(), ' box_content', true ); ?></p>
-        <?php endif; ?>
-    </aside>
 
 </article><!-- #post-## -->
