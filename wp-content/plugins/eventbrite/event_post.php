@@ -48,6 +48,7 @@ class event_post extends event_call {
       }
 
 
+
   }
   public function create_event_post () {
     $post_id = wp_insert_post(
