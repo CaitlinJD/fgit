@@ -7802,19 +7802,45 @@ button,
     background-color: #e6e6e6;
     color: #808080; }
 
+.membership-main-content .intro-bold {
+  font-size: 18px;
+  font-weight: bold; }
+
+.membership-main-content p {
+  font-size: 14px; }
+
 .info-box {
   background-color: black;
-  padding: 1em 0.5em 1em 0.5em; }
+  padding: 2em 1.5em 2em 1.5em;
+  color: white;
+  margin-bottom: 2em; }
+  .info-box h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 26px;
+    font-weight: 500; }
+  .info-box .subheading {
+    font-size: 20px;
+    font-weight: 600; }
+  .info-box p {
+    font-size: 1em; }
+  .info-box .membership-price {
+    font-weight: bold;
+    font-size: 20px; }
+  .info-box .price-info {
+    font-size: 13px; }
+
+.membership-benefits-container {
+  margin: 2em 1em 2em 1em; }
+  .membership-benefits-container li {
+    font-size: 1em;
+    line-height: 26px;
+    margin-bottom: 1em; }
 
 .home-banner {
   background-size: cover; }
 
 .section-container {
   padding: 4em 0 4em 0; }
-  .section-container hr {
-    border: 4px solid #bc2c2d;
-    width: 70px;
-    margin-left: 0; }
 
 .banner-title {
   margin-top: 1em;
@@ -7876,6 +7902,7 @@ button,
 
 .twitter-wrapper .twit-feed-container {
   overflow: scroll;
+  overflow-x: hidden;
   height: 300px; }
   .twitter-wrapper .twit-feed-container .tweet-div {
     padding: 10px;
@@ -8068,6 +8095,9 @@ button,
 
 .wrapper {
   padding: 0; }
+
+.single-member .site-main {
+  width: 100%; }
 
 .single-member .entry-title {
   font-family: "Roboto", sans-serif;
@@ -8289,6 +8319,9 @@ p {
 .medium-font-weight {
   font-weight: 500; }
 
+.space-between {
+  justify-content: space-between; }
+
 .page-intro .page-title {
   font-family: "Playfair Display", serif;
   font-size: 48px;
@@ -8435,10 +8468,6 @@ h3 {
 
 .section-container {
   padding: 4em 0 4em 0; }
-  .section-container hr {
-    border: 4px solid #bc2c2d;
-    width: 70px;
-    margin-left: 0; }
 
 .banner-title {
   margin-top: 1em;
@@ -8500,6 +8529,7 @@ h3 {
 
 .twitter-wrapper .twit-feed-container {
   overflow: scroll;
+  overflow-x: hidden;
   height: 300px; }
   .twitter-wrapper .twit-feed-container .tweet-div {
     padding: 10px;
@@ -8672,6 +8702,9 @@ h3 {
 
 .wrapper {
   padding: 0; }
+
+.single-member .site-main {
+  width: 100%; }
 
 .single-member .entry-title {
   font-family: "Roboto", sans-serif;
@@ -8886,9 +8919,39 @@ h3 {
 .detail-title:not(:first-child) {
   margin-top: 2em; }
 
+.membership-main-content .intro-bold {
+  font-size: 18px;
+  font-weight: bold; }
+
+.membership-main-content p {
+  font-size: 14px; }
+
 .info-box {
   background-color: black;
-  padding: 1em 0.5em 1em 0.5em; }
+  padding: 2em 1.5em 2em 1.5em;
+  color: white;
+  margin-bottom: 2em; }
+  .info-box h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 26px;
+    font-weight: 500; }
+  .info-box .subheading {
+    font-size: 20px;
+    font-weight: 600; }
+  .info-box p {
+    font-size: 1em; }
+  .info-box .membership-price {
+    font-weight: bold;
+    font-size: 20px; }
+  .info-box .price-info {
+    font-size: 13px; }
+
+.membership-benefits-container {
+  margin: 2em 1em 2em 1em; }
+  .membership-benefits-container li {
+    font-size: 1em;
+    line-height: 26px;
+    margin-bottom: 1em; }
 
 .news-box {
   border: 1px solid black;
