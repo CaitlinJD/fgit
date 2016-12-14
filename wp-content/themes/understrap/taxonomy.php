@@ -17,10 +17,9 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 <?php get_template_part( 'global-templates/variables', 'none' ); ?>
 
-
 <div class="wrapper" id="archive-wrapper">
 
-    <div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
+    <div class="<?php echo esc_html( $container ); ?> no-padding" id="content" tabindex="-1">
 
         <div class="row">
 
@@ -28,16 +27,14 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
                 <?php if ( have_posts() ) : ?>
 
-                    <header class="page-header col-xs-10 col-sm-8 col-md-7">
+                    <header class="page-header row no-padding">
                         <?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
                         $saved_data = get_term_meta($term->term_id,'ba_textarea_field_id');
-
-                        echo "<h1>".$saved_data[0]."</h1>";
                         ?>
 
-                       <h1> </h1>
+                        <h1 class="col-xs-12 red-font <?php echo (is_tax('partnercategory', 'mentors')? 'col-sm-9 col-md-10' : 'col-sm-8 col-md-7'); ?>"><?php echo $saved_data[0]; ?></h1>
 
-                    <div class="page-content">
+                    <div class="page-content col-xs-10 col-sm-7 col-md-6">
                         <p>
                             <?php
                             $current_term = get_term_by( 'slug', get_query_var('term'), get_query_var('taxonomy') );

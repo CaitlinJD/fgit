@@ -17,7 +17,6 @@
 
 .post-type-archive-event {
     header {
-        padding: 1em 20px 2em;
         h1 {
             color: $primary-color;
             margin-bottom: 0.4em;
@@ -31,8 +30,12 @@
     }
 
     .page-header {
+      padding: 1em 20px 1em;
+      @media only screen and (min-width: 576px) {
         padding: 1em 10%;
+      }
     }
+
     .container {
         @media only screen and (min-width: 576px) {
             margin: 0;
@@ -53,7 +56,7 @@
             }
 
             hr {
-                margin-left: none;
+                margin-left: 0;
             }
             .img-bkg {
                 width: 100%;
