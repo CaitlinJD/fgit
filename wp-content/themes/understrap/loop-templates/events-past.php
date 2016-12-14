@@ -1,9 +1,15 @@
 <?php
 wp_reset_postdata();
+// Init a variable to store the values of the original WP Query
+$temp_query = $wp_query;
+
+$paged = get_query_var( 'paged' );
+$page = ( !$paged ? 1 : $paged );
+
 $args = array(
     "post_type"=>"event",
     "posts_per_page"=>4,
-    "paged" => 1,
+    "paged" => $page,
     'tax_query' => array(
         array(
             'taxonomy' => 'eventcategory',
@@ -14,10 +20,13 @@ $args = array(
     )
 );
 
-$query = new WP_Query($args);
+
+// Instantiate a new query
+$wp_query = new WP_Query($args);
 ?>
 
 <?php if ( have_posts() ) : ?>
+
     <div class="past-events">
         <!--  Event post type heading -->
         <?php
@@ -27,7 +36,7 @@ $query = new WP_Query($args);
         <div class="row">
 
         <?php
-        while ( $query->have_posts() ) : $query->the_post(); ?>
+        while (have_posts()) : the_post(); ?>
             <div class="article-wrapper col-xs-12 col-sm-6">
 
             <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
@@ -57,11 +66,14 @@ $query = new WP_Query($args);
         <?php endwhile; ?>
 
         <!-- The pagination component -->
-        <?php understrap_pagination(); ?>
+            <?php custom_pagination($wp_query); ?>
     </div>
 
-<?php endif; ?>
+<?php
+// Restore the $wp_query back to its original state
+    $wp_query = $temp_query;
+endif; ?>
 
-<?php wp_reset_query(); ?>
+<?php// wp_reset_query(); ?>
 
 

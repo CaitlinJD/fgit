@@ -133,3 +133,19 @@ function prefix_insert_after_paragraph( $insertion, $paragraph_id, $content ) {
 }
 
 
+// Custom pagination for load more
+function custom_pagination($wp_query) {
+    $past_evt_query = $wp_query->query_vars;
+    $total_posts = $wp_query->found_posts;
+    $posts_per_page = $past_evt_query['posts_per_page'];
+    $current_page = $past_evt_query['paged'];
+
+    $total_pages = ceil ($total_posts / $posts_per_page );
+
+    if ( $current_page < $total_pages ) {
+        $url = home_url(add_query_arg(array(),$wp->request));
+        $url .= '/event/page/';
+        $url .= $current_page + 1;
+        echo "<div class='load-more'><a href='".$url."'>SEE MORE</a></div>";
+    }
+}

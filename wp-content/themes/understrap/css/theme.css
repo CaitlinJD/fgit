@@ -8119,7 +8119,8 @@ button,
 
 .single-member .black-icons {
   width: 30px;
-  height: 30px; }
+  height: 30px;
+  margin-right: 0.4em; }
 
 .single-member .entry-meta {
   margin: 1.5rem 0; }
@@ -8203,7 +8204,8 @@ button,
 
 .single-partner img.black-icons {
   width: 30px;
-  height: 30px; }
+  height: 30px;
+  margin-right: 0.4em; }
 
 .single-partner h2 {
   color: #000; }
@@ -8230,6 +8232,12 @@ button,
 .tax-partnercategory .container {
   margin: 0;
   width: 100%; }
+
+.tax-partnercategory .page-header .img-bkg {
+  display: none; }
+
+.tax-partnercategory .page-header .btn-secondary {
+  display: none; }
 
 .tax-partnercategory header {
   padding: 1em 20px; }
@@ -8393,7 +8401,8 @@ h3 {
 
 /* BUY TICKETS btn */
 .ticket-btn {
-  margin: 2em 0; }
+  margin: 2em 0;
+  padding: 0; }
   .ticket-btn a.white-font {
     background-color: #bc2c2d;
     color: #fff;
@@ -8585,6 +8594,12 @@ h3 {
   margin: 0;
   width: 100%; }
 
+.tax-partnercategory .page-header .img-bkg {
+  display: none; }
+
+.tax-partnercategory .page-header .btn-secondary {
+  display: none; }
+
 .tax-partnercategory header {
   padding: 1em 20px; }
   @media only screen and (min-width: 576px) {
@@ -8667,7 +8682,8 @@ h3 {
 
 .single-partner img.black-icons {
   width: 30px;
-  height: 30px; }
+  height: 30px;
+  margin-right: 0.4em; }
 
 .single-partner h2 {
   color: #000; }
@@ -8780,7 +8796,8 @@ h3 {
 
 .single-member .black-icons {
   width: 30px;
-  height: 30px; }
+  height: 30px;
+  margin-right: 0.4em; }
 
 .single-member .entry-meta {
   margin: 1.5rem 0; }
