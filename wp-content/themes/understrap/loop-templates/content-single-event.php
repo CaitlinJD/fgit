@@ -20,11 +20,11 @@ $eventTitle = get_the_title();
 
             <div class="entry-content">
                 <div class="ticket-btn">
-                    <?php echo '<a href="http://www.eventbrite.com/event/' . $eventID . '?ref=ebtn" target="_blank"><img border="0" src="http://www.eventbrite.com/custombutton?eid=' . $eventID . '" alt="Register for ' . $eventTitle . ' on Eventbrite" />Buy Tickets</a>'; ?>
+                    <?php echo '<a href="http://www.eventbrite.com/event/' . $eventID . '?ref=ebtn" class="white-font" target="_blank"><img border="0" src="http://www.eventbrite.com/custombutton?eid=' . $eventID . '" alt="Register for ' . $eventTitle . ' on Eventbrite" />Buy Tickets</a>'; ?>
                 </div>
                 <?php the_content(); ?>
                 <div class="ticket-btn">
-                    <?php echo '<a href="http://www.eventbrite.com/event/' . $eventID . '?ref=ebtn" target="_blank"><img border="0" src="http://www.eventbrite.com/custombutton?eid=' . $eventID . '" alt="Register for ' . $eventTitle . ' on Eventbrite" />Buy Tickets</a>'; ?>
+                    <?php echo '<a href="http://www.eventbrite.com/event/' . $eventID . '?ref=ebtn" class="white-font" target="_blank"><img border="0" src="http://www.eventbrite.com/custombutton?eid=' . $eventID . '" alt="Register for ' . $eventTitle . ' on Eventbrite" />Buy Tickets</a>'; ?>
                 </div>
             </div><!-- .entry-content -->
         </div>
@@ -56,7 +56,7 @@ $eventTitle = get_the_title();
         </div>
 
         <div class="ticket-btn last-btn">
-            <?php echo '<a href="http://www.eventbrite.com/event/' . $eventID . '?ref=ebtn" target="_blank"><img border="0" src="http://www.eventbrite.com/custombutton?eid=' . $eventID . '" alt="Register for ' . $eventTitle . ' on Eventbrite" />Buy Tickets</a>'; ?>
+            <?php echo '<a href="http://www.eventbrite.com/event/' . $eventID . '?ref=ebtn" class="white-font" target="_blank"><img border="0" src="http://www.eventbrite.com/custombutton?eid=' . $eventID . '" alt="Register for ' . $eventTitle . ' on Eventbrite" />Buy Tickets</a>'; ?>
         </div>
 
 
@@ -78,11 +78,11 @@ $eventTitle = get_the_title();
                 </header><!-- .entry-header -->
                 <div class="entry-content">
                     <div class="ticket-btn">
-                        <?php echo '<a href="http://www.eventbrite.com/event/' . $eventID . '?ref=ebtn" target="_blank"><img border="0" src="http://www.eventbrite.com/custombutton?eid=' . $eventID . '" alt="Register for ' . $eventTitle . ' on Eventbrite" />Buy Tickets</a>'; ?>
+                        <?php echo '<a href="http://www.eventbrite.com/event/' . $eventID . '?ref=ebtn" class="white-font" target="_blank"><img border="0" src="http://www.eventbrite.com/custombutton?eid=' . $eventID . '" alt="Register for ' . $eventTitle . ' on Eventbrite" />Buy Tickets</a>'; ?>
                     </div>
                     <?php the_content(); ?>
                     <div class="ticket-btn">
-                        <?php echo '<a href="http://www.eventbrite.com/event/' . $eventID . '?ref=ebtn" target="_blank"><img border="0" src="http://www.eventbrite.com/custombutton?eid=' . $eventID . '" alt="Register for ' . $eventTitle . ' on Eventbrite" />Buy Tickets</a>'; ?>
+                        <?php echo '<a href="http://www.eventbrite.com/event/' . $eventID . '?ref=ebtn" class="white-font" target="_blank"><img border="0" src="http://www.eventbrite.com/custombutton?eid=' . $eventID . '" alt="Register for ' . $eventTitle . ' on Eventbrite" />Buy Tickets</a>'; ?>
                     </div>
                 </div><!-- .entry-content -->
                 <div class="info-wording">
@@ -99,7 +99,7 @@ $eventTitle = get_the_title();
                         <?php echo uf('events_meta_venue_address'); ?></p>
 
                     <div class="ticket-btn">
-                        <?php echo '<a href="http://www.eventbrite.com/event/' . $eventID . '?ref=ebtn" target="_blank"><img border="0" src="http://www.eventbrite.com/custombutton?eid=' . $eventID . '" alt="Register for ' . $eventTitle . ' on Eventbrite" />Buy Tickets</a>'; ?>
+                        <?php echo '<a href="http://www.eventbrite.com/event/' . $eventID . '?ref=ebtn" class="white-font" target="_blank"><img border="0" src="http://www.eventbrite.com/custombutton?eid=' . $eventID . '" alt="Register for ' . $eventTitle . ' on Eventbrite" />Buy Tickets</a>'; ?>
                     </div>
                 </div><!-- .info-wording -->
             </div>

@@ -44,6 +44,12 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
                     </div>
 
+                      <!-- BUY Tickets btn -->
+                    <?php if (is_tax('partnercategory', 'mentors')) : ?>
+                        <?php get_template_part( 'loop-templates/content', 'featured-event' ); ?>
+                    <?php endif; ?>
+
+
                     </header><!-- .page-header -->
 
                     <?php /* Start the Loop */ ?>
@@ -65,6 +71,15 @@ $container   = get_theme_mod( 'understrap_container_type' );
                             <?php endwhile; ?>
                         </div> <!-- end of row -->
                     </div> <!-- end of col-xs-12 -->
+
+                    <!-- BUY Tickets btn -->
+                    <div class="end-content col-xs-12 text-xs-center">
+                    <?php if (is_tax('partnercategory', 'mentors')) : ?>
+                        <?php get_template_part( 'loop-templates/content', 'featured-event' ); ?>
+                    <?php endif; ?>
+                    <div>
+
+
                 <?php else : ?>
 
                     <?php get_template_part( 'loop-templates/content', 'none' ); ?>

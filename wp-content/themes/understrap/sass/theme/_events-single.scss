@@ -88,25 +88,6 @@
 
     }
 
-    /* BUY TICKETS btn */
-    .ticket-btn {
-        margin: 2em 0;
-        a {
-            background-color: $primary-color;
-            color: #fff;
-            padding: 0.8em 1.8em;
-            font-size: 0.875em;
-
-            &:hover {
-                text-decoration: none;
-            }
-
-            img {
-                display: none;
-            }
-        }
-    }
-
     /* Ticket info and Location */
 
     .details {

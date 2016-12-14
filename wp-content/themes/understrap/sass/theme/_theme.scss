@@ -149,3 +149,21 @@ h3 {
 .inline-block {
     display: inline-block;
 }
+
+/* BUY TICKETS btn */
+.ticket-btn {
+    margin: 2em 0;
+    a.white-font {
+        background-color: $primary-color;
+        color: #fff;
+        padding: 0.8em 1.8em;
+        font-size: 0.875em;
+
+        img {
+            display: none;
+        }
+    }
+    a:hover.white-font {
+        text-decoration: none;
+    }
+}

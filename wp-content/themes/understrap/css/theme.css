@@ -7938,7 +7938,6 @@ button,
 .single-event {
   /* Desktop Specific Styles */
   /* Mobile Specific Styles */
-  /* BUY TICKETS btn */
   /* Ticket info and Location */ }
   @media only screen and (min-width: 576px) {
     .single-event .container {
@@ -7972,17 +7971,6 @@ button,
   .single-event .mobile .last-btn {
     text-align: center;
     padding: 3em 0; }
-  .single-event .ticket-btn {
-    margin: 2em 0; }
-    .single-event .ticket-btn a {
-      background-color: #bc2c2d;
-      color: #fff;
-      padding: 0.8em 1.8em;
-      font-size: 0.875em; }
-      .single-event .ticket-btn a:hover {
-        text-decoration: none; }
-      .single-event .ticket-btn a img {
-        display: none; }
   .single-event .details {
     line-height: 0.4em; }
   .single-event .detail-title:not(:first-child) {
@@ -8299,6 +8287,9 @@ button,
   .tax-partnercategory article p.card-text {
     margin-bottom: 0.2em; }
 
+.tax-partnercategory .end-content {
+  margin: 3.5em 0; }
+
 /** GENERAL STYLES **/
 body {
   font-size: 16; }
@@ -8399,6 +8390,19 @@ h3 {
 
 .inline-block {
   display: inline-block; }
+
+/* BUY TICKETS btn */
+.ticket-btn {
+  margin: 2em 0; }
+  .ticket-btn a.white-font {
+    background-color: #bc2c2d;
+    color: #fff;
+    padding: 0.8em 1.8em;
+    font-size: 0.875em; }
+    .ticket-btn a.white-font img {
+      display: none; }
+  .ticket-btn a:hover.white-font {
+    text-decoration: none; }
 
 .footer-newsletter {
   background-color: #bc2c2d;
@@ -8636,6 +8640,9 @@ h3 {
     color: #fff; }
   .tax-partnercategory article p.card-text {
     margin-bottom: 0.2em; }
+
+.tax-partnercategory .end-content {
+  margin: 3.5em 0; }
 
 .bio-title {
   font-size: 20px;
@@ -8882,7 +8889,6 @@ h3 {
 .single-event {
   /* Desktop Specific Styles */
   /* Mobile Specific Styles */
-  /* BUY TICKETS btn */
   /* Ticket info and Location */ }
   @media only screen and (min-width: 576px) {
     .single-event .container {
@@ -8916,17 +8922,6 @@ h3 {
   .single-event .mobile .last-btn {
     text-align: center;
     padding: 3em 0; }
-  .single-event .ticket-btn {
-    margin: 2em 0; }
-    .single-event .ticket-btn a {
-      background-color: #bc2c2d;
-      color: #fff;
-      padding: 0.8em 1.8em;
-      font-size: 0.875em; }
-      .single-event .ticket-btn a:hover {
-        text-decoration: none; }
-      .single-event .ticket-btn a img {
-        display: none; }
   .single-event .details {
     line-height: 0.4em; }
   .single-event .detail-title:not(:first-child) {
