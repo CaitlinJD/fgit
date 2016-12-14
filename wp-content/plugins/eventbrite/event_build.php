@@ -4,7 +4,7 @@ class event_build extends event_call {
   public function __construct(){
     $this->events = parent::get_events_data();
      echo "<pre>";
-      print_r($this->events);
+      //print_r($this->events);
       echo "</pre>";
   }
 

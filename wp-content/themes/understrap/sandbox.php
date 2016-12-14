@@ -3,13 +3,29 @@
 <?php
 
 
-$var = new event_build;
-$var -> build_event();
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
 
 function Generate_Featured_Image( $image_url, $post_id  ){
+    $generated_string = generateRandomString();
     $upload_dir = wp_upload_dir();
     $image_data = file_get_contents($image_url);
-    $filename = basename($image_url);
+
+    $file_parts = pathinfo($image_url);
+    $file_type = $file_parts['extension'];
+    echo $image_url."  ";
+    echo $file_type."  ";
+
+    $filename = basename($generated_string.".".$file_type);
+    echo $filename."<br>";
+
     if(wp_mkdir_p($upload_dir['path']))     $file = $upload_dir['path'] . '/' . $filename;
     else                                    $file = $upload_dir['basedir'] . '/' . $filename;
     file_put_contents($file, $image_data);
@@ -28,7 +44,10 @@ function Generate_Featured_Image( $image_url, $post_id  ){
     $res2= set_post_thumbnail( $post_id, $attach_id );
 }
 
-//Generate_Featured_Image ('https://cdn.evbuc.com/images/10406615/3213628023/1/logo.jpg', 195);
+$var = new event_build;
+$var->build_event();
+
+//Generate_Featured_Image ('https://cdn.evbuc.com/images/25674446/3213628023/1/logo.jpg', 1041);
 
 
 ?>

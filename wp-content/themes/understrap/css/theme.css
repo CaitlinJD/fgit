@@ -8233,10 +8233,7 @@ button,
   margin: 0;
   width: 100%; }
 
-.tax-partnercategory .page-header .img-bkg {
-  display: none; }
-
-.tax-partnercategory .page-header .btn-secondary {
+.tax-partnercategory .page-header img {
   display: none; }
 
 .tax-partnercategory header {
@@ -8411,6 +8408,15 @@ h3 {
     .ticket-btn a.white-font img {
       display: none; }
   .ticket-btn a:hover.white-font {
+    text-decoration: none; }
+
+/* Load more posts btn */
+.load-more a {
+  background-color: #bc2c2d;
+  color: #fff;
+  padding: 0.8em 1.8em;
+  font-size: 0.875em; }
+  .load-more a:hover {
     text-decoration: none; }
 
 .footer-newsletter {
@@ -8594,10 +8600,7 @@ h3 {
   margin: 0;
   width: 100%; }
 
-.tax-partnercategory .page-header .img-bkg {
-  display: none; }
-
-.tax-partnercategory .page-header .btn-secondary {
+.tax-partnercategory .page-header img {
   display: none; }
 
 .tax-partnercategory header {
