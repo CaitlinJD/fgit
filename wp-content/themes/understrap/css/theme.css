@@ -9225,10 +9225,12 @@ nav {
       height: 100vh;
       /* Form in the menu */ }
       nav .menu-icons #exCollapsingNavbar #main-menu {
-        float: none;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap; }
+        float: none; }
+        @media only screen and (min-width: 576px) {
+          nav .menu-icons #exCollapsingNavbar #main-menu {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap; } }
       @media only screen and (min-width: 576px) {
         nav .menu-icons #exCollapsingNavbar {
           background-color: #fff;
