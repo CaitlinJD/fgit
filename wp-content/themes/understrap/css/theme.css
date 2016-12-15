@@ -7934,6 +7934,36 @@ button,
       display: block;
       margin-top: 0.5em; }
 
+@media only screen and (min-width: 576px) {
+  .page-template-get-involved .cards-container {
+    margin-left: 10%;
+    margin-right: 10%; } }
+
+.page-template-get-involved .head {
+  padding: 0 1.25em 1em; }
+  @media only screen and (min-width: 576px) {
+    .page-template-get-involved .head {
+      margin-left: 10%;
+      margin-right: 10%; } }
+
+.page-template-get-involved .card {
+  border: none;
+  margin-bottom: 2.5em; }
+  .page-template-get-involved .card img {
+    width: 100%;
+    height: auto;
+    padding: 1.25rem; }
+  .page-template-get-involved .card .card-title {
+    font-family: "Roboto", sans-serif; }
+  .page-template-get-involved .card hr {
+    margin-left: 0; }
+  .page-template-get-involved .card p {
+    margin-bottom: 1.5em; }
+  .page-template-get-involved .card a {
+    padding: 0.8em 1.8em;
+    font-size: 0.875em;
+    text-transform: uppercase; }
+
 .event-main-section p {
   font-size: 1em; }
 
@@ -9079,6 +9109,36 @@ h3 {
   .single-event .detail-title:not(:first-child) {
     margin-top: 2em; }
 
+@media only screen and (min-width: 576px) {
+  .page-template-get-involved .cards-container {
+    margin-left: 10%;
+    margin-right: 10%; } }
+
+.page-template-get-involved .head {
+  padding: 0 1.25em 1em; }
+  @media only screen and (min-width: 576px) {
+    .page-template-get-involved .head {
+      margin-left: 10%;
+      margin-right: 10%; } }
+
+.page-template-get-involved .card {
+  border: none;
+  margin-bottom: 2.5em; }
+  .page-template-get-involved .card img {
+    width: 100%;
+    height: auto;
+    padding: 1.25rem; }
+  .page-template-get-involved .card .card-title {
+    font-family: "Roboto", sans-serif; }
+  .page-template-get-involved .card hr {
+    margin-left: 0; }
+  .page-template-get-involved .card p {
+    margin-bottom: 1.5em; }
+  .page-template-get-involved .card a {
+    padding: 0.8em 1.8em;
+    font-size: 0.875em;
+    text-transform: uppercase; }
+
 .membership-main-content .intro-bold {
   font-size: 18px;
   font-weight: bold; }
@@ -9201,6 +9261,22 @@ h3 {
   @media only screen and (min-width: 576px) {
     .tax-membercategory .img-replacement {
       display: none; } }
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .page-template-get-involved .card-columns {
+    column-count: 2; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .page-template-get-involved .card-columns {
+    column-count: 2; } }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .page-template-get-involved .card-columns {
+    column-count: 2; } }
+
+@media (min-width: 1200px) {
+  .page-template-get-involved .card-columns {
+    column-count: 2; } }
 
 nav {
   /* end of navbar-header */ }
