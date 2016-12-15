@@ -45,6 +45,11 @@ jQuery(document).ready(function($) {
             e.preventDefault();
         }
     })
+
+    // Footer search bar
+
+    $("#footer-menu").find('form').hide();
+
     // Events archive - switch order of image and content on even numbered articles
     $(".upcoming-events").children("article:odd").addClass("even-article");
     $(".upcoming-events").children("article:odd").find(".content-right").addClass("push-md-6");
