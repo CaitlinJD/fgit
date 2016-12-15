@@ -15,7 +15,7 @@
 
         <div class="overlay partner col-xs-12 col-sm-5 push-sm-1 text-xs-center">
             <div class="relative-position">
-                <p class="card-text name"><b><?php the_title() ?></b></p>
+                <p class="card-text name mentor-name"><b><?php the_title() ?></b></p>
                 <p class="card-text"><?php echo uf('bio_position'); ?></p>
                 <?php if ( get_uf('bio_quote') ) : ?>
                 <hr>

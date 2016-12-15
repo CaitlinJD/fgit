@@ -8248,12 +8248,15 @@ button,
       padding: 1em 10% 2em; } }
   .tax-partnercategory header h1 {
     margin-bottom: 0.4em; }
+  .tax-partnercategory header .img-bkg, .tax-partnercategory header .btn-secondary {
+    display: none; }
 
 .tax-partnercategory article {
   position: relative;
   color: #fff;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  /* Black box */ }
   .tax-partnercategory article p {
     font-size: 1.1em; }
   .tax-partnercategory article .img-bkg {
@@ -8274,7 +8277,7 @@ button,
         border-bottom: none; } }
   .tax-partnercategory article .relative-position {
     height: 100%;
-    padding: 2em 0.3em 2.6em;
+    padding: 2em 0.5em 2.6em;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -8283,8 +8286,9 @@ button,
     background-color: #bc2c2d;
     border: none;
     margin-top: 1em;
-    padding: 0.5rem 0.8rem;
-    color: #fff; }
+    padding: 0.8em 1.8em;
+    color: #fff;
+    font-size: 0.875em; }
     .tax-partnercategory article .post-link:hover {
       text-decoration: none; }
     @media only screen and (min-width: 576px) {
@@ -8412,6 +8416,8 @@ h3 {
     font-size: 0.875em; }
     .ticket-btn a.white-font img {
       display: none; }
+  .ticket-btn a:visited.white-font {
+    text-decoration: none; }
   .ticket-btn a:hover.white-font {
     text-decoration: none; }
 
@@ -8617,12 +8623,15 @@ h3 {
       padding: 1em 10% 2em; } }
   .tax-partnercategory header h1 {
     margin-bottom: 0.4em; }
+  .tax-partnercategory header .img-bkg, .tax-partnercategory header .btn-secondary {
+    display: none; }
 
 .tax-partnercategory article {
   position: relative;
   color: #fff;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  /* Black box */ }
   .tax-partnercategory article p {
     font-size: 1.1em; }
   .tax-partnercategory article .img-bkg {
@@ -8643,7 +8652,7 @@ h3 {
         border-bottom: none; } }
   .tax-partnercategory article .relative-position {
     height: 100%;
-    padding: 2em 0.3em 2.6em;
+    padding: 2em 0.5em 2.6em;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -8652,8 +8661,9 @@ h3 {
     background-color: #bc2c2d;
     border: none;
     margin-top: 1em;
-    padding: 0.5rem 0.8rem;
-    color: #fff; }
+    padding: 0.8em 1.8em;
+    color: #fff;
+    font-size: 0.875em; }
     .tax-partnercategory article .post-link:hover {
       text-decoration: none; }
     @media only screen and (min-width: 576px) {

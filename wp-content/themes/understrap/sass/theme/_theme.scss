@@ -164,9 +164,13 @@ h3 {
             display: none;
         }
     }
+    a:visited.white-font {
+      text-decoration: none;
+    }
     a:hover.white-font {
         text-decoration: none;
     }
+
 }
 
 /* Load more posts btn */
