@@ -1,6 +1,9 @@
 .tax-membercategory {
     header {
-        padding: 20px;
+        padding: 1em 30px;
+        @media only screen and (min-width: 576px) {
+            padding: 0;
+        }
     }
 
     .entry-title {

@@ -15,7 +15,9 @@ $query = new WP_Query($args);
             <?php if ($var == 'yes') : ?>
 
             <!-- Add just the featured event -->
-                <div class="row">
+                <?php if (is_front_page()) : ?>
+                    <div class="row">
+                <?php endif; ?>
                     <div class="img-bkg hidden-xs-down col-sm-6 col-md-6" style="background: url('<?php echo the_post_thumbnail_url('large') ?>') center right/cover no-repeat"></div>
                     <?php if (is_front_page()) : ?>
                         <div class="event-info col-xs-12 col-sm-6 col-md-6">
@@ -32,7 +34,9 @@ $query = new WP_Query($args);
                     <?php if (is_front_page()) : ?>
                         </div>
                     <?php endif; ?>
-                </div>
+                <?php if (is_front_page()) : ?>
+                    </div>
+                <?php endif; ?>
                 <?php return; ?> <!-- only let one event be featured -->
 
         <?php endif; ?>

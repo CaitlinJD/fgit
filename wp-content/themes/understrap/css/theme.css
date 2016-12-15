@@ -8136,7 +8136,10 @@ button,
     margin-right: 0.5rem; }
 
 .tax-membercategory header {
-  padding: 20px; }
+  padding: 1em 30px; }
+  @media only screen and (min-width: 576px) {
+    .tax-membercategory header {
+      padding: 0; } }
 
 .tax-membercategory .entry-title {
   font-size: 1.5em;
@@ -8281,14 +8284,20 @@ button,
   display: none; }
 
 .tax-partnercategory header {
-  padding: 1em 20px; }
+  padding: 1em 20px 1em 50px; }
   @media only screen and (min-width: 576px) {
     .tax-partnercategory header {
       padding: 1em 10% 2em; } }
+  .tax-partnercategory header .page-content {
+    padding: 0; }
   .tax-partnercategory header h1 {
-    margin-bottom: 0.4em; }
+    margin-bottom: 0.4em;
+    padding: 0; }
   .tax-partnercategory header .img-bkg, .tax-partnercategory header .btn-secondary {
     display: none; }
+  @media only screen and (min-width: 576px) {
+    .tax-partnercategory header .ticket-btn {
+      padding: 0; } }
 
 .tax-partnercategory article {
   position: relative;
@@ -8657,14 +8666,20 @@ h3 {
   display: none; }
 
 .tax-partnercategory header {
-  padding: 1em 20px; }
+  padding: 1em 20px 1em 50px; }
   @media only screen and (min-width: 576px) {
     .tax-partnercategory header {
       padding: 1em 10% 2em; } }
+  .tax-partnercategory header .page-content {
+    padding: 0; }
   .tax-partnercategory header h1 {
-    margin-bottom: 0.4em; }
+    margin-bottom: 0.4em;
+    padding: 0; }
   .tax-partnercategory header .img-bkg, .tax-partnercategory header .btn-secondary {
     display: none; }
+  @media only screen and (min-width: 576px) {
+    .tax-partnercategory header .ticket-btn {
+      padding: 0; } }
 
 .tax-partnercategory article {
   position: relative;
@@ -8803,7 +8818,10 @@ h3 {
   padding: 0; }
 
 .tax-membercategory header {
-  padding: 20px; }
+  padding: 1em 30px; }
+  @media only screen and (min-width: 576px) {
+    .tax-membercategory header {
+      padding: 0; } }
 
 .tax-membercategory .entry-title {
   font-size: 1.5em;
@@ -9165,9 +9183,6 @@ h3 {
   @media only screen and (min-width: 576px) {
     .tax-membercategory .img-replacement {
       display: none; } }
-
-.tax-membercategory .page-header {
-  padding: 10px; }
 
 nav {
   /* end of navbar-header */ }

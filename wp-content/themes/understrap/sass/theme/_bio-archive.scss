@@ -44,23 +44,35 @@
     width: 100%;
   }
 
+
   .page-header {
     img {
       display: none;
     }
-
   }
 
   header {
-    padding: 1em 20px;
+    padding: 1em 20px 1em 50px;
     @media only screen and (min-width: 576px) {
       padding: 1em 10% 2em;
     }
+    .page-content {
+      padding: 0;
+    }
+
     h1 {
       margin-bottom: 0.4em;
+      padding: 0;
+
     }
     .img-bkg, .btn-secondary {
       display: none;
+    }
+    .ticket-btn {
+
+      @media only screen and (min-width: 576px) {
+        padding: 0;
+      }
     }
   }
     article {
