@@ -67,6 +67,10 @@ $container   = get_theme_mod( 'understrap_container_type' );
                                 <?php get_template_part( 'loop-templates/content', get_post_type() ); ?>
 
                             <?php endwhile; ?>
+
+                            <!-- pagination -->
+                            <?php custom_pagination($wp_query) ?>
+
                         </div> <!-- end of row -->
                     </div> <!-- end of col-xs-12 -->
 

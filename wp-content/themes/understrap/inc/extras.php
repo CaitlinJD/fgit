@@ -142,6 +142,11 @@ function custom_pagination($wp_query) {
 
     $total_pages = ceil ($total_posts / $posts_per_page );
 
+    // return if only 1 page
+    if ($total_pages == 1 || $total_pages < 0) {
+        return;
+    }
+
     // Load more
     if ( $current_page < $total_pages ) {
         $url = home_url(add_query_arg(array(),$wp->request));
