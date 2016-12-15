@@ -8207,13 +8207,67 @@ button,
 .bio-qa {
   font-size: 20px; }
 
-.single-partner img.black-icons {
-  width: 30px;
-  height: 30px;
-  margin-right: 0.4em; }
+.single-partner .container {
+  margin: 0;
+  width: 100%; }
 
-.single-partner h2 {
-  color: #000; }
+.single-partner .entry-header {
+  padding: 1em 20px; }
+  @media only screen and (min-width: 576px) {
+    .single-partner .entry-header {
+      padding: 0; } }
+  .single-partner .entry-header p {
+    font-size: 1.1em; }
+    @media only screen and (min-width: 576px) {
+      .single-partner .entry-header p {
+        font-size: 1.3em; } }
+  .single-partner .entry-header p.red-font {
+    text-transform: uppercase; }
+  .single-partner .entry-header h1.entry-title {
+    font-family: "Roboto", sans-serif;
+    color: #000;
+    font-size: 1.6em;
+    margin: 1rem 0 0.3em; }
+    @media only screen and (min-width: 576px) {
+      .single-partner .entry-header h1.entry-title {
+        font-size: 2.2rem; } }
+  .single-partner .entry-header img.black-icons {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.4em; }
+
+.single-partner aside {
+  padding: 0.5em 20px 0.8em;
+  background-color: #000;
+  color: #fff; }
+  @media only screen and (min-width: 576px) {
+    .single-partner aside {
+      padding: 0.3em 1.4em 0.8em; } }
+  .single-partner aside hr {
+    margin-left: 0; }
+
+.single-partner .entry-content {
+  padding: 2em 20px; }
+  @media only screen and (min-width: 576px) {
+    .single-partner .entry-content {
+      padding: 0 0 1em; } }
+  .single-partner .entry-content p:first-child {
+    font-size: 1.05em; }
+  .single-partner .entry-content .quote {
+    color: #bc2c2d;
+    margin: 2em 0; }
+    @media only screen and (min-width: 576px) {
+      .single-partner .entry-content .quote {
+        font-size: 1.5em;
+        margin: 1.5em 0;
+        position: relative;
+        left: -10%; } }
+
+.single-partner .desktop .row {
+  padding: 1em 10%; }
+
+.single-partner .desktop .left-column {
+  padding: 0; }
 
 .mentor-section .mentor-section-box {
   width: 380px;
@@ -8311,7 +8365,7 @@ body {
 p {
   font-size: 1em;
   font-family: "Roboto", sans-serif;
-  line-height: 1.35em; }
+  line-height: 1.3em; }
   @media only screen and (min-width: 576px) {
     p {
       line-height: 1.425em; } }
@@ -8413,7 +8467,8 @@ h3 {
     background-color: #bc2c2d;
     color: #fff;
     padding: 0.8em 1.8em;
-    font-size: 0.875em; }
+    font-size: 0.875em;
+    text-decoration: none; }
     .ticket-btn a.white-font img {
       display: none; }
   .ticket-btn a:visited.white-font {
@@ -8700,13 +8755,67 @@ h3 {
 .bio-qa {
   font-size: 20px; }
 
-.single-partner img.black-icons {
-  width: 30px;
-  height: 30px;
-  margin-right: 0.4em; }
+.single-partner .container {
+  margin: 0;
+  width: 100%; }
 
-.single-partner h2 {
-  color: #000; }
+.single-partner .entry-header {
+  padding: 1em 20px; }
+  @media only screen and (min-width: 576px) {
+    .single-partner .entry-header {
+      padding: 0; } }
+  .single-partner .entry-header p {
+    font-size: 1.1em; }
+    @media only screen and (min-width: 576px) {
+      .single-partner .entry-header p {
+        font-size: 1.3em; } }
+  .single-partner .entry-header p.red-font {
+    text-transform: uppercase; }
+  .single-partner .entry-header h1.entry-title {
+    font-family: "Roboto", sans-serif;
+    color: #000;
+    font-size: 1.6em;
+    margin: 1rem 0 0.3em; }
+    @media only screen and (min-width: 576px) {
+      .single-partner .entry-header h1.entry-title {
+        font-size: 2.2rem; } }
+  .single-partner .entry-header img.black-icons {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.4em; }
+
+.single-partner aside {
+  padding: 0.5em 20px 0.8em;
+  background-color: #000;
+  color: #fff; }
+  @media only screen and (min-width: 576px) {
+    .single-partner aside {
+      padding: 0.3em 1.4em 0.8em; } }
+  .single-partner aside hr {
+    margin-left: 0; }
+
+.single-partner .entry-content {
+  padding: 2em 20px; }
+  @media only screen and (min-width: 576px) {
+    .single-partner .entry-content {
+      padding: 0 0 1em; } }
+  .single-partner .entry-content p:first-child {
+    font-size: 1.05em; }
+  .single-partner .entry-content .quote {
+    color: #bc2c2d;
+    margin: 2em 0; }
+    @media only screen and (min-width: 576px) {
+      .single-partner .entry-content .quote {
+        font-size: 1.5em;
+        margin: 1.5em 0;
+        position: relative;
+        left: -10%; } }
+
+.single-partner .desktop .row {
+  padding: 1em 10%; }
+
+.single-partner .desktop .left-column {
+  padding: 0; }
 
 .tax-membercategory header {
   padding: 20px; }
