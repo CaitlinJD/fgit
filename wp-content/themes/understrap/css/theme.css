@@ -7795,12 +7795,17 @@ button,
 
 .news-box {
   border: 1px solid black;
-  padding: 0.5em 0 0.5em 0; }
+  padding: 3em 0 0.5em 0;
+  width: 80%; }
   .news-box .fgit-button {
     width: 60px;
     height: 28px;
     background-color: #e6e6e6;
     color: #808080; }
+  .news-box p {
+    padding: 1em 1em 1em 1em; }
+  .news-box a {
+    padding: 1em 1em 1em 1em; }
 
 .membership-main-content .intro-bold {
   font-size: 18px;
@@ -7924,6 +7929,10 @@ button,
       font-size: 12px;
       margin-bottom: 1em;
       margin-top: 1em; }
+    .twitter-wrapper .twit-feed-container .tweet-div a {
+      font-size: 13px;
+      display: block;
+      margin-top: 0.5em; }
 
 .event-main-section p {
   font-size: 1em; }
@@ -8638,6 +8647,10 @@ h3 {
       font-size: 12px;
       margin-bottom: 1em;
       margin-top: 1em; }
+    .twitter-wrapper .twit-feed-container .tweet-div a {
+      font-size: 13px;
+      display: block;
+      margin-top: 0.5em; }
 
 .mentor-section .mentor-section-box {
   width: 380px;
@@ -9102,12 +9115,17 @@ h3 {
 
 .news-box {
   border: 1px solid black;
-  padding: 0.5em 0 0.5em 0; }
+  padding: 3em 0 0.5em 0;
+  width: 80%; }
   .news-box .fgit-button {
     width: 60px;
     height: 28px;
     background-color: #e6e6e6;
     color: #808080; }
+  .news-box p {
+    padding: 1em 1em 1em 1em; }
+  .news-box a {
+    padding: 1em 1em 1em 1em; }
 
 .sponsorship-main-content p {
   line-height: 22px; }
