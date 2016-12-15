@@ -66,7 +66,9 @@ $wp_query = new WP_Query($args);
         <?php endwhile; ?>
 
         <!-- The pagination component -->
-            <?php custom_pagination($wp_query); ?>
+            <div class="col-xs-12 text-xs-center col-sm-6 push-sm-6 text-sm-left">
+                <?php custom_pagination($wp_query); ?>
+            </div>
     </div>
 
 <?php

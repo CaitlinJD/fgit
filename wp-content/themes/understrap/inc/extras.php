@@ -146,7 +146,7 @@ function custom_pagination($wp_query) {
         $url = home_url(add_query_arg(array(),$wp->request));
         $url .= '/event/page/';
         $url .= $current_page + 1;
-        echo "<div class='load-more'><a href='".$url."'>SEE MORE</a></div>";
+        echo "<div class='load-more'><a href='".$url."'>LOAD MORE</a></div>";
     }
 }
 
@@ -154,54 +154,27 @@ function custom_pagination($wp_query) {
 // Cron job
 // Run Facebook, Twitter, Eventbrite, Instagram plugins once daily
 
-function my_cron_schedules($schedules){
-    if(!isset($schedules["1min"])){
-        $schedules["1min"] = array(
-            'interval' => 1*60,
-            'display' => __('Once every 1 minute'));
-    }
-    if(!isset($schedules["30min"])){
-        $schedules["30min"] = array(
-            'interval' => 30*60,
-            'display' => __('Once every 30 minutes'));
-    }
-    return $schedules;
-}
-add_filter('cron_schedules','my_cron_schedules');
-
-
-
-if (! wp_next_scheduled ( 'tester_cron' )) {
-    wp_schedule_event( time(), '1min', 'my_daily_event' );
-}
-//add_action( 'tester_cron', 'do_this_daily' );
-function do_this_daily() {
-    // Eventbrite
-    if (class_exists('build_event')) {
-        echo "<h1>RUNNING PLUGIN</h1>";
-        $var = new event_build;
-        $var->build_event();
-    }
-}
-
-//echo '<pre>'; print_r( _get_cron_array() ); echo '</pre>';
-
-
-
-
-
 add_action('my_hourly_event', 'do_this_hourly');
 
 function my_activation() {
-    if ( !wp_next_scheduled( 'my_hourly_event' ) ) {
-        wp_schedule_event( current_time( 'timestamp' ), 'hourly', 'my_hourly_event');
+    if ( !wp_next_scheduled( 'my_daily_event' ) ) {
+        wp_schedule_event( current_time( 'timestamp' ), 'daily', 'my_daily_event');
     }
 }
 
 add_action('wp', 'my_activation');
 
-function do_this_hourly() {
-    wp_delete_post( 994, true );
+function do_this_daily() {
+    // Eventbrite
+    if (class_exists('build_event')) {
+        $var = new event_build;
+        $var->build_event();
+    }
+
+    // Twitter
+    if (class_exists('build_tweet')) {
+        $var = new raw_twitter_build;
+        $var->build_tweet();
+    }
 }
 
-//echo '<pre>'; print_r( _get_cron_array() ); echo '</pre>';

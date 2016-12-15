@@ -173,10 +173,12 @@ h3 {
 
 .load-more {
     a {
-        background-color: $primary-color;
-        color: #fff;
+        background-color: #fff;
+        border: 1px solid $primary-color;
+        color: $primary-color;
         padding: 0.8em 1.8em;
         font-size: 0.875em;
+        font-weight: bold;
         &:hover {
             text-decoration: none;
         }

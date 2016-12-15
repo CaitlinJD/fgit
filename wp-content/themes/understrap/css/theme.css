@@ -8041,12 +8041,15 @@ button,
       text-decoration: none; }
 
 .post-type-archive-event .past-events {
-  padding: 1.5em 20px; }
+  padding: 1.5em 20px;
+  /* Load more btn */ }
   @media only screen and (min-width: 576px) {
     .post-type-archive-event .past-events {
       padding: 2em 10%; } }
   .post-type-archive-event .past-events .second-title {
     font-size: 1.3em; }
+  .post-type-archive-event .past-events .article-wrapper {
+    margin-bottom: 1em; }
   .post-type-archive-event .past-events article div.red-block {
     background-color: #bc2c2d;
     height: 14px;
@@ -8061,6 +8064,8 @@ button,
     text-decoration: underline; }
     .post-type-archive-event .past-events article .event-link:hover {
       text-decoration: none; }
+  .post-type-archive-event .past-events .load-more {
+    margin-top: 1em; }
 
 .img-bkg {
   width: 100%;
@@ -8412,10 +8417,12 @@ h3 {
 
 /* Load more posts btn */
 .load-more a {
-  background-color: #bc2c2d;
-  color: #fff;
+  background-color: #fff;
+  border: 1px solid #bc2c2d;
+  color: #bc2c2d;
   padding: 0.8em 1.8em;
-  font-size: 0.875em; }
+  font-size: 0.875em;
+  font-weight: bold; }
   .load-more a:hover {
     text-decoration: none; }
 
@@ -8875,12 +8882,15 @@ h3 {
       text-decoration: none; }
 
 .post-type-archive-event .past-events {
-  padding: 1.5em 20px; }
+  padding: 1.5em 20px;
+  /* Load more btn */ }
   @media only screen and (min-width: 576px) {
     .post-type-archive-event .past-events {
       padding: 2em 10%; } }
   .post-type-archive-event .past-events .second-title {
     font-size: 1.3em; }
+  .post-type-archive-event .past-events .article-wrapper {
+    margin-bottom: 1em; }
   .post-type-archive-event .past-events article div.red-block {
     background-color: #bc2c2d;
     height: 14px;
@@ -8895,6 +8905,8 @@ h3 {
     text-decoration: underline; }
     .post-type-archive-event .past-events article .event-link:hover {
       text-decoration: none; }
+  .post-type-archive-event .past-events .load-more {
+    margin-top: 1em; }
 
 .event-main-section p {
   font-size: 1em; }
