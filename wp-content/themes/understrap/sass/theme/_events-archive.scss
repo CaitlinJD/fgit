@@ -16,10 +16,10 @@
 }
 
 .post-type-archive-event {
-    header.row {
-        padding: 1em 20px 2em;
+    header {
         h1 {
             color: $primary-color;
+            margin-bottom: 0.4em;
         }
         .taxonomy-description {
             display: none;
@@ -30,8 +30,12 @@
     }
 
     .page-header {
+      padding: 1em 20px 1em;
+      @media only screen and (min-width: 576px) {
         padding: 1em 10%;
+      }
     }
+
     .container {
         @media only screen and (min-width: 576px) {
             margin: 0;
@@ -52,7 +56,7 @@
             }
 
             hr {
-                margin-left: none;
+                margin-left: 0;
             }
             .img-bkg {
                 width: 100%;
@@ -98,10 +102,10 @@
             font-size: 1.3em;
         }
         .article-wrapper {
-            margin: 0;
+            margin-bottom: 1em;
         }
         article {
-            margin-bottom: 2em;
+          
             div.red-block
             {
                 background-color: $primary-color;
@@ -124,6 +128,10 @@
                 }
             }
 
+        }
+        /* Load more btn */
+        .load-more {
+            margin-top: 1em;
         }
     }
 }

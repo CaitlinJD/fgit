@@ -17,10 +17,9 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 <?php get_template_part( 'global-templates/variables', 'none' ); ?>
 
-
 <div class="wrapper" id="archive-wrapper">
 
-    <div class="<?php echo esc_html( $container ); ?>" id="content" tabindex="-1">
+    <div class="<?php echo esc_html( $container ); ?> no-padding" id="content" tabindex="-1">
 
         <div class="row">
 
@@ -28,24 +27,35 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
                 <?php if ( have_posts() ) : ?>
 
-                    <header class="page-header col-xs-10 col-sm-8 col-md-7">
-                        <?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
-                        $saved_data = get_term_meta($term->term_id,'ba_textarea_field_id');
-
-                        echo "<h1>".$saved_data[0]."</h1>";
-                        ?>
-
-                       <h1> </h1>
-
-                    <div class="page-content">
-                        <p>
-                            <?php
-                            $current_term = get_term_by( 'slug', get_query_var('term'), get_query_var('taxonomy') );
-                            echo $current_term->description;
+                    <header class="page-header row no-padding">
+                        <?php if (is_tax('partnercategory', 'mentors')) : ?>
+                             <?php get_template_part( 'loop-templates/content', 'featured-event' ); ?>
+                        <?php else : ?>
+                            <?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+                            $saved_data = get_term_meta($term->term_id,'ba_textarea_field_id');
                             ?>
-                        </p>
+                            <h1 class="col-xs-12 red-font col-sm-8 col-md-7"><?php echo $saved_data[0]; ?></h1>
 
-                    </div>
+                        <?php endif; ?>
+
+                        <?php if (! is_tax('partnercategory', 'mentors') ) : ?>
+                            <div class="page-content col-xs-10 col-sm-7 col-md-6">
+                                <p>
+                                    <?php
+                                    $current_term = get_term_by( 'slug', get_query_var('term'), get_query_var('taxonomy') );
+                                    echo $current_term->description;
+                                    ?>
+                                </p>
+
+                            </div>
+
+                    <?php else : ?>
+                          <!-- BUY Tickets btn -->
+                        <?php if (is_tax('partnercategory', 'mentors')) : ?>
+                            <?php get_template_part( 'loop-templates/content', 'featured-btn' ); ?>
+                        <?php endif; ?>
+                    <?php endif; ?>
+
 
                     </header><!-- .page-header -->
 
@@ -54,20 +64,24 @@ $container   = get_theme_mod( 'understrap_container_type' );
                         <div class="row">
                             <?php while ( have_posts() ) : the_post(); ?>
 
-                                <?php
-
-                                /*
-                                 * Include the Post-Format-specific template for the content.
-                                 * If you want to override this in a child theme, then include a file
-                                 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-                                 */
-                                get_template_part( 'loop-templates/content', get_post_type() );
-                                ?>
-
+                                <?php get_template_part( 'loop-templates/content', get_post_type() ); ?>
 
                             <?php endwhile; ?>
+
+                            <!-- pagination -->
+                            <?php custom_pagination($wp_query) ?>
+
                         </div> <!-- end of row -->
                     </div> <!-- end of col-xs-12 -->
+
+                    <!-- BUY Tickets btn -->
+                    <div class="end-content col-xs-12 text-xs-center">
+                    <?php if (is_tax('partnercategory', 'mentors')) : ?>
+                        <?php get_template_part( 'loop-templates/content', 'featured-btn' ); ?>
+                    <?php endif; ?>
+                    <div>
+
+
                 <?php else : ?>
 
                     <?php get_template_part( 'loop-templates/content', 'none' ); ?>

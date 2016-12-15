@@ -18,7 +18,7 @@
 
   .entry-title {
     font-family: $primary-font;
-    color: #000;
+    color: $menu-color;
     font-size: 1.5em;
     margin: 2rem 0;
     @media only screen and (min-width: 576px) {
@@ -68,6 +68,7 @@
   .black-icons {
       width: 30px;
       height: 30px;
+      margin-right: 0.4em;
   }
 
   .entry-meta {

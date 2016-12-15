@@ -11,8 +11,9 @@ p
     font-size: $paragraph-primary-size;
     font-family: $primary-font;
     line-height: 1.3em;
+
     @media only screen and (min-width: 576px) {
-        line-height: 1.375em;
+        line-height: 1.425em;
     }
 
 }
@@ -101,7 +102,6 @@ hr
     @media only screen and (min-width: 576px) {
         border: 3px solid $primary-color;
         width: 70px;
-        margin-left: 0;
     }
 
 }
@@ -149,4 +149,44 @@ h3 {
 
 .inline-block {
     display: inline-block;
+}
+
+/* BUY TICKETS btn */
+.ticket-btn {
+    margin: 2em 0;
+    padding: 0;
+    a.white-font {
+        background-color: $primary-color;
+        color: #fff;
+        padding: 0.8em 1.8em;
+        font-size: 0.875em;
+        text-decoration: none;
+
+        img {
+            display: none;
+        }
+    }
+    a:visited.white-font {
+      text-decoration: none;
+    }
+    a:hover.white-font {
+        text-decoration: none;
+    }
+
+}
+
+/* Load more posts btn */
+
+.load-more {
+    a {
+        background-color: #fff;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+        padding: 0.8em 1.8em;
+        font-size: 0.875em;
+        font-weight: bold;
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }

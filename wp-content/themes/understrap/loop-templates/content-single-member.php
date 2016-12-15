@@ -25,31 +25,26 @@
 
         <div class="entry-meta">
             <!-- Social Media -->
-            <?php $key_1_value = get_post_meta( get_the_ID(), 'website_url', true );
-            // check if the custom field has a value
-            if ( ! empty( $key_1_value ) ) : ?>
-                <a href="<?php echo get_post_meta( get_the_ID(), 'website_url', true ) ?>" target="_blank">
+            <?php if ( get_uf('website_url') ) : ?>
+                <a href="<?php echo get_uf( 'website_url') ?>" target="_blank">
             <img src="<?php echo get_bloginfo('template_url')?>/assets/SocialMediaIconsSVGFiles/black-site.png" class="black-icons">
                 </a>
             <?php endif; ?>
 
-            <?php $key_1_value = get_post_meta( get_the_ID(), 'facebook_url', true );
-            if ( ! empty( $key_1_value ) ) : ?>
-                <a href="<?php echo get_post_meta( get_the_ID(), 'facebook_url', true ) ?>" target="_blank">
+            <?php if ( get_uf('facebook_url') ) : ?>
+                <a href="<?php echo get_uf( 'facebook_url' ) ?>" target="_blank">
                     <img class="black-icons" src="<?php echo get_bloginfo('template_url')?>/assets/SocialMediaIconsSVGFiles/black-fb.png">
                 </a>
             <?php endif; ?>
 
-            <?php $key_1_value = get_post_meta( get_the_ID(), 'instagram_url', true );
-            if ( ! empty( $key_1_value ) ) : ?>
-                <a href="<?php echo get_post_meta( get_the_ID(), 'instagram_url', true ) ?>" target="_blank">
+            <?php if ( get_uf('instagram_url') ) : ?>
+                <a href="<?php echo get_uf( 'instagram_url' ) ?>" target="_blank">
                     <img class="black-icons" src="<?php echo get_bloginfo('template_url')?>/assets/SocialMediaIconsSVGFiles/black-insta.png">
                 </a>
             <?php endif; ?>
 
-            <?php $key_1_value = get_post_meta( get_the_ID(), 'twitter_url', true );
-            if ( ! empty( $key_1_value ) ) : ?>
-                <a href="<?php echo get_post_meta( get_the_ID(), 'twitter_url', true ) ?>" target="_blank">
+            <?php if ( get_uf('twitter_url') ) : ?>
+                <a href="<?php echo get_uf( 'twitter_url' ) ?>" target="_blank">
                     <img class="black-icons" src="<?php echo get_bloginfo('template_url')?>/assets/SocialMediaIconsSVGFiles/black-twitter.png">
                 </a>
             <?php endif; ?>
@@ -73,11 +68,10 @@
         ?>
 
         <!-- Quote -->
-        <?php $key_1_value = get_post_meta( get_the_ID(), 'bio_quote', true );
-        if ( ! empty( $key_1_value ) ) : ?>
-            <h2 class="margin-top">&ldquo;<?php echo get_post_meta( get_the_ID(), 'bio_quote', true ); ?>&rdquo;
+        <?php if ( get_uf('bio_quote') ) : ?>
+            <h2 class="margin-top red-font">&ldquo;<?php echo get_post_meta( get_the_ID(), 'bio_quote', true ); ?>&rdquo;
                 <?php if (get_uf('quote_author')) : ?>
-                <br> ~ <?php echo get_post_meta( get_the_ID(), 'quote_author', true ); ?>
+                <br> ~ <?php echo get_uf( 'quote_author' ); ?>
                 <?php endif; ?>
             </h2>
         <?php endif; ?>

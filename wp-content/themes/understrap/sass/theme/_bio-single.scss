@@ -32,12 +32,86 @@
 
 .single-partner {
 
-    img.black-icons {
-        width: 30px;
-        height: 30px;
+    .container {
+        margin: 0;
+       width: 100%;
     }
 
-    h2 {
-        color: #000;
+    .entry-header {
+        padding: 1em 20px;
+        @media only screen and (min-width: 576px) {
+            padding: 0;
+        }
+
+        p {
+            font-size: 1.1em;
+            @media only screen and (min-width: 576px) {
+                font-size: 1.3em;
+            }
+        }
+        p.red-font {
+            text-transform: uppercase;
+        }
+
+        h1.entry-title {
+            font-family: $primary-font;
+            color: #000;
+            font-size: 1.6em;
+            margin: 1rem 0 0.3em;
+            @media only screen and (min-width: 576px) {
+                font-size: 2.2rem;
+            }
+        }
+
+        img.black-icons {
+            width: 30px;
+            height: 30px;
+            margin-right: 0.4em;
+        }
+    }
+
+    aside {
+        padding: 0.5em 20px 0.8em;
+        background-color: #000;
+        color: #fff;
+        @media only screen and (min-width: 576px) {
+            padding: 0.3em 1.4em 0.8em;
+        }
+
+        hr {
+            margin-left: 0;
+        }
+    }
+
+    .entry-content {
+        padding: 2em 20px;
+        @media only screen and (min-width: 576px) {
+            padding: 0 0 1em;
+        }
+
+        p:first-child {
+            font-size: 1.05em;
+        }
+
+        .quote {
+            color: $primary-color;
+            margin: 2em 0;
+            @media only screen and (min-width: 576px) {
+                font-size: 1.5em;
+                margin: 1.5em 0;
+                position: relative;
+                left: -10%;
+            }
+        }
+    }
+
+    .desktop {
+        .row {
+           padding: 1em 10%;
+        }
+
+        .left-column {
+            padding: 0;
+        }
     }
 }
