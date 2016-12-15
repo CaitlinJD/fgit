@@ -9175,7 +9175,8 @@ nav {
     nav .header-container {
       display: flex;
       justify-content: space-between;
-      align-items: center; } }
+      align-items: center;
+      padding: 0.2em 4% 0.2em 2%; } }
   nav .navbar-header {
     margin: 10px 20px;
     /* Site Logo */
@@ -9186,10 +9187,12 @@ nav {
       background: url("../assets/FGIT_Logos_forClient/FGIT_MobileWebsite/FGIT_Logo_Mobile.png") center/contain no-repeat; }
       @media only screen and (min-width: 576px) {
         nav .navbar-header .site-logo {
-          width: 93.75px;
+          margin-top: 24px;
+          width: 93px;
           height: 83px; } }
-      @media only screen and (min-width: 780px) {
+      @media only screen and (min-width: 925px) {
         nav .navbar-header .site-logo {
+          margin-top: 0;
           width: 234.9px;
           height: 118px;
           background: url("../assets/FGIT_Logos_forClient/FGIT_DesktopWeb/FGIT_logo_Desktop.png") center/contain no-repeat; } }
@@ -9201,6 +9204,7 @@ nav {
     /* end of collapsing menu */ }
     @media only screen and (min-width: 576px) {
       nav .menu-icons {
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -9215,12 +9219,16 @@ nav {
         width: 30px;
         height: 30px; }
     nav .menu-icons #exCollapsingNavbar {
+      width: 100%;
       background-color: #ececec;
       padding: 0 20px;
       height: 100vh;
       /* Form in the menu */ }
       nav .menu-icons #exCollapsingNavbar #main-menu {
-        float: none; }
+        float: none;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; }
       @media only screen and (min-width: 576px) {
         nav .menu-icons #exCollapsingNavbar {
           background-color: #fff;
@@ -9229,7 +9237,7 @@ nav {
           nav .menu-icons #exCollapsingNavbar form {
             display: none; } }
       nav .menu-icons #exCollapsingNavbar ul li a {
-        color: #000;
+        color: #333333;
         font-weight: bold;
         padding: 0.2em 0.3em; }
         nav .menu-icons #exCollapsingNavbar ul li a:hover {
@@ -9274,5 +9282,7 @@ form .submit {
 .header-icons form .input-group .field {
   border-radius: 40px; }
 
-.no-padding {
-  padding: 0; }
+.tax-membercategory nav .container, .single-member nav .container, .page-template-get-involved nav .container,
+.page-template-sponsors nav .container, .category-facebook nav .container, .category-instagram nav .container {
+  margin: 0;
+  width: 100%; }
