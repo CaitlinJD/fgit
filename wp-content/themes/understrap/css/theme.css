@@ -8083,7 +8083,7 @@ button,
 
 .single-member .entry-title {
   font-family: "Roboto", sans-serif;
-  color: #000;
+  color: #333333;
   font-size: 1.5em;
   margin: 2rem 0; }
   @media only screen and (min-width: 576px) {
@@ -8150,8 +8150,7 @@ button,
     display: none; } }
 
 .tax-membercategory h1 {
-  font-size: 2em;
-  line-height: 2.5rem; }
+  margin-bottom: 0.4em; }
 
 .tax-membercategory .card-img-overlay p {
   color: #fff;
@@ -8163,21 +8162,7 @@ button,
 .board-member-box {
   min-width: 240px;
   min-height: 240px;
-  position: relative;
-  /*
-    img
-    {
-        -webkit-filter: saturate(50%); /* Safari 6.0 - 9.0 */
-  /* filter: saturate(50%);
-    }
-
-
-    img:hover
-    {
-        -webkit-filter: saturate(100%); /* Safari 6.0 - 9.0 */
-  /*    filter: saturate(100%);
-    }
-    */ }
+  position: relative; }
   .board-member-box .board-member-box-info {
     background-color: black;
     height: 73px;
@@ -8832,8 +8817,7 @@ h3 {
     display: none; } }
 
 .tax-membercategory h1 {
-  font-size: 2em;
-  line-height: 2.5rem; }
+  margin-bottom: 0.4em; }
 
 .tax-membercategory .card-img-overlay p {
   color: #fff;
@@ -8845,21 +8829,7 @@ h3 {
 .board-member-box {
   min-width: 240px;
   min-height: 240px;
-  position: relative;
-  /*
-    img
-    {
-        -webkit-filter: saturate(50%); /* Safari 6.0 - 9.0 */
-  /* filter: saturate(50%);
-    }
-
-
-    img:hover
-    {
-        -webkit-filter: saturate(100%); /* Safari 6.0 - 9.0 */
-  /*    filter: saturate(100%);
-    }
-    */ }
+  position: relative; }
   .board-member-box .board-member-box-info {
     background-color: black;
     height: 73px;
@@ -8884,7 +8854,7 @@ h3 {
 
 .single-member .entry-title {
   font-family: "Roboto", sans-serif;
-  color: #000;
+  color: #333333;
   font-size: 1.5em;
   margin: 2rem 0; }
   @media only screen and (min-width: 576px) {
@@ -9149,8 +9119,9 @@ h3 {
 .tax-membercategory button.member-btn {
   background-color: #bc2c2d;
   border: none;
-  padding: 0.3rem;
-  color: #fff; }
+  padding: 0.8em 1.8em;
+  color: #fff;
+  font-size: 0.875em; }
   @media only screen and (min-width: 576px) {
     .tax-membercategory button.member-btn {
       display: none; } }

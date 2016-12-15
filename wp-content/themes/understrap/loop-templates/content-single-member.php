@@ -75,7 +75,7 @@
         <!-- Quote -->
         <?php $key_1_value = get_post_meta( get_the_ID(), 'bio_quote', true );
         if ( ! empty( $key_1_value ) ) : ?>
-            <h2 class="margin-top">&ldquo;<?php echo get_post_meta( get_the_ID(), 'bio_quote', true ); ?>&rdquo;
+            <h2 class="margin-top red-font">&ldquo;<?php echo get_post_meta( get_the_ID(), 'bio_quote', true ); ?>&rdquo;
                 <?php if (get_uf('quote_author')) : ?>
                 <br> ~ <?php echo get_post_meta( get_the_ID(), 'quote_author', true ); ?>
                 <?php endif; ?>

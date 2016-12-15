@@ -4,8 +4,9 @@
   button.member-btn {
     background-color: $primary-color;
     border: none;
-    padding: 0.3rem;
+    padding: 0.8em 1.8em;
     color: #fff;
+    font-size: 0.875em;
     @media only screen and (min-width: 576px) {
       display: none;
     }
