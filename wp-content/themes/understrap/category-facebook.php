@@ -1,73 +1,34 @@
-<?php /* Template Name: Get Involved */ ?>
 
 <?php get_header(); ?>
 
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
 
-            <?php while ( have_posts() ) : the_post(); ?>
-
-
-
-
-                <div class="container">
-
-                  <div class="row" >
-                    <div class="col-md-4 card"><img  src="http://media.vogue.com/r/pass/2016/02/19/15-street-style-phil-oh-day-8-fw16.jpg">
-                    <p class="card-text">New York Fashion Week is over, but the street style lives on. Here are some of our favorite moments from outside the shows.</p>
-                    <a href="https://www.facebook.com/fgi.toronto/?fref=ts class="card-link">Read More +</a>
-
+        <div class="row">
+         <div class="offset-xs-1 offset-md-2 col-xs-10 col-md-8 col-lg-6 page-intro">
+                        <h2 class="page-title">News</h2>
+                       <p>FGIT Toronto</p>
 
                     </div>
-                    <div class="col-md-4 card">
-                    <img src="https://media.timeout.com/images/102862539/image.jpg">
-                    <p class="card-text">Check back daily for the latest looks on the street during New York Fashion Week.</p>
-                  <a href="https://www.facebook.com/fgi.toronto/?fref=ts" class="card-link">Read More +</a>
-                 </div>
-
-                      <div class="col-md-4 card">
-                      <img src="http://blog.trucco.es/wp-content/uploads/2011/09/IMG_2618.jpg">
-                      <p class="card-text">Note to bloggers who change head-to-toe, paid-to-wear outfits every hour: Please stop. Find another business. You are heralding the death of style.”</p>
-                    <a href="https://www.facebook.com/fgi.toronto/?fref=ts" class="card-link">Read More +</a>
-                   </div>
+        </div>
+        <div class="row flex-items-sm-center">
+            <div class="col-md-9">
+            <div class ="row">
+            <?php query_posts('cat=facebook'); ?>
+                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>	
+                    <div class="col-md-4">
+                        <div class="news-box">
+                            <img src="<?php if( !uf('facebook_post_image')){echo uf('facebook_post_image');}else{echo 'https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-9/405246_10150652183552753_2139047369_n.jpg?oh=fbe0de6532572403fa08cd6eaa5e14b1&oe=58E7FFC8';}; ?>" />
+                                
+                            <p><?php the_content(); ?></p>
+                            <a href="<?php uf('facebook_post_url') ?>">Read More</a>
+                        </div>
                     </div>
-              </div>
-                <div class="row">
-                   <div class="col-md-4 card">
-                   <img src="http://blog.trucco.es/wp-content/uploads/2011/09/IMG_2747.jpg">
-                    <p class="card-text">As Milan Fashion Week drew to a close, Vogue‘s editorial team penned a roundtable discussion looking back on the week’s events. </p>
-                  <a href="https://www.facebook.com/fgi.toronto/?fref=ts" class="card-link">Read More +</a></div>
-
-                <div class="col-md-4 card">
-                <img src="http://images1.miaminewtimes.com/imager/the-cast-of-miami-social-sorah-d/u/original/6527876/miamisociallouis.jpg">
-                 <p class="card-text">The cast of Miami Social (Sorah Daiha, Ariel Stein, Katrina Campins, George French, Maria Lankina, Michael Cohen, and Hardy Hill) celebrated at the series-premiere party at Louis Bar-Lounge at the Gansevoort South this past July 9.</p>
-                 <a href="https://www.facebook.com/fgi.toronto/?fref=ts" class="card-link">Read More +</a>
+                <?php endwhile; endif; ?>
+                <?php wp_reset_query(); ?>
                 </div>
-             <div class="col-md-4 card">
-             <img src="http://chicstylista.com/wp-content/uploads/2013/11/MG_6696-1024x785.jpg">
-              <p class="card-text">Miami Fashion Network Launch Event Fashion Blogger </p>
-              <a href="https://www.facebook.com/fgi.toronto/?fref=ts" class="card-link">Read More +</a>
-          </div>
-      </div>
-
-  </div>
-
-
-
-
-
-
-
-                <?php //the_post_navigation(); ?>
-
-                <?php
-                // If comments are open or we have at least one comment, load up the comment template.
-                if ( comments_open() || get_comments_number() ) :
-                    comments_template();
-                endif;
-                ?>
-
-            <?php endwhile; // End of the loop. ?>
+                </div>
+        </div>
 
         </main><!-- #main -->
     </div><!-- #primary -->

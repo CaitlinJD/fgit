@@ -55,10 +55,22 @@ if ( class_exists( 'WooCommerce' ) ) {
                         
                     </div>
 
-                    <div class="offset-xs-1 offset-md-0  col-xs-10 col-md-4 twitter-wrapper">
-                        <h3>Keep In Touch With Us</h3>
+                     <div class="offset-xs-1 offset-md-0  col-xs-10 col-md-4 twitter-wrapper">
+                        <h3><?php uf('social_media_feed_title'); ?></h3>
                         <div class="twit-feed-container">
-                            <?php getTwitterInfo($twitter_data); ?>
+                        
+                            <?php query_posts('cat=twitter'); ?>
+                            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>	
+                                <div class="tweet-div">
+                                    <img class="user-pic" src="<?php uf('tweet_display_pic')?>" />
+                                    <h4><?php uf('tweet_display_name')?><span> <?php uf('tweet_user_name'); ?></span></h4>
+                                    <p><?php the_content(); ?></p>
+                                    <img style="height: 100px; <?php if( uf('tweet_media_url') == ''){echo 'display: none;';} ?>" src="<?php uf('tweet_media_url')?>" />
+                                    <a href="<?php uf('tweet_url') ?>">View on Twitter</a>
+                                </div>
+                            <?php endwhile; endif; ?>
+                            <?php wp_reset_query(); ?>
+
                         </div>
                     </div>
 
@@ -82,38 +94,23 @@ if ( class_exists( 'WooCommerce' ) ) {
                 </div>
                 
 
-                <div class="row flex-items-sm-center section-container home-third-content">                
+                 <?php $home_article_data = get_post_meta( get_the_ID(), 'home_articles', true );
+                            foreach($home_article_data as $home_article){
+                    ?>
+                    <div class="row flex-items-sm-center section-container <?php if($home_article % 2 == 0){echo 'home-third-content';}?>">           
+                        <div class="col-xs-10 col-md-8 offset-xs-1">
+                                <h3><?php echo $home_article['home_article_title']; ?></h3>
+                                <hr>
+                                <div class="row">
+                                    <p class="col-md-6"><?php echo $home_article['home_first_paragraph']; ?></p>
+                                    <p class="col-md-6"><?php echo $home_article['home_second_paragraph']; ?></p>
+                                </div>
+                                <?php if(!$home_article['home_article_link_url'] == ''){echo "<a class='article-button' href='".$home_article['home_article_link_url']."'>".$home_article['home_article_link_title']."</a>";}; ?>
+                        </div>
 
-                    <div class="col-xs-10 col-md-8 offset-xs-1">
-                    <?php $homeArticleData = get_post_meta( get_the_ID(), 'home_articles', true );?>
-                            <h3><?php echo $homeArticleData[0]['home_article_title']; ?></h3>
-                            <hr>
-                            <div class="row">
-                                <p class="col-md-6"><?php echo $homeArticleData[0]['home_first_paragraph']; ?></p>
-                                <p class="col-md-6"><?php echo $homeArticleData[0]['home_second_paragraph']; ?></p>
-                            </div>
-                            <a class="article-button" href="#">NEWSLETTER SIGNUP</a>
                     </div>
 
-                    <div class="col-xs-5 article-container">
-                    </div>
-
-                </div>
-
-                <div class="row flex-items-sm-center section-container home-fourth-content">
-                
-                    <div class="col-xs-10 col-md-8 offset-xs-1">
-                    <?php $homeArticleData = get_post_meta( get_the_ID(), 'home_articles', true );?>
-                            <h3><?php echo $homeArticleData[1]['home_article_title']; ?></h3>
-                            <hr>
-                            <div class="row">
-                                <p class="col-xs-12 col-md-6"><?php echo $homeArticleData[1]['home_first_paragraph']; ?></p>
-                                <p class="col-xs-12 col-md-6"><?php echo $homeArticleData[1]['home_second_paragraph']; ?></p>
-                            </div>
-                            <a class="article-button" href="#">NEWSLETTER SIGNUP</a>
-                    </div>
-
-                </div>
+                    <?php } ?>;
 
      </main><!-- #main -->
 
