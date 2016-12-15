@@ -7,9 +7,15 @@
 
 ?>
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+    <?php if (get_the_post_thumbnail()) :?>
     <div class="img-bkg col-xs-12" style="background: url('<?php echo the_post_thumbnail_url('full') ?>') center right/cover no-repeat"></div>
+    <?php endif; ?>
     <header class="entry-header col-xs-12 col-sm-12 col-md-8">
-        <p class="red-font sm-line-ht"><b>BOARD MEMBER</b></p>
+        <?php
+            $post_id = get_the_ID();
+            $category = wp_get_post_terms( $post_id, 'membercategory');
+            echo "<p class=\"red-font sm-line-ht\"><b>".$category[0]->name."</b></p>";
+        ?>
         <p class="red-font sm-line-ht"><b><?php echo get_post_meta( get_the_ID(), 'bio_position', true ); ?> </b></p>
 
         <?php the_title( '<h2 class="entry-title roboto">', '</h2>' ); ?>
@@ -70,9 +76,17 @@
         <?php $key_1_value = get_post_meta( get_the_ID(), 'bio_quote', true );
         if ( ! empty( $key_1_value ) ) : ?>
             <h2 class="margin-top">&ldquo;<?php echo get_post_meta( get_the_ID(), 'bio_quote', true ); ?>&rdquo;
+                <?php if (get_uf('quote_author')) : ?>
                 <br> ~ <?php echo get_post_meta( get_the_ID(), 'quote_author', true ); ?>
+                <?php endif; ?>
             </h2>
         <?php endif; ?>
+
+        <?php if (the_content()) : ?>
+        <div class="body-content">
+            <?php the_content() ?>
+        </div>
+        <? endif; ?>
 
 
 

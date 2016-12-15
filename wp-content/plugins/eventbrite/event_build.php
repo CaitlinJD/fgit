@@ -3,6 +3,9 @@
 class event_build extends event_call {
   public function __construct(){
     $this->events = parent::get_events_data();
+     echo "<pre>";
+      print_r($this->events);
+      echo "</pre>";
   }
 
   public function build_event () {
@@ -10,6 +13,7 @@ class event_build extends event_call {
     foreach ($this->events->events as $event) {
 
       $event = $event->event;
+
       $ev = array();
 
       //if ($event->status == "Live") {
@@ -21,12 +25,14 @@ class event_build extends event_call {
         $ev['events_meta_start_date'] = $event->start_date;
         $ev['events_meta_end_date'] = $event->end_date;
         $ev['events_meta_id'] = $event->id;
+        $ev['logo'] = $event->logo;
 
         /* Ticket Info */
 
-        $ev['events_meta_ticket_price'] = $event->tickets[0]->ticket->price;
+        $ev['events_meta_ticket_price_member'] = $event->tickets[0]->ticket->price;
         $ev['events_meta_ticket_sold'] = $event->tickets[0]->ticket->quantity_sold;
         $ev['events_meta_ticket_avail'] = $event->tickets[0]->ticket->quantity_available;
+        $ev['events_meta_ticket_price_nonmember'] = $event->tickets[1]->ticket->price;
 
         /* Address Info */
 

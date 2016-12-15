@@ -115,6 +115,10 @@ wp-content/themes/understrap/node_modules/
 !wp-content/plugins/contact-form-7/
 !wp-content/plugins/ultimate-fields/
 !wp-content/plugins/post-types/
+!wp-content/plugins/Tax-meta-class/
+!wp-content/plugins/twitter-to-post/
+!wp-content/plugins/facebook-to-post/
+!wp-content/plugins/insta-to-post/
 
 *.DS_Store
 _DS_Store
@@ -125,3 +129,8 @@ wp-content/plugins/.DS_Store
 wp-content/themes/understrap/css/theme.min.css.map
 wp-content/themes/understrap/sandbox.php
 *.map
+
+
+*.orig
+
+*.orig

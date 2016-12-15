@@ -55,7 +55,7 @@ if ( class_exists( 'WooCommerce' ) ) {
                         
                     </div>
 
-                    <div class="offset-xs-1 offset-md-0  col-xs-10 col-md-4 twitter-wrapper">
+                     <div class="offset-xs-1 offset-md-0  col-xs-10 col-md-4 twitter-wrapper">
                         <h3><?php uf('social_media_feed_title'); ?></h3>
                         <div class="twit-feed-container">
                         
@@ -93,8 +93,8 @@ if ( class_exists( 'WooCommerce' ) ) {
                         
                 </div>
                 
-               
-                    <?php $home_article_data = get_post_meta( get_the_ID(), 'home_articles', true );
+
+                 <?php $home_article_data = get_post_meta( get_the_ID(), 'home_articles', true );
                             foreach($home_article_data as $home_article){
                     ?>
                     <div class="row flex-items-sm-center section-container <?php if($home_article % 2 == 0){echo 'home-third-content';}?>">           
@@ -111,8 +111,6 @@ if ( class_exists( 'WooCommerce' ) ) {
                     </div>
 
                     <?php } ?>;
-
-         
 
      </main><!-- #main -->
 

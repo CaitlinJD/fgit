@@ -2,10 +2,19 @@
 
 /** GENERAL STYLES **/
 
+body {
+    font-size: 16;
+}
+
 p
 {
     font-size: $paragraph-primary-size;
     font-family: $primary-font;
+    line-height: 1.3em;
+    @media only screen and (min-width: 576px) {
+        line-height: 1.375em;
+    }
+
 }
 
 .bold
@@ -83,15 +92,39 @@ p
         line-height: 22px;
     }
 
-    hr
-    {
+}
+
+hr
+{
+    border: 2px solid $primary-color;
+    width: 70px;
+    @media only screen and (min-width: 576px) {
         border: 3px solid $primary-color;
         width: 70px;
         margin-left: 0;
     }
 
-    
+}
 
+h1 {
+    font-family: $secondary-font;
+    font-size: 2em;
+    @media only screen and (min-width: 576px) {
+        font-size: 3em;
+    }
+
+}
+
+h2 {
+    font-size: 1.625em;
+    font-family: $secondary-font;
+    line-height: 1.5em;
+    margin: 0.8em 0;
+}
+
+h3 {
+    font-size: 1.3em;
+    font-family: $secondary-font;
 }
 
 .event-title
@@ -108,4 +141,12 @@ p
     border: 2px solid $primary-color;
     padding: 15px 20px 15px 20px;
     
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.inline-block {
+    display: inline-block;
 }
