@@ -55,7 +55,11 @@ if ( class_exists( 'WooCommerce' ) ) {
                         
                     </div>
 
+<<<<<<< HEAD
                     <div class="offset-xs-1 offset-md-0  col-xs-10 col-md-4 twitter-wrapper">
+=======
+                     <div class="offset-xs-1 offset-md-0  col-xs-10 col-md-4 twitter-wrapper">
+>>>>>>> 80dadb6c6543ac8959e672f44f22ec516563dde2
                         <h3><?php uf('social_media_feed_title'); ?></h3>
                         <div class="twit-feed-container">
                         
@@ -93,7 +97,28 @@ if ( class_exists( 'WooCommerce' ) ) {
                         
                 </div>
                 
+               
+                    <?php $home_article_data = get_post_meta( get_the_ID(), 'home_articles', true );
+                            foreach($home_article_data as $home_article){
+                    ?>
+                    <div class="row flex-items-sm-center section-container <?php if($home_article % 2 == 0){echo 'home-third-content';}?>">           
+                        <div class="col-xs-10 col-md-8 offset-xs-1">
+                                <h3><?php echo $home_article['home_article_title']; ?></h3>
+                                <hr>
+                                <div class="row">
+                                    <p class="col-md-6"><?php echo $home_article['home_first_paragraph']; ?></p>
+                                    <p class="col-md-6"><?php echo $home_article['home_second_paragraph']; ?></p>
+                                </div>
+                                <?php if(!$home_article['home_article_link_url'] == ''){echo "<a class='article-button' href='".$home_article['home_article_link_url']."'>".$home_article['home_article_link_title']."</a>";}; ?>
+                        </div>
 
+<<<<<<< HEAD
+                    </div>
+
+                    <?php } ?>;
+
+         
+=======
                  <?php $home_article_data = get_post_meta( get_the_ID(), 'home_articles', true );
                             foreach($home_article_data as $home_article){
                     ?>
@@ -111,6 +136,7 @@ if ( class_exists( 'WooCommerce' ) ) {
                     </div>
 
                     <?php } ?>;
+>>>>>>> 80dadb6c6543ac8959e672f44f22ec516563dde2
 
      </main><!-- #main -->
 

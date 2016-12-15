@@ -22,7 +22,7 @@
 
 
     $oauth_access_token = "24305766-brjaqdEK99qX6ARiZAcdhQk4HNRCgwIeGN9WHRakA";
-    $oauth_access_token_secret = "GzkwH1NNPK3FcBHOC2OnbsdmS2qGeWp9np2EGwvSg7DWg";
+    $oauth_access_token_secret = "GzkwH1NNPK3FcBHOC2OmnbsdmS2qGeWp9np2EGwvSg7DWg";
     $consumer_key = "ThRCM5NyZmE4T5SQHj6MPtM2K";
     $consumer_secret = "ynUdFNA4YNQSTpnN1kRdqeFNSL3g7n0pvzVIQOLqiG60wUyxRH";
 
