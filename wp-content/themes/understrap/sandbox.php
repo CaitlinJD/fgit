@@ -44,8 +44,8 @@ function Generate_Featured_Image( $image_url, $post_id  ){
     $res2= set_post_thumbnail( $post_id, $attach_id );
 }
 
-$var = new event_build;
-$var->build_event();
+//$var = new event_build;
+//$var->build_event();
 
 //Generate_Featured_Image ('https://cdn.evbuc.com/images/25674446/3213628023/1/logo.jpg', 1041);
 

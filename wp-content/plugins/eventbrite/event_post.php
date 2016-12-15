@@ -55,8 +55,8 @@ class event_post extends event_call {
         update_post_meta($this->post_id,$meta_key,$value);
       }
     }
-    //echo $this->event["logo"]." // ".$this->post_id."<br>";
-      self::Generate_Featured_Image ($this->event['logo']);
+
+     //self::Generate_Featured_Image ($this->event['logo']);
 
      // Updating event taxonomy
       $curdate=date('Y-m-d H:i:s');
@@ -82,7 +82,7 @@ class event_post extends event_call {
       )
     );
     $this->post_id = $post_id;
-      self::Generate_Featured_Image ($this->event['logo']);
+    self::Generate_Featured_Image ($this->event['logo']);
     self::update_event_post();
   }
   public function import_events () {

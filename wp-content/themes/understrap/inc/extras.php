@@ -142,6 +142,7 @@ function custom_pagination($wp_query) {
 
     $total_pages = ceil ($total_posts / $posts_per_page );
 
+    // Load more
     if ( $current_page < $total_pages ) {
         $url = home_url(add_query_arg(array(),$wp->request));
         $url .= '/event/page/';
