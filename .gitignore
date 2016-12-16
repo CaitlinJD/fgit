@@ -134,3 +134,9 @@ wp-content/themes/understrap/sandbox.php
 *.orig
 
 *.orig
+
+wp-content/themes/understrap/src/sass/bootstrap4/utilities/_clearfix.scss
+
+*.orig
+
+*.orig
