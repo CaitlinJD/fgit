@@ -5,6 +5,9 @@ nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 0.2em 4% 0.2em 2%;
+
+
     }
   }
 
@@ -15,11 +18,15 @@ nav {
       width: 37.5px;
       height: 33.2px;
       background: url('../assets/FGIT_Logos_forClient/FGIT_MobileWebsite/FGIT_Logo_Mobile.png') center/contain no-repeat;
+
       @media only screen and (min-width: 576px) {
-        width: 93.75px;
+        margin-top: 24px;
+        width: 93px;
         height: 83px;
       }
-      @media only screen and (min-width: 780px) {
+
+      @media only screen and (min-width: 925px) {
+        margin-top: 0;
         width: 234.9px;
         height: 118px;
         background: url('../assets/FGIT_Logos_forClient/FGIT_DesktopWeb/FGIT_logo_Desktop.png') center/contain no-repeat;
@@ -35,6 +42,7 @@ nav {
 
   .menu-icons {
     @media only screen and (min-width: 576px) {
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -56,12 +64,18 @@ nav {
 
     /* Collapsing Menu - Primary */
     #exCollapsingNavbar {
+      width: 100%;
       background-color: #ececec;
       padding: 0 20px;
       height: 100vh;
 
       #main-menu{
         float: none;
+        @media only screen and (min-width: 576px) {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+        }
       }
 
       @media only screen and (min-width: 576px) {
@@ -74,7 +88,7 @@ nav {
       }
 
       ul li a {
-        color: #000;
+        color: $menu-color;
         font-weight: bold;
         padding: 0.2em 0.3em;
         &:hover {
@@ -150,6 +164,13 @@ form {
   border-radius: 40px;
 }
 
-.no-padding {
-  padding: 0;
+
+
+.tax-membercategory, .single-member, .page-template-get-involved,
+.page-template-sponsors, .category-facebook, .category-instagram, .home{
+    nav .container {
+      margin: 0;
+      width: 100%;
+    }
 }
+

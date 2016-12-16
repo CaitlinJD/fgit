@@ -1,92 +1,113 @@
-.home-banner
-{
-    background-size: cover; 
+.home {
 
-}
-
-.section-container
-{
-    padding: 4em 0 4em 0;
-    
-}
-.banner-title
-    {
-        margin-top: 1em;
-        font-family: $secondary-font;
-        font-size: 24px;
-        line-height: 30px;
-        color: $secondary-color;
-        margin-bottom: 0.5em;
-
-        @media only screen and (min-width: 576px ) {
-            margin-top: 1em;
-            font-size: 26px;
-            line-height: 30px;
-        }
-
-         @media only screen and (min-width: 992px ) {
-            line-height: 52px;
-            font-size: $home-section-title;
-        }
-       
+  .home-banner {
+    margin: 1em 0;
+    position: relative;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    @media only screen and (min-width: 576px) {
+      height: 360px;
+    }
+    @media only screen and (min-width: 992px) {
+      height: 440px;
     }
 
-#home-banner-button
-{
+    .banner-img {
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 100%;
+      filter: brightness(50%);
+    }
+
+    .title-section {
+      position: absolute;
+
+    }
+
+  }
+
+  .banner-title {
+    margin-top: 1em;
+    font-family: $secondary-font;
+    font-size: 24px;
+    line-height: 30px;
+    color: #fff;
+    margin-bottom: 0.5em;
+
+    @media only screen and (min-width: 576px) {
+      margin-top: 1em;
+      font-size: 26px;
+      line-height: 30px;
+    }
+
+    @media only screen and (min-width: 992px) {
+      line-height: 52px;
+      font-size: $home-section-title;
+    }
+
+  }
+
+  #home-banner-button {
     background-color: white;
     color: $primary-color;
     text-transform: uppercase;
     font-weight: 700;
     margin-top: 2em;
-}
+  }
 
-.home-secondary-content
-{
-      padding-top: 2.5em;
-      padding-bottom: 2.5em;
+  .home-secondary-content {
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
 
-    h3
-    {
-        margin-bottom: 1em;
+    h3 {
+      margin-bottom: 1em;
+      font-family: $primary-font;
     }
 
-    p
-    {
-        margin-bottom: 2em;
+    p {
+      margin-bottom: 2em;
     }
-    .article-container
-    {
-        width: 80%;
+    .article-container {
+      width: 80%;
     }
-}
+  }
 
-.home-third-content
-{
-      padding-top: 2.5em;
-      padding-bottom: 2.5em;
-      background-color: black;
+  .home-third-content {
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    background-color: black;
+    color: $secondary-color;
+
+    h3 {
+      font-family: $secondary-font;
       color: $secondary-color;
-
-      h3{
-        font-family: $secondary-font;
-        color: $secondary-color;
-        font-size: 32px;
+      font-size: 32px;
     }
-}
+  }
 
-.home-fourth-content
-{
-      padding-top: 2.5em;
-      padding-bottom: 2.5em;
-      color: black;
+  .home-fourth-content {
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    color: black;
 
-      h3{
-        font-family: $secondary-font;
-        color: $third-color;
-        font-size: 32px;
+    h3 {
+      font-family: $secondary-font;
+      color: $third-color;
+      font-size: 32px;
     }
-}
+  }
 
+  .twitter-wrapper {
+
+    h3 {
+      font-family: $secondary-font;
+      color: $primary-color;
+      font-size: 32px;
+    }
+
+<<<<<<< HEAD
 .twitter-wrapper{
 
     h3
@@ -142,6 +163,128 @@
                 margin-top: 1em;
                 display: block;
             }
+=======
+    .twit-feed-container {
+      overflow: scroll;
+      overflow-x: hidden;
+      height: 300px;
+
+      .tweet-div {
+        padding: 10px;
+        border-bottom: 1px solid #D3D3D3;
+
+        .user-pic {
+          margin-right: 10px;
+          width: 30px;
+          height: 30px;
+          align: left;
+          display: inline;
+          border-radius: 20px;
+>>>>>>> remotes/CaitlinJD/master
         }
+
+        h4 {
+          display: inline;
+          font-size: 12px;
+          font-weight: bold;
+          span {
+
+            color: grey;
+          }
+        }
+
+        p {
+          font-size: 12px;
+          margin-bottom: 1em;
+          margin-top: 1em;
+        }
+
+        a {
+          font-size: 13px;
+          display: block;
+          margin-top: 0.5em;
+
+        }
+      }
     }
+  }
+  hr {
+    margin-left: 0;
+  }
+  a.article-button {
+      margin: 1em 0;
+      padding: 0.8em 1.8em;
+      font-size: 0.875em;
+      font-weight: normal;
+      text-transform: uppercase;
+  }
+  a:hover.article-button {
+    color: #fff;
+    text-decoration: none;
+  }
+  .home-link {
+    margin: 1em 0;
+
+  }
+
+  .section-container {
+      margin-bottom: 3em;
+  }
+
+  .odd-article {
+    background-color: #000;
+    color: #fff;
+    h2 {
+      color: #fff;
+    }
+<<<<<<< HEAD
+=======
+  }
+
+  .home-article {
+    padding: 1em;
+  }
+
+  .home-featured-event {
+    .img-bkg {
+      height: auto;
+    }
+    .event-info {
+      h2 {
+        margin-top: 0;
+      }
+      a {
+        background-color: $primary-color;
+        border: none;
+        border-radius: 0;
+        color: #fff;
+        padding: 0.8em 1.8em;
+        font-size: 0.875em;
+      }
+    }
+  }
+
+  .article-container, .twitter-wrapper, .home-featured-event,
+  .section-container {
+    padding: 0 20px 0;
+    @media only screen and (min-width: 576px) {
+      padding: auto;
+    }
+  }
+
+  .home-banner.section-container {
+    padding: 0;
+    @media only screen and (min-width: 576px) {
+      padding: auto;
+    }
+  }
+
+  .home-repeater {
+    margin-bottom: 1em;
+    @media only screen and (min-width: 576px) {
+      padding: auto;
+    }
+  }
+
+>>>>>>> remotes/CaitlinJD/master
 }

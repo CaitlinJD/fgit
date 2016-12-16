@@ -34,10 +34,13 @@
                color: white;
                font-family: $primary-font;
                font-size: 0.9em;
+<<<<<<< HEAD
                  @include media-breakpoint-only(xs) {
                      font-size: 0.75em;
                  }
 
+=======
+>>>>>>> remotes/CaitlinJD/master
             }
 
             input[type="submit"]
@@ -52,9 +55,12 @@
                 font-family: $primary-font;
                 font-size: 0.85em;
                 border: 8px solid #fff;
+<<<<<<< HEAD
                 @include media-breakpoint-only(xs) {
                      font-size: 0.7em;
                  }
+=======
+>>>>>>> remotes/CaitlinJD/master
             }
     }
 }

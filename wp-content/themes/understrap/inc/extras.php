@@ -143,3 +143,68 @@ $var -> build_insta_post();
 
 
 
+
+
+// Custom pagination for load more
+function custom_pagination($wp_query) {
+    $past_evt_query = $wp_query->query_vars;
+    $total_posts = $wp_query->found_posts;
+    $posts_per_page = $past_evt_query['posts_per_page'];
+    $current_page = $past_evt_query['paged'];
+
+    $total_pages = ceil ($total_posts / $posts_per_page );
+
+    // return if only 1 page
+    if ($total_pages == 1 || $total_pages < 0) {
+        return;
+    }
+
+    // Load more
+    if ( $current_page < $total_pages ) {
+        $url = home_url(add_query_arg(array(),$wp->request));
+        $url .= '/event/page/';
+        $url .= $current_page + 1;
+        echo "<div class='load-more'><a href='".$url."'>LOAD MORE</a></div>";
+    }
+}
+
+
+// Cron job
+// Run Facebook, Twitter, Eventbrite, Instagram plugins once daily
+
+add_action('my_hourly_event', 'do_this_hourly');
+
+function my_activation() {
+    if ( !wp_next_scheduled( 'my_hourly_event' ) ) {
+        wp_schedule_event( current_time( 'timestamp' ), 'hourly', 'my_hourly_event');
+    }
+}
+
+add_action('wp', 'my_activation');
+
+function do_this_hourly() {
+    // Eventbrite
+    if (class_exists('build_event')) {
+        $var = new event_build;
+        $var->build_event();
+    }
+
+    // Twitter
+    if (class_exists('build_tweet')) {
+        $var = new raw_twitter_build;
+        $var->build_tweet();
+    }
+
+    // Instagram
+    if ( class_exists('build_insta_post')) {
+        $var = new raw_insta_build;
+        $var->build_insta_post();
+    }
+
+    // Facebook
+    if (class_exists('build_facebook_post')) {
+        $var = new raw_facebook_build;
+        $var->build_facebook_post();
+    }
+}
+

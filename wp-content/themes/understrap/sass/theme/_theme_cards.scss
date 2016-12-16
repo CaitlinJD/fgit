@@ -4,8 +4,9 @@
   button.member-btn {
     background-color: $primary-color;
     border: none;
-    padding: 0.3rem;
+    padding: 0.8em 1.8em;
     color: #fff;
+    font-size: 0.875em;
     @media only screen and (min-width: 576px) {
       display: none;
     }
@@ -60,7 +61,23 @@
     }
   }
 
-  .page-header {
-    padding: 10px;
+}
+
+// Get involved cards
+.page-template-get-involved {
+  .card-columns {
+    @include media-breakpoint-only(sm) {
+      column-count: 2;
+    }
+    @include media-breakpoint-only(md) {
+      column-count: 2;
+    }
+    @include media-breakpoint-only(lg) {
+      column-count: 2;
+    }
+    @include media-breakpoint-only(xl) {
+      column-count: 2;
+    }
+
   }
 }

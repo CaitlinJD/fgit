@@ -37,7 +37,44 @@
 }
 
 
+
 .tax-partnercategory {
+  .container {
+    margin: 0;
+    width: 100%;
+  }
+
+
+  .page-header {
+    img {
+      display: none;
+    }
+  }
+
+  header {
+    padding: 1em 20px 1em 50px;
+    @media only screen and (min-width: 576px) {
+      padding: 1em 10% 2em;
+    }
+    .page-content {
+      padding: 0;
+    }
+
+    h1 {
+      margin-bottom: 0.4em;
+      padding: 0;
+
+    }
+    .img-bkg, .btn-secondary {
+      display: none;
+    }
+    .ticket-btn {
+
+      @media only screen and (min-width: 576px) {
+        padding: 0;
+      }
+    }
+  }
     article {
         position: relative;
         color: #fff;
@@ -52,6 +89,8 @@
                 display: block;
                 height: 370px;
                 opacity: 0.48;
+                margin: 0;
+              padding: 0 10% ;
             }
         }
         .overlay {
@@ -63,9 +102,10 @@
             }
         }
 
+        /* Black box */
         .relative-position {
             height: 100%;
-            padding: 2em 0.3em;
+            padding: 2em 0.5em 2.6em;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -75,8 +115,10 @@
         .post-link {
             background-color: $primary-color;
             border: none;
-            padding: 0.5rem 0.8rem;
+            margin-top: 1em;
+            padding: 0.8em 1.8em;
             color: #fff;
+            font-size: 0.875em;
             &:hover {
                 text-decoration: none;
             }
@@ -87,8 +129,17 @@
         }
 
         h2 {
+            margin: 0.15em 0;
             color: #fff;
         }
 
+        p.card-text {
+          margin-bottom: 0.2em;
+        }
+
     }
+  .end-content {
+    margin: 3.5em 0;
+}
+
 }
