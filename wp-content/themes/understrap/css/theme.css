@@ -7841,98 +7841,143 @@ button,
     line-height: 26px;
     margin-bottom: 1em; }
 
-.home-banner {
-  background-size: cover; }
+.home .home-banner {
+  margin: 1em 0;
+  position: relative;
+  height: 250px;
+  display: flex;
+  align-items: center; }
+  @media only screen and (min-width: 576px) {
+    .home .home-banner {
+      height: 360px; } }
+  @media only screen and (min-width: 992px) {
+    .home .home-banner {
+      height: 440px; } }
+  .home .home-banner .banner-img {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    filter: brightness(50%); }
+  .home .home-banner .title-section {
+    position: absolute; }
 
-.section-container {
-  padding: 4em 0 4em 0; }
-
-.banner-title {
+.home .banner-title {
   margin-top: 1em;
   font-family: "Playfair Display", serif;
   font-size: 24px;
   line-height: 30px;
-  color: #ececec;
+  color: #fff;
   margin-bottom: 0.5em; }
   @media only screen and (min-width: 576px) {
-    .banner-title {
+    .home .banner-title {
       margin-top: 1em;
       font-size: 26px;
       line-height: 30px; } }
   @media only screen and (min-width: 992px) {
-    .banner-title {
+    .home .banner-title {
       line-height: 52px;
       font-size: 40px; } }
 
-#home-banner-button {
+.home #home-banner-button {
   background-color: white;
   color: #bc2c2d;
   text-transform: uppercase;
   font-weight: 700;
   margin-top: 2em; }
 
-.home-secondary-content {
+.home .home-secondary-content {
   padding-top: 2.5em;
   padding-bottom: 2.5em; }
-  .home-secondary-content h3 {
-    margin-bottom: 1em; }
-  .home-secondary-content p {
+  .home .home-secondary-content h3 {
+    margin-bottom: 1em;
+    font-family: "Roboto", sans-serif; }
+  .home .home-secondary-content p {
     margin-bottom: 2em; }
-  .home-secondary-content .article-container {
+  .home .home-secondary-content .article-container {
     width: 80%; }
 
-.home-third-content {
+.home .home-third-content {
   padding-top: 2.5em;
   padding-bottom: 2.5em;
   background-color: black;
   color: #ececec; }
-  .home-third-content h3 {
+  .home .home-third-content h3 {
     font-family: "Playfair Display", serif;
     color: #ececec;
     font-size: 32px; }
 
-.home-fourth-content {
+.home .home-fourth-content {
   padding-top: 2.5em;
   padding-bottom: 2.5em;
   color: black; }
-  .home-fourth-content h3 {
+  .home .home-fourth-content h3 {
     font-family: "Playfair Display", serif;
     color: #4d4d4d;
     font-size: 32px; }
 
-.twitter-wrapper h3 {
+.home .twitter-wrapper h3 {
   font-family: "Playfair Display", serif;
   color: #bc2c2d;
   font-size: 32px; }
 
-.twitter-wrapper .twit-feed-container {
+.home .twitter-wrapper .twit-feed-container {
   overflow: scroll;
   overflow-x: hidden;
   height: 300px; }
-  .twitter-wrapper .twit-feed-container .tweet-div {
+  .home .twitter-wrapper .twit-feed-container .tweet-div {
     padding: 10px;
     border-bottom: 1px solid #D3D3D3; }
-    .twitter-wrapper .twit-feed-container .tweet-div .user-pic {
+    .home .twitter-wrapper .twit-feed-container .tweet-div .user-pic {
       margin-right: 10px;
       width: 30px;
       height: 30px;
       align: left;
       display: inline;
       border-radius: 20px; }
-    .twitter-wrapper .twit-feed-container .tweet-div h4 {
+    .home .twitter-wrapper .twit-feed-container .tweet-div h4 {
       display: inline;
       font-size: 12px;
       font-weight: bold; }
-      .twitter-wrapper .twit-feed-container .tweet-div h4 span {
+      .home .twitter-wrapper .twit-feed-container .tweet-div h4 span {
         color: grey; }
-    .twitter-wrapper .twit-feed-container .tweet-div p {
+    .home .twitter-wrapper .twit-feed-container .tweet-div p {
       font-size: 12px;
       margin-bottom: 1em;
       margin-top: 1em; }
-    .twitter-wrapper .twit-feed-container .tweet-div a {
+    .home .twitter-wrapper .twit-feed-container .tweet-div a {
       font-size: 13px;
       display: block;
       margin-top: 0.5em; }
+
+.home hr {
+  margin-left: 0; }
+
+.home a.article-button {
+  margin: 1em 0;
+  padding: 0.8em 1.8em;
+  font-size: 0.875em;
+  font-weight: normal;
+  text-transform: uppercase; }
+
+.home a:hover.article-button {
+  color: #fff;
+  text-decoration: none; }
+
+.home .home-link {
+  margin: 1em 0; }
+
+.home .section-container {
+  margin-bottom: 3em; }
+
+.home .odd-article {
+  background-color: #000;
+  color: #fff; }
+  .home .odd-article h2 {
+    color: #fff; }
+
+.home .home-article {
+  padding: 1em; }
 
 @media only screen and (min-width: 576px) {
   .page-template-get-involved .cards-container {
@@ -8589,98 +8634,143 @@ h3 {
   #footer-menu {
     flex-direction: row; } }
 
-.home-banner {
-  background-size: cover; }
+.home .home-banner {
+  margin: 1em 0;
+  position: relative;
+  height: 250px;
+  display: flex;
+  align-items: center; }
+  @media only screen and (min-width: 576px) {
+    .home .home-banner {
+      height: 360px; } }
+  @media only screen and (min-width: 992px) {
+    .home .home-banner {
+      height: 440px; } }
+  .home .home-banner .banner-img {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    filter: brightness(50%); }
+  .home .home-banner .title-section {
+    position: absolute; }
 
-.section-container {
-  padding: 4em 0 4em 0; }
-
-.banner-title {
+.home .banner-title {
   margin-top: 1em;
   font-family: "Playfair Display", serif;
   font-size: 24px;
   line-height: 30px;
-  color: #ececec;
+  color: #fff;
   margin-bottom: 0.5em; }
   @media only screen and (min-width: 576px) {
-    .banner-title {
+    .home .banner-title {
       margin-top: 1em;
       font-size: 26px;
       line-height: 30px; } }
   @media only screen and (min-width: 992px) {
-    .banner-title {
+    .home .banner-title {
       line-height: 52px;
       font-size: 40px; } }
 
-#home-banner-button {
+.home #home-banner-button {
   background-color: white;
   color: #bc2c2d;
   text-transform: uppercase;
   font-weight: 700;
   margin-top: 2em; }
 
-.home-secondary-content {
+.home .home-secondary-content {
   padding-top: 2.5em;
   padding-bottom: 2.5em; }
-  .home-secondary-content h3 {
-    margin-bottom: 1em; }
-  .home-secondary-content p {
+  .home .home-secondary-content h3 {
+    margin-bottom: 1em;
+    font-family: "Roboto", sans-serif; }
+  .home .home-secondary-content p {
     margin-bottom: 2em; }
-  .home-secondary-content .article-container {
+  .home .home-secondary-content .article-container {
     width: 80%; }
 
-.home-third-content {
+.home .home-third-content {
   padding-top: 2.5em;
   padding-bottom: 2.5em;
   background-color: black;
   color: #ececec; }
-  .home-third-content h3 {
+  .home .home-third-content h3 {
     font-family: "Playfair Display", serif;
     color: #ececec;
     font-size: 32px; }
 
-.home-fourth-content {
+.home .home-fourth-content {
   padding-top: 2.5em;
   padding-bottom: 2.5em;
   color: black; }
-  .home-fourth-content h3 {
+  .home .home-fourth-content h3 {
     font-family: "Playfair Display", serif;
     color: #4d4d4d;
     font-size: 32px; }
 
-.twitter-wrapper h3 {
+.home .twitter-wrapper h3 {
   font-family: "Playfair Display", serif;
   color: #bc2c2d;
   font-size: 32px; }
 
-.twitter-wrapper .twit-feed-container {
+.home .twitter-wrapper .twit-feed-container {
   overflow: scroll;
   overflow-x: hidden;
   height: 300px; }
-  .twitter-wrapper .twit-feed-container .tweet-div {
+  .home .twitter-wrapper .twit-feed-container .tweet-div {
     padding: 10px;
     border-bottom: 1px solid #D3D3D3; }
-    .twitter-wrapper .twit-feed-container .tweet-div .user-pic {
+    .home .twitter-wrapper .twit-feed-container .tweet-div .user-pic {
       margin-right: 10px;
       width: 30px;
       height: 30px;
       align: left;
       display: inline;
       border-radius: 20px; }
-    .twitter-wrapper .twit-feed-container .tweet-div h4 {
+    .home .twitter-wrapper .twit-feed-container .tweet-div h4 {
       display: inline;
       font-size: 12px;
       font-weight: bold; }
-      .twitter-wrapper .twit-feed-container .tweet-div h4 span {
+      .home .twitter-wrapper .twit-feed-container .tweet-div h4 span {
         color: grey; }
-    .twitter-wrapper .twit-feed-container .tweet-div p {
+    .home .twitter-wrapper .twit-feed-container .tweet-div p {
       font-size: 12px;
       margin-bottom: 1em;
       margin-top: 1em; }
-    .twitter-wrapper .twit-feed-container .tweet-div a {
+    .home .twitter-wrapper .twit-feed-container .tweet-div a {
       font-size: 13px;
       display: block;
       margin-top: 0.5em; }
+
+.home hr {
+  margin-left: 0; }
+
+.home a.article-button {
+  margin: 1em 0;
+  padding: 0.8em 1.8em;
+  font-size: 0.875em;
+  font-weight: normal;
+  text-transform: uppercase; }
+
+.home a:hover.article-button {
+  color: #fff;
+  text-decoration: none; }
+
+.home .home-link {
+  margin: 1em 0; }
+
+.home .section-container {
+  margin-bottom: 3em; }
+
+.home .odd-article {
+  background-color: #000;
+  color: #fff; }
+  .home .odd-article h2 {
+    color: #fff; }
+
+.home .home-article {
+  padding: 1em; }
 
 .mentor-section .mentor-section-box {
   width: 380px;
@@ -9394,6 +9484,6 @@ form .submit {
   border-radius: 40px; }
 
 .tax-membercategory nav .container, .single-member nav .container, .page-template-get-involved nav .container,
-.page-template-sponsors nav .container, .category-facebook nav .container, .category-instagram nav .container {
+.page-template-sponsors nav .container, .category-facebook nav .container, .category-instagram nav .container, .home nav .container {
   margin: 0;
   width: 100%; }

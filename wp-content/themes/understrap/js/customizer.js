@@ -55,6 +55,9 @@ jQuery(document).ready(function($) {
     $(".upcoming-events").children("article:odd").find(".content-right").addClass("push-md-6");
     $(".upcoming-events").children("article:odd").find(".pic-left").addClass("pull-md-6");
 
+    // Home page - switch styling on every other article
+
+    $(".home-repeater:even").addClass("odd-article");
 
     // Ticket Price : Change $0.00 to Free
     if ($(".price-mem").html() == '$0.00') {
