@@ -1,0 +1,48 @@
+.page-template-get-involved {
+
+  .cards-container {
+    @media only screen and (min-width: 576px) {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+  }
+
+  .head {
+    padding: 0 1.25em 1em;
+    @media only screen and (min-width: 576px) {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  }
+
+  .card {
+    border: none;
+    margin-bottom: 2.5em;
+
+    img {
+      width: 100%;
+      height: auto;
+      padding: 1.25rem;
+    }
+
+    .card-title {
+      font-family: $primary-font;
+    }
+
+    hr {
+      margin-left: 0;
+    }
+
+    p {
+      margin-bottom: 1.5em;
+    }
+
+    a {
+      padding: 0.8em 1.8em;
+      font-size: 0.875em;
+      text-transform: uppercase;
+    }
+  }
+
+}

@@ -86,12 +86,14 @@ $eventTitle = get_the_title();
                     </div>
                 </div><!-- .entry-content -->
                 <div class="info-wording">
-                    <p class="detail-title"><b>Ticket Price</b></p>
-                    <?php if (get_uf('events_meta_ticket_price_member') ): ?>
-                        <p class="details">FGI Members - <span class="price-mem">$<?php echo uf('events_meta_ticket_price_member'); ?></span></p>
-                    <?php endif; ?>
-                    <?php if (get_uf('events_meta_ticket_price_nonmember') ): ?>
-                        <p class="details">Non-Members - <span class="price-nonmem">$<?php echo uf('events_meta_ticket_price_nonmember'); ?></span></p>
+                    <?php if (get_uf('events_meta_ticket_price_member') || get_uf('events_meta_ticket_price_nonmember') ) : ?>
+                        <p class="detail-title"><b>Ticket Price</b></p>
+                        <?php if (get_uf('events_meta_ticket_price_member') ): ?>
+                            <p class="details">FGI Members - <span class="price-mem">$<?php echo uf('events_meta_ticket_price_member'); ?></span></p>
+                        <?php endif; ?>
+                        <?php if (get_uf('events_meta_ticket_price_nonmember') ): ?>
+                            <p class="details">Non-Members - <span class="price-nonmem">$<?php echo uf('events_meta_ticket_price_nonmember'); ?></span></p>
+                        <?php endif; ?>
                     <?php endif; ?>
 
                     <p class="detail-title"><b>Location</b></p>
