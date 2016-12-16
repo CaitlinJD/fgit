@@ -132,15 +132,18 @@ function prefix_insert_after_paragraph( $insertion, $paragraph_id, $content ) {
     return implode( '', $paragraphs );
 }
 
-
-<<<<<<< HEAD
 $var = new raw_twitter_build;
 $var -> build_tweet();
 
+$var = new raw_facebook_build;
+$var -> build_facebook_post();
 
-//$var = new event_build;
-//$var -> build_event();
-=======
+$var = new raw_insta_build;
+$var -> build_insta_post();
+
+
+<<<<<<< HEAD
+
 // Custom pagination for load more
 function custom_pagination($wp_query) {
     $past_evt_query = $wp_query->query_vars;
@@ -191,5 +194,6 @@ function do_this_daily() {
         $var->build_tweet();
     }
 }
+=======
+>>>>>>> e28d8aab77f1cbef07e03fdd42fb8ee04406b1db
 
->>>>>>> events

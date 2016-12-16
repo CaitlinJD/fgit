@@ -59,7 +59,7 @@ if ( class_exists( 'WooCommerce' ) ) {
                     <div class="offset-xs-1 offset-md-0  col-xs-10 col-md-4 twitter-wrapper">
 =======
                      <div class="offset-xs-1 offset-md-0  col-xs-10 col-md-4 twitter-wrapper">
->>>>>>> 80dadb6c6543ac8959e672f44f22ec516563dde2
+>>>>>>> pr/10
                         <h3><?php uf('social_media_feed_title'); ?></h3>
                         <div class="twit-feed-container">
                         
@@ -136,7 +136,7 @@ if ( class_exists( 'WooCommerce' ) ) {
                     </div>
 
                     <?php } ?>;
->>>>>>> 80dadb6c6543ac8959e672f44f22ec516563dde2
+>>>>>>> pr/10
 
      </main><!-- #main -->
 

@@ -4,29 +4,29 @@
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
 
-        <div class="row">
-         <div class="offset-xs-1 offset-md-2 col-xs-10 col-md-8 col-lg-6 page-intro">
+        <div class="row flex-items-xs-center">
+         <div class="col-xs-10 col-md-9 page-intro">
                         <h2 class="page-title">Gallery</h2>
 
                     </div>
         </div>
-        <div class="row flex-items-sm-center">
-            <div class="col-md-9">
-            <div class ="row">
-            <?php query_posts('cat=instagram'); ?>
-                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>	
-                    <div class="col-md-3">
-                        <div class="insta-box">
-                            <a href="<?php uf('insta_post_url') ?>">
-                                <img src="<?php the_content(); ?>" />
-                            </a>                                
-                            <p><?php uf('insta_post_likes') ?></p>
+        <div class="row flex-items-xs-center">
+            <div class="col-md-9 col-sm-9 col-xs-10">
+                <div class ="row around-xs">
+                <?php query_posts('cat=instagram'); ?>
+                    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>	
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <a href="<?php uf('insta_post_url') ?>">
+                            <div class="insta-box" style="background-image: url(<?php the_content(); ?>" >                                             
+                                <p>&#9825; <?php uf('insta_post_likes') ?></p>
+                            </div>
+                            </a>        
                         </div>
-                    </div>
-                <?php endwhile; endif; ?>
-                <?php wp_reset_query(); ?>
-                </div>
-                </div>
+                    <?php endwhile; endif; ?>
+                    <?php wp_reset_query(); ?>
+            </div>
+                <a href="<?php custom_pagination($wp_query) ?>" class="article-button">Load More</a>
+           </div>
         </div>
 
         </main><!-- #main -->

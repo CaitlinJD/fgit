@@ -132,15 +132,6 @@ function prefix_insert_after_paragraph( $insertion, $paragraph_id, $content ) {
     return implode( '', $paragraphs );
 }
 
-$var = new raw_twitter_build;
-$var -> build_tweet();
-
-$var = new raw_facebook_build;
-$var -> build_facebook_post();
-
-$var = new raw_insta_build;
-$var -> build_insta_post();
-
 
 
 // Custom pagination for load more

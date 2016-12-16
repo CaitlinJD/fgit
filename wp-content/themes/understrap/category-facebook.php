@@ -4,19 +4,19 @@
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
 
-        <div class="row">
-         <div class="offset-xs-1 offset-md-2 col-xs-10 col-md-8 col-lg-6 page-intro">
+        <div class="row flex-items-xs-center">
+         <div class="col-xs-10 col-md-9 col-lg-9 page-intro facebook-intro">
                         <h2 class="page-title">News</h2>
-                       <p>FGIT Toronto</p>
+                       <p class="bold">FGIT Toronto</p>
 
                     </div>
         </div>
-        <div class="row flex-items-sm-center">
-            <div class="col-md-9">
-            <div class ="row">
-            <?php query_posts('cat=facebook'); ?>
+        <div class="row flex-items-xs-center">
+            <div class="col-md-9 col-xs-10 news-container">
+            <div class ="card-columns around-xs">
+      
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>	
-                    <div class="col-md-4">
+                    <div class="card">
                         <div class="news-box">
                             <img src="<?php if( !uf('facebook_post_image')){echo uf('facebook_post_image');}else{echo 'https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-9/405246_10150652183552753_2139047369_n.jpg?oh=fbe0de6532572403fa08cd6eaa5e14b1&oe=58E7FFC8';}; ?>" />
                                 
@@ -25,9 +25,12 @@
                         </div>
                     </div>
                 <?php endwhile; endif; ?>
-                <?php wp_reset_query(); ?>
-                </div>
-                </div>
+ 
+            </div>
+
+            <a href="<?php custom_pagination($wp_query) ?>" class="article-button">Load More</a>
+
+            </div>
         </div>
 
         </main><!-- #main -->

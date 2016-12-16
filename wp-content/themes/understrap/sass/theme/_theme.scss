@@ -67,16 +67,11 @@ p
 .article-button
 {
     background-color: $primary-color;
-    color: white;
-    padding: 10px 15px 10px 15px;
-    font-family: $primary-font;
-    font-size: $button-title;
-    font-weight: 700;
+    color: #fff;
+    padding: 0.8em 1.8em;
+    font-size: 0.875em;
+    text-transform: uppercase;
 
-     @media only screen and (min-width: 992px ) {
-        padding: 15px 25px 15px 25px;
-        font-size: $button-title;
-        }
 }
 
 .article-container

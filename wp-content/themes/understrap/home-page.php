@@ -55,11 +55,12 @@ if ( class_exists( 'WooCommerce' ) ) {
                         
                     </div>
 
-                    <div class="offset-xs-1 offset-md-0  col-xs-10 col-md-4 twitter-wrapper">
+                     <div class="offset-xs-1 offset-md-0  col-xs-10 col-md-4 twitter-wrapper">
                         <h3><?php uf('social_media_feed_title'); ?></h3>
                         <div class="twit-feed-container">
                         
-                            <?php query_posts('cat=twitter'); ?>
+                        
+                            <?php query_posts(array('category_name'=>'twitter','posts_per_page'=>12)); ?>
                             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>	
                                 <div class="tweet-div">
                                     <img class="user-pic" src="<?php uf('tweet_display_pic')?>" />

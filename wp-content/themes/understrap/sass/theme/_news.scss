@@ -1,22 +1,56 @@
-.news-box
+.facebook-intro
 {
-    border: 1px solid black;
-    padding: 3em 0 0.5em 0;
-    width: 80%;
+    h2
+    {
+        margin-bottom: 0;
+    }
 
-    .fgit-button
-    {
-        width: 60px;
-        height: 28px;
-        background-color: #e6e6e6;
-        color:  #808080;
+    margin-bottom: 2em;
+}
+.news-container
+{
+    margin-bottom: 2em;
+    .card-columns {
+        @include media-breakpoint-only(sm) {
+        column-count: 1;
+        }
+        @include media-breakpoint-only(md) {
+        column-count: 2;
+        }
+        @include media-breakpoint-only(lg) {
+        column-count: 2;
+        }
+        @include media-breakpoint-only(xl) {
+        column-count: 3;
+        }
     }
-    p{
-        padding: 1em 1em 1em 1em;
-    }
-    a
+    
+    .card
     {
-        padding: 1em 1em 1em 1em;
+        border: 0;
+    }
+    .news-box
+
+    {
+        border: 1px solid black;
+        padding: 3em 0 0.5em 0;
+
+        
+
+        .fgit-button
+        {
+            width: 60px;
+            height: 28px;
+            background-color: #e6e6e6;
+            color:  #808080;
+        }
+        p{
+            padding: 1em 1em 1em 1em;
+        }
+        a
+        {
+            padding: 1em 1em 1em 1em;
+        }
     }
 }
 
