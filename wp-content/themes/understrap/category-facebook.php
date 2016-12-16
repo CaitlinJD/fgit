@@ -28,7 +28,7 @@
  
             </div>
 
-            <a href="<?php custom_pagination($wp_query) ?>" class="article-button">Load More</a>
+            <?php custom_pagination_category($wp_query) ?>
 
             </div>
         </div>

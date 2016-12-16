@@ -141,6 +141,9 @@ function custom_pagination($wp_query) {
     $total_posts = $wp_query->found_posts;
     $posts_per_page = $past_evt_query['posts_per_page'];
     $current_page = $past_evt_query['paged'];
+    $post_type = $past_evt_query['post_type'];
+
+    //echo "<pre>"; print_r($past_evt_query); echo "</pre>";
 
     $total_pages = ceil ($total_posts / $posts_per_page );
 
@@ -152,11 +155,39 @@ function custom_pagination($wp_query) {
     // Load more
     if ( $current_page < $total_pages ) {
         $url = home_url(add_query_arg(array(),$wp->request));
-        $url .= '/event/page/';
+        $url .= '/'.$post_type.'/page/';
         $url .= $current_page + 1;
         echo "<div class='load-more'><a href='".$url."'>LOAD MORE</a></div>";
     }
 }
+
+
+// Custom pagination for post categories
+function custom_pagination_category($wp_query) {
+    $past_evt_query = $wp_query->query_vars;
+    $total_posts = $wp_query->found_posts;
+    $posts_per_page = $past_evt_query['posts_per_page'];
+    $current_page = $past_evt_query['paged'];
+    $category = $past_evt_query['category_name'];
+
+    //echo "<pre>"; print_r($past_evt_query); echo "</pre>";
+
+    $total_pages = ceil ($total_posts / $posts_per_page );
+
+    // return if only 1 page
+    if ($total_pages == 1 || $total_pages < 0) {
+        return;
+    }
+
+    // Load more
+    if ( $current_page < $total_pages ) {
+        $url = home_url(add_query_arg(array(),$wp->request));
+        $url .= '/category/'.$category.'/page/';
+        $url .= $current_page + 1;
+        echo "<div class='load-more'><a href='".$url."'>LOAD MORE</a></div>";
+    }
+}
+
 
 
 // Cron job
