@@ -12,20 +12,21 @@
         </div>
         <div class="row flex-items-xs-center">
             <div class="col-md-9 col-sm-9 col-xs-10">
-            <div class ="row flex-items-xs-center">
-            <?php query_posts('cat=instagram'); ?>
-                <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>	
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <a href="<?php uf('insta_post_url') ?>">
-                        <div class="insta-box" style="background-image: url(<?php the_content(); ?>" >                                             
-                            <p>&#9825; <?php uf('insta_post_likes') ?></p>
+                <div class ="row around-xs">
+                <?php query_posts('cat=instagram'); ?>
+                    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>	
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <a href="<?php uf('insta_post_url') ?>">
+                            <div class="insta-box" style="background-image: url(<?php the_content(); ?>" >                                             
+                                <p>&#9825; <?php uf('insta_post_likes') ?></p>
+                            </div>
+                            </a>        
                         </div>
-                        </a>        
-                    </div>
-                <?php endwhile; endif; ?>
-                <?php wp_reset_query(); ?>
-                </div>
-                </div>
+                    <?php endwhile; endif; ?>
+                    <?php wp_reset_query(); ?>
+            </div>
+                <a href="<?php custom_pagination($wp_query) ?>" class="article-button">Load More</a>
+           </div>
         </div>
 
         </main><!-- #main -->

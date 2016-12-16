@@ -59,7 +59,8 @@ if ( class_exists( 'WooCommerce' ) ) {
                         <h3><?php uf('social_media_feed_title'); ?></h3>
                         <div class="twit-feed-container">
                         
-                            <?php query_posts('cat=twitter'); ?>
+                        
+                            <?php query_posts(array('category_name'=>'twitter','posts_per_page'=>12)); ?>
                             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>	
                                 <div class="tweet-div">
                                     <img class="user-pic" src="<?php uf('tweet_display_pic')?>" />

@@ -9,6 +9,7 @@
 }
 .news-container
 {
+    margin-bottom: 2em;
     .card-columns {
         @include media-breakpoint-only(sm) {
         column-count: 1;

@@ -15,7 +15,7 @@ require_once("insta-build-post.php");
 
 class insta_call {
 
-  public $insta_url = "https://api.instagram.com/v1/users/16106778/media/recent?access_token=16106778.385da40.92e6ce076559419ba3fc39c18545413f";
+  public $insta_url = "https://api.instagram.com/v1/users/324962268/media/recent?access_token=324962268.7b5a93d.78ef1bfa38bc45deb4642a95479d9ffc";
 
 
       public function get_insta_data() {

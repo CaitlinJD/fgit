@@ -13,7 +13,7 @@
         </div>
         <div class="row flex-items-xs-center">
             <div class="col-md-9 col-xs-10 news-container">
-            <div class ="card-columns">
+            <div class ="card-columns around-xs">
       
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>	
                     <div class="card">
@@ -26,8 +26,11 @@
                     </div>
                 <?php endwhile; endif; ?>
  
-                </div>
-                </div>
+            </div>
+
+            <a href="<?php custom_pagination($wp_query) ?>" class="article-button">Load More</a>
+
+            </div>
         </div>
 
         </main><!-- #main -->
