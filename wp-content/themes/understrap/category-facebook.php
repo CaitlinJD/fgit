@@ -24,13 +24,11 @@
                             <a href="<?php uf('facebook_post_url') ?>">Read More</a>
                         </div>
                     </div>
-
-                    
-                <?php endwhile;  custom_pagination($wp_query); endif; ?>
+                <?php endwhile; endif; ?>
  
             </div>
 
-           
+            <a href="<?php custom_pagination($wp_query) ?>" class="article-button">Load More</a>
 
             </div>
         </div>
