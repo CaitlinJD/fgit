@@ -184,4 +184,46 @@
   .home-article {
     padding: 1em;
   }
+
+  .home-featured-event {
+    .img-bkg {
+      height: auto;
+    }
+    .event-info {
+      h2 {
+        margin-top: 0;
+      }
+      a {
+        background-color: $primary-color;
+        border: none;
+        border-radius: 0;
+        color: #fff;
+        padding: 0.8em 1.8em;
+        font-size: 0.875em;
+      }
+    }
+  }
+
+  .article-container, .twitter-wrapper, .home-featured-event,
+  .section-container {
+    padding: 0 20px 0;
+    @media only screen and (min-width: 576px) {
+      padding: auto;
+    }
+  }
+
+  .home-banner.section-container {
+    padding: 0;
+    @media only screen and (min-width: 576px) {
+      padding: auto;
+    }
+  }
+
+  .home-repeater {
+    margin-bottom: 1em;
+    @media only screen and (min-width: 576px) {
+      padding: auto;
+    }
+  }
+
 }

@@ -165,14 +165,14 @@ function custom_pagination($wp_query) {
 add_action('my_hourly_event', 'do_this_hourly');
 
 function my_activation() {
-    if ( !wp_next_scheduled( 'my_daily_event' ) ) {
-        wp_schedule_event( current_time( 'timestamp' ), 'daily', 'my_daily_event');
+    if ( !wp_next_scheduled( 'my_hourly_event' ) ) {
+        wp_schedule_event( current_time( 'timestamp' ), 'hourly', 'my_hourly_event');
     }
 }
 
 add_action('wp', 'my_activation');
 
-function do_this_daily() {
+function do_this_hourly() {
     // Eventbrite
     if (class_exists('build_event')) {
         $var = new event_build;

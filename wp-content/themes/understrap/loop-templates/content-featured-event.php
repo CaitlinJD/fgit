@@ -16,7 +16,7 @@ $query = new WP_Query($args);
 
             <!-- Add just the featured event -->
 
-                    <div class="img-bkg hidden-xs-down col-sm-5 col-md-6" style="background: url('<?php echo the_post_thumbnail_url('large') ?>') center right/cover no-repeat"></div>
+                    <div class="img-bkg hidden-xs-down col-sm-5 col-md-6" style="background: url('<?php echo the_post_thumbnail_url('large') ?>') center/cover no-repeat"></div>
                     <?php if (is_front_page()) : ?>
                         <div class="event-info col-xs-12 col-sm-5 col-md-6">
                     <?php endif; ?>
