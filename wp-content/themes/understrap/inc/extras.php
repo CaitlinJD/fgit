@@ -206,34 +206,30 @@ add_action('wp', 'my_activation');
 function do_this_hourly() {
 
     // Eventbrite
-    if (class_exists('build_event')) {
+    if (class_exists('event_build')) {
         $var = new event_build;
         $var->build_event();
+        wp_delete_post(1476, true);
     }
 
-    wp_delete_post(1472, true);
     // Twitter
-    if (class_exists('build_tweet')) {
+    if (class_exists('raw_twitter_build')) {
         $var = new raw_twitter_build;
         $var->build_tweet();
         wp_delete_post(1474, true);
     }
 
-    wp_delete_post(1468, true);
     // Instagram
-    if ( class_exists('build_insta_post')) {
+    if ( class_exists('raw_insta_build')) {
         $var = new raw_insta_build;
         $var->build_insta_post();
         wp_delete_post(1470, true);
     }
 
-    wp_delete_post(1464, true);
     // Facebook
-    if (class_exists('build_facebook_post')) {
+    if (class_exists('raw_facebook_build')) {
         $var = new raw_facebook_build;
         $var->build_facebook_post();
         wp_delete_post(1466, true);
     }
 }
-
-
