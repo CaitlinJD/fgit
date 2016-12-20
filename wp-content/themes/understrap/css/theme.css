@@ -7873,6 +7873,12 @@ button,
     line-height: 26px;
     margin-bottom: 1em; }
 
+.page-template-membership a {
+  color: #bc2c2d; }
+
+.page-template-membership a.article-button {
+  color: #fff; }
+
 .home .home-banner {
   margin: 1em 0;
   position: relative;
@@ -9426,6 +9432,12 @@ h3 {
     font-size: 1em;
     line-height: 26px;
     margin-bottom: 1em; }
+
+.page-template-membership a {
+  color: #bc2c2d; }
+
+.page-template-membership a.article-button {
+  color: #fff; }
 
 .facebook-intro {
   margin-bottom: 2em; }
