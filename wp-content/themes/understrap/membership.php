@@ -73,10 +73,10 @@ if ( class_exists( 'WooCommerce' ) ) {
                                     echo "<p class='membership-price'>" . $membership_price . "</p>";
                                     echo "<p class='price-info'>" . $price_info . "</p>";
                                     if (!$membership_link == '') {
-                                        echo "<a class='article-button' href='" . $membership_link . "'>" . $membership_link_title . "</a>";
+                                        echo "<a class='article-button' target='_blank' href='" . $membership_link . "'>" . $membership_link_title . "</a>";
                                     };
                                     if (!$membership_file == '') {
-                                        echo "<a class='article-button' href='" . $membership_file . "' download>" . $membership_link_title . "</a>";
+                                        echo "<a class='article-button' target='_blank' href='" . $membership_file . "' download>" . $membership_link_title . "</a>";
                                     };
                                     echo "</div></div>";
                                 }
