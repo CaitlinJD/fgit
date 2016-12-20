@@ -7882,6 +7882,9 @@ button,
 .page-template-membership a.article-button {
   color: #fff; }
 
+.page-template-membership a:hover.article-button {
+  text-decoration: none; }
+
 .home .home-banner {
   margin: 1em 0;
   position: relative;
@@ -9447,6 +9450,9 @@ h3 {
 
 .page-template-membership a.article-button {
   color: #fff; }
+
+.page-template-membership a:hover.article-button {
+  text-decoration: none; }
 
 .facebook-intro {
   margin-bottom: 2em; }
