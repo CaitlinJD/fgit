@@ -9690,6 +9690,7 @@ form .submit {
   border-radius: 40px; }
 
 .tax-membercategory nav .container, .single-member nav .container, .page-template-get-involved nav .container,
-.page-template-sponsors nav .container, .category-facebook nav .container, .category-instagram nav .container, .home nav .container {
+.page-template-sponsors nav .container, .category-facebook nav .container, .category-instagram nav .container, .home nav .container,
+.page-template-membership nav .container {
   margin: 0;
   width: 100%; }
