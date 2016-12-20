@@ -21,7 +21,7 @@
                             <img src="<?php if( !uf('facebook_post_image')){echo uf('facebook_post_image');}else{echo 'https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-9/405246_10150652183552753_2139047369_n.jpg?oh=fbe0de6532572403fa08cd6eaa5e14b1&oe=58E7FFC8';}; ?>" />
                                 
                             <p><?php the_content(); ?></p>
-                            <a href="<?php uf('facebook_post_url') ?>">Read More</a>
+                            <a href="<?php uf('facebook_post_url') ?>" target="_blank">Read More</a>
                         </div>
                     </div>
                 <?php endwhile; endif; ?>
