@@ -67,6 +67,13 @@ jQuery(document).ready(function($) {
         $(".price-nonmem").text('Free');
     }
 
+    // Add "active" class to current menu page
+    $(".nav [href]").each(function() {
+        if (this.href == window.location.href) {
+            $(this).addClass("active");
+        }
+    });
+
 
 
 })

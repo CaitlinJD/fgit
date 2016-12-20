@@ -95,6 +95,12 @@ nav {
           color: $primary-color;
         }
       }
+
+      ul li.active a.nav-link {
+        color: $primary-color;
+      }
+
+
       ul li:nth-last-child(2) a {
         padding: 0.2em 0 0.2em 0.3em;
       }
@@ -175,3 +181,9 @@ form {
     }
 }
 
+
+/* Active Links in Navigation */
+
+.nav {
+
+}

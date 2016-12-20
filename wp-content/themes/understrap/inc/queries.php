@@ -26,6 +26,12 @@ function pre_events_query($query) {
         }
     }
 
+        // Instagram / Gallery query
+        if (is_archive() && is_category('instagram') && !is_admin()) {
+            $query->set('posts_per_page', 12);
+
+        }
+
 }
 
 add_action( 'pre_get_posts', 'pre_events_query' );

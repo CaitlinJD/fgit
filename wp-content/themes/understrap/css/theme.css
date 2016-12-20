@@ -9667,6 +9667,8 @@ nav {
         padding: 0.2em 0.3em; }
         nav .menu-icons #exCollapsingNavbar ul li a:hover {
           color: #bc2c2d; }
+      nav .menu-icons #exCollapsingNavbar ul li.active a.nav-link {
+        color: #bc2c2d; }
       nav .menu-icons #exCollapsingNavbar ul li:nth-last-child(2) a {
         padding: 0.2em 0 0.2em 0.3em; }
       nav .menu-icons #exCollapsingNavbar form .input-group {
@@ -9712,3 +9714,5 @@ form .submit {
 .page-template-membership nav .container {
   margin: 0;
   width: 100%; }
+
+/* Active Links in Navigation */
