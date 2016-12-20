@@ -44,5 +44,9 @@
     a
     {
         text-transform: uppercase;
+        &:hover {
+            color: #fff;
+            text-decoration: none; 
+        }
     }
 }

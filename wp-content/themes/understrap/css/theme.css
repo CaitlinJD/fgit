@@ -7793,6 +7793,9 @@ button,
     font-weight: 600; }
   .sponsorship-secondary-container a {
     text-transform: uppercase; }
+    .sponsorship-secondary-container a:hover {
+      color: #fff;
+      text-decoration: none; }
 
 .facebook-intro {
   margin-bottom: 2em; }
@@ -9512,6 +9515,9 @@ h3 {
     font-weight: 600; }
   .sponsorship-secondary-container a {
     text-transform: uppercase; }
+    .sponsorship-secondary-container a:hover {
+      color: #fff;
+      text-decoration: none; }
 
 /* Board Members & Success Stories Cards */
 .tax-membercategory button.member-btn {
