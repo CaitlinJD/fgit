@@ -8088,6 +8088,9 @@ button,
     padding: 0.8em 1.8em;
     font-size: 0.875em;
     text-transform: uppercase; }
+  .page-template-get-involved .card a:hover.article-button {
+    color: #fff;
+    text-decoration: none; }
 
 .insta-box {
   position: relative;
@@ -9396,6 +9399,9 @@ h3 {
     padding: 0.8em 1.8em;
     font-size: 0.875em;
     text-transform: uppercase; }
+  .page-template-get-involved .card a:hover.article-button {
+    color: #fff;
+    text-decoration: none; }
 
 .membership-main-content .intro-bold {
   font-size: 18px;

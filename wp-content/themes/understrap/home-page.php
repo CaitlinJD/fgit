@@ -41,7 +41,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
                         <hr>
                         <p><?php echo uf('article_content'); ?></p>
                         <?php if (get_uf('article_link')) : ?>
-                            <a class="article-button" href="<?php echo get_uf('article_link'); ?>"><?php echo (get_uf('article_link_text')? get_uf('article_link_text') : 'LEARN MORE'); ?></a>
+                            <a class="article-button" target="_blank" href="<?php echo get_uf('article_link'); ?>"><?php echo (get_uf('article_link_text')? get_uf('article_link_text') : 'LEARN MORE'); ?></a>
                         <?php endif; ?>
                     </div>
 
