@@ -64,7 +64,11 @@ if ( class_exists( 'WooCommerce' ) ) {
                         <h3 class="white-font"><?php uf('sponsorship_secondary_title'); ?></h3>
                         <hr>
                         <?php uf('sponsorship_secondary_content'); ?>
-                        <a class="article-button" href="mailto: info@fgitoronto.org">Learn More</a>
+                        <?php if (get_uf('link_url')) : ?>
+                        <a class="article-button" href="<?php echo get_uf('link_url'); ?>">
+                            <?php echo ( get_uf('link_text')? get_uf('link_text') : 'Learn More'); ?>
+                        </a>
+                        <?php endif; ?>
                     </div>
                 </div>    
                          
