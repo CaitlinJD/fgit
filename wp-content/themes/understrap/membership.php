@@ -30,14 +30,14 @@ if ( class_exists( 'WooCommerce' ) ) {
 
     <div id="content" tabindex="-1">
 
-    <main class="site-main" id="main">	
-            
-             
+    <main class="site-main" id="main">
+
+
                 <div class="row flex-items-xs-center">
                     <div class="col-xs-10 col-lg-9">
                         <div class="row">
                             <div class="col-xs-12 col-md-9 col-lg-8 page-intro membership-main-content">
-                            <?php while ( have_posts() ) : the_post(); ?>	
+                            <?php while ( have_posts() ) : the_post(); ?>
                                 <h2 class="page-title"><?php the_title(); ?></h2>
                             <p><?php the_content(); ?></p>
                             <?php endwhile; ?>
@@ -50,7 +50,8 @@ if ( class_exists( 'WooCommerce' ) ) {
                     <div class="col-xs-11 col-md-11 sponsor-logo-section">                        
                         <div class="row flex-items-xs-center space-between">
                         
-                        <?php $membership_info = get_post_meta( get_the_ID(), 'membership_information', true );
+                        <?php $membership_info = get_uf( 'membership_information' );
+
 
                             foreach($membership_info as $membership_type){                             
                                 $membership_title = $membership_type['membership_title'];

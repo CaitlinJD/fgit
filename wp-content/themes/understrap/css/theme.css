@@ -7780,7 +7780,8 @@ button,
 .sponsorship-secondary-container {
   padding: 3em 1.5em 3em 1.5em;
   background-color: black;
-  margin-bottom: 4em; }
+  margin-bottom: 4em;
+  color: #fff; }
   .sponsorship-secondary-container h3 {
     font-size: 32px;
     font-weight: 500;
@@ -7848,6 +7849,8 @@ button,
   padding: 2em 1.5em 2em 1.5em;
   color: white;
   margin-bottom: 2em; }
+  .info-box hr {
+    margin-left: 0; }
   .info-box h3 {
     font-family: "Playfair Display", serif;
     font-size: 26px;
@@ -8009,18 +8012,23 @@ button,
   padding: 1em; }
 
 .home .home-featured-event .img-bkg {
-  height: auto; }
+  height: auto;
+  min-height: 200px; }
 
-.home .home-featured-event .event-info h2 {
-  margin-top: 0; }
-
-.home .home-featured-event .event-info a {
-  background-color: #bc2c2d;
-  border: none;
-  border-radius: 0;
-  color: #fff;
-  padding: 0.8em 1.8em;
-  font-size: 0.875em; }
+.home .home-featured-event .event-info {
+  padding: 0 30px 0; }
+  @media only screen and (min-width: 576px) {
+    .home .home-featured-event .event-info {
+      padding: auto; } }
+  .home .home-featured-event .event-info h2 {
+    margin-top: 0; }
+  .home .home-featured-event .event-info a {
+    background-color: #bc2c2d;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    padding: 0.8em 1.8em;
+    font-size: 0.875em; }
 
 .home .article-container, .home .twitter-wrapper, .home .home-featured-event,
 .home .section-container {
@@ -8041,6 +8049,9 @@ button,
   @media only screen and (min-width: 576px) {
     .home .home-repeater {
       padding: auto; } }
+
+.home .article-container {
+  margin-bottom: 2em; }
 
 @media only screen and (min-width: 576px) {
   .page-template-get-involved .cards-container {
@@ -8857,18 +8868,23 @@ h3 {
   padding: 1em; }
 
 .home .home-featured-event .img-bkg {
-  height: auto; }
+  height: auto;
+  min-height: 200px; }
 
-.home .home-featured-event .event-info h2 {
-  margin-top: 0; }
-
-.home .home-featured-event .event-info a {
-  background-color: #bc2c2d;
-  border: none;
-  border-radius: 0;
-  color: #fff;
-  padding: 0.8em 1.8em;
-  font-size: 0.875em; }
+.home .home-featured-event .event-info {
+  padding: 0 30px 0; }
+  @media only screen and (min-width: 576px) {
+    .home .home-featured-event .event-info {
+      padding: auto; } }
+  .home .home-featured-event .event-info h2 {
+    margin-top: 0; }
+  .home .home-featured-event .event-info a {
+    background-color: #bc2c2d;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    padding: 0.8em 1.8em;
+    font-size: 0.875em; }
 
 .home .article-container, .home .twitter-wrapper, .home .home-featured-event,
 .home .section-container {
@@ -8889,6 +8905,9 @@ h3 {
   @media only screen and (min-width: 576px) {
     .home .home-repeater {
       padding: auto; } }
+
+.home .article-container {
+  margin-bottom: 2em; }
 
 .mentor-section .mentor-section-box {
   width: 380px;
@@ -9384,6 +9403,8 @@ h3 {
   padding: 2em 1.5em 2em 1.5em;
   color: white;
   margin-bottom: 2em; }
+  .info-box hr {
+    margin-left: 0; }
   .info-box h3 {
     font-family: "Playfair Display", serif;
     font-size: 26px;
@@ -9460,7 +9481,8 @@ h3 {
 .sponsorship-secondary-container {
   padding: 3em 1.5em 3em 1.5em;
   background-color: black;
-  margin-bottom: 4em; }
+  margin-bottom: 4em;
+  color: #fff; }
   .sponsorship-secondary-container h3 {
     font-size: 32px;
     font-weight: 500;

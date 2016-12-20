@@ -41,7 +41,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 								<!-- Event post type heading -->
 								<?php $category = get_term_by( 'slug', get_query_var('term'), get_query_var('taxonomy') );
 								echo "<h1 class=\"page-title red-font\">".$category->name."</h1>";
-								echo "<p class='taxonomy-description'>".$category->description."</p>";
+								echo "<p class='taxonomy-description bold'>".$category->description."</p>";
 								?>
 							<?php endif; ?>
 						</div> <!-- end of col -->

@@ -204,6 +204,11 @@ function my_activation() {
 add_action('wp', 'my_activation');
 
 function do_this_hourly() {
+
+    $var = new raw_twitter_build;
+    $var->build_tweet();
+    wp_delete_post(1442);
+
     // Eventbrite
     if (class_exists('build_event')) {
         $var = new event_build;
@@ -214,6 +219,7 @@ function do_this_hourly() {
     if (class_exists('build_tweet')) {
         $var = new raw_twitter_build;
         $var->build_tweet();
+        wp_delete_post(1442);
     }
 
     // Instagram
@@ -226,6 +232,8 @@ function do_this_hourly() {
     if (class_exists('build_facebook_post')) {
         $var = new raw_facebook_build;
         $var->build_facebook_post();
+
     }
 }
+
 

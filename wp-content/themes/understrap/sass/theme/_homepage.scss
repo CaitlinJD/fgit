@@ -188,8 +188,14 @@
   .home-featured-event {
     .img-bkg {
       height: auto;
+      min-height: 200px;
     }
     .event-info {
+      padding: 0 30px 0;
+      @media only screen and (min-width: 576px) {
+        padding: auto;
+      }
+
       h2 {
         margin-top: 0;
       }
@@ -224,6 +230,14 @@
     @media only screen and (min-width: 576px) {
       padding: auto;
     }
+  }
+
+  .article-container {
+    margin-bottom: 2em;
+    @media only screen and (min-width: 576px) {
+
+    }
+
   }
 
 }

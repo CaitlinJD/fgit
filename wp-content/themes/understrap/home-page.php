@@ -45,7 +45,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
                         <?php endif; ?>
                     </div>
 
-                    <div class="offset-xs-1 offset-md-0  col-xs-10 col-md-4 twitter-wrapper">
+                    <div class="offset-xs-1 offset-md-0  col-xs-10 col-md-5 twitter-wrapper">
                         <h3><?php uf('social_media_feed_title'); ?></h3>
                         <div class="twit-feed-container">
                         
