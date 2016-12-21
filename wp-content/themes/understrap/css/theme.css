@@ -9525,6 +9525,23 @@ h3 {
       color: #fff;
       text-decoration: none; }
 
+.search-results a {
+  color: #bc2c2d; }
+  .search-results a:hover {
+    color: #bc2c2d; }
+
+.search-results a.btn-secondary {
+  background-color: #bc2c2d;
+  color: #fff;
+  padding: 0.8em 1.8em;
+  font-size: 0.875em;
+  text-decoration: none;
+  border: none;
+  border-radius: 0; }
+
+.search-results .site-main {
+  margin-bottom: 2em; }
+
 /* Board Members & Success Stories Cards */
 .tax-membercategory button.member-btn {
   background-color: #bc2c2d;
@@ -9711,7 +9728,7 @@ form .submit {
 
 .tax-membercategory nav .container, .single-member nav .container, .page-template-get-involved nav .container,
 .page-template-sponsors nav .container, .category-facebook nav .container, .category-instagram nav .container, .home nav .container,
-.page-template-membership nav .container {
+.page-template-membership nav .container, .search-results nav .container {
   margin: 0;
   width: 100%; }
 

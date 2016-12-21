@@ -1,0 +1,22 @@
+.search-results {
+  a {
+    color: $primary-color;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  a.btn-secondary {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 0.8em 1.8em;
+    font-size: 0.875em;
+    text-decoration: none;
+    border: none;
+    border-radius: 0;
+  }
+
+  .site-main {
+    margin-bottom: 2em;
+  }
+}
