@@ -9704,8 +9704,9 @@ nav {
             background-color: #fff;
             text-align: center;
             position: absolute;
-            left: -20px;
-            padding: 4px; } }
+            left: -30px;
+            padding: 4px;
+            width: 175px; } }
 
 /* Form (not just in nav) */
 form .submit {
