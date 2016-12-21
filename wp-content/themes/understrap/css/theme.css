@@ -8474,6 +8474,12 @@ button,
   .mentor-section .mentor-section-box .mentor-button {
     position: absolute; }
 
+.tax-partnercategory .load-more {
+  margin: 1em 30px 1em; }
+  @media only screen and (min-width: 576px) {
+    .tax-partnercategory .load-more {
+      margin: 2em 10% 1em; } }
+
 .tax-partnercategory .container {
   margin: 0;
   width: 100%; }
@@ -8942,6 +8948,12 @@ h3 {
     font-size: 26px; }
   .mentor-section .mentor-section-box .mentor-button {
     position: absolute; }
+
+.tax-partnercategory .load-more {
+  margin: 1em 30px 1em; }
+  @media only screen and (min-width: 576px) {
+    .tax-partnercategory .load-more {
+      margin: 2em 10% 1em; } }
 
 .tax-partnercategory .container {
   margin: 0;
