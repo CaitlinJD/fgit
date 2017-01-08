@@ -19,10 +19,10 @@ class twitter_call {
   public $oauth;
 
   public function __construct(){
-    $oauth_access_token = "808742526408650752-k2ypR78lVm2TnjgPTGwUN0HZe3Sb3uq";
-    $oauth_access_token_secret = "WLXE3MGGaSjMSWEXfIJn54neYZybcIAkc4hqI5AxjqkNF";
-    $consumer_key = "ipRVc41UjhzNeiXPEahYBrSlJ";
-    $consumer_secret = "CNYfNPBsPiXEqB4l4GyAW3BfCPCtENDToDha88smAaTxawAP6Q";
+    $oauth_access_token = "175255603-TI1s6EkjUQPJg7VsT5Y6bKldOTy6gUSroObY9ZHJ";
+    $oauth_access_token_secret = "j1YM8javiB3oq01sMWaGdcOAyKye5jIn0xcTZHxaj022l";
+    $consumer_key = "Ixgy8aERDiFUr78LlFbDNdSj9";
+    $consumer_secret = "QZIk5xIuyn6TbN7lDvafr9VQA33PQuekYFLkHpMzyxczAu5SGq";
 
     $oauth = array( 'oauth_consumer_key' => $consumer_key,
                     'oauth_nonce' => time(),
