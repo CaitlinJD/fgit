@@ -30,7 +30,7 @@ $wp_query = new WP_Query($args);
     <div class="past-events">
         <!--  Event post type heading -->
         <?php
-        $category = get_term_by( 'term_taxonomy_id', 3, get_query_var('taxonomy') );
+        $category = get_term_by( 'term_taxonomy_id', 9, get_query_var('taxonomy') );
         echo "<div class='col-xs-12 col-sm-12'><p class='second-title'><b>".$category->name."</b></p></div>"; ?>
 
         <div class="row">
