@@ -8138,6 +8138,8 @@ button,
     .single-event .container {
       margin: 0;
       width: 100%; } }
+  .single-event article {
+    width: 100%; }
   .single-event a {
     color: #bc2c2d; }
     .single-event a:hover {
@@ -9333,6 +9335,8 @@ h3 {
     .single-event .container {
       margin: 0;
       width: 100%; } }
+  .single-event article {
+    width: 100%; }
   .single-event a {
     color: #bc2c2d; }
     .single-event a:hover {
