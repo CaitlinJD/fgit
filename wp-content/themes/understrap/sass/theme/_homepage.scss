@@ -14,11 +14,12 @@
     }
 
     .banner-img {
-      background-size: cover;
       background-position: center;
       width: 100%;
       height: 100%;
       filter: brightness(50%);
+      background-repeat:no-repeat;
+      background-size: cover;
     }
 
     .title-section {
@@ -222,6 +223,11 @@
     padding: 0;
     @media only screen and (min-width: 576px) {
       padding: auto;
+    }
+
+    .gecko .title-section {
+      background-color: blue;
+
     }
   }
 
