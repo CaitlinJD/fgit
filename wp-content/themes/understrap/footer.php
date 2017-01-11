@@ -15,9 +15,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<div class="row flex-items-sm-middle">
 			<div class="footer-newsletter col-md-12">
-			<!--<a name="footer"> -->
+			<a name="footer">
 				<?php dynamic_sidebar( 'footerfull' ); ?>
-				<!--</div>-->
+				</div>
 			</div>
 		</div>
 
@@ -52,7 +52,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 </div><!-- wrapper end -->
 </div><!-- #page -->
 
-<?php //wp_footer(); ?>
+<?php wp_footer(); ?>
 
 </body>
 
