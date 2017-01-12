@@ -22,17 +22,12 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
                     
                         <h2 class="banner-title">
                         <?php echo uf( 'banner_title'); ?>
-<<<<<<< HEAD
-                        <h2>
-                        <a id="home-banner-button" class="article-button" href="<?php echo uf('banner_link_url'); ?>"><?php echo uf( 'banner_link_title'); ?></a>
-=======
                         </h2>
                         <?php if (get_uf('banner_link')) : ?>
                             <a id="home-banner-button" class="article-button" href="<?php echo get_uf('banner_link'); ?>">
                                 <?php echo (get_uf('banner_link_text')? get_uf('banner_link_text') : 'Learn More'); ?>
                             </a>
                         <?php endif; ?>
->>>>>>> remotes/CaitlinJD/master
                     </div>
 
                 </div> 
@@ -46,15 +41,11 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
                         <hr>
                         <p><?php echo uf('article_content'); ?></p>
                         <?php if (get_uf('article_link')) : ?>
-                            <a class="article-button" href="<?php echo get_uf('article_link'); ?>"><?php echo (get_uf('article_link_text')? get_uf('article_link_text') : 'LEARN MORE'); ?></a>
+                            <a class="article-button" target="_blank" href="<?php echo get_uf('article_link'); ?>"><?php echo (get_uf('article_link_text')? get_uf('article_link_text') : 'LEARN MORE'); ?></a>
                         <?php endif; ?>
                     </div>
 
-<<<<<<< HEAD
-                     <div class="offset-xs-1 offset-md-0  col-xs-10 col-md-4 twitter-wrapper">
-=======
-                    <div class="offset-xs-1 offset-md-0  col-xs-10 col-md-4 twitter-wrapper">
->>>>>>> remotes/CaitlinJD/master
+                    <div class="offset-xs-1 offset-md-0  col-xs-10 col-md-5 twitter-wrapper">
                         <h3><?php uf('social_media_feed_title'); ?></h3>
                         <div class="twit-feed-container">
                         
@@ -71,12 +62,9 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
                             <?php endwhile; endif; ?>
                             <?php wp_reset_query(); ?>
 
-<<<<<<< HEAD
-=======
                         </div>
                     </div>
 
->>>>>>> remotes/CaitlinJD/master
                         </div>
                     </div>
 
@@ -110,31 +98,19 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
                         <?php endwhile; ?>
 
                 </div>
-<<<<<<< HEAD
-                
-=======
 
->>>>>>> remotes/CaitlinJD/master
 
                  <?php $home_article_data = get_post_meta( get_the_ID(), 'home_articles', true );
                             foreach($home_article_data as $home_article){
                     ?>
-<<<<<<< HEAD
-                    <div class="row flex-items-sm-center section-container <?php if($home_article % 2 == 0){echo 'home-third-content';}?>">           
-                        <div class="col-xs-10 col-md-8 offset-xs-1">
-                                <h3><?php echo $home_article['home_article_title']; ?></h3>
-=======
                     <div class="row flex-items-sm-center section-container home-repeater">
                         <div class="col-xs-10 col-md-9 home-article">
                                 <h2 class="red-font"><?php echo $home_article['home_article_title']; ?></h2>
->>>>>>> remotes/CaitlinJD/master
                                 <hr>
                                 <div class="row">
                                     <p class="col-md-6"><?php echo $home_article['home_first_paragraph']; ?></p>
                                     <p class="col-md-6"><?php echo $home_article['home_second_paragraph']; ?></p>
                                 </div>
-<<<<<<< HEAD
-=======
                                 <?php if ( $home_article['article_link']) : ?>
                                     <div class="home-link">
                                     <a href="<?php echo $home_article['article_link']; ?>" class="article-button">
@@ -143,7 +119,6 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
                                     </div>
 
                                     <?php endif; ?>
->>>>>>> remotes/CaitlinJD/master
                                 <?php if(!$home_article['home_article_link_url'] == ''){echo "<a class='article-button' href='".$home_article['home_article_link_url']."'>".$home_article['home_article_link_title']."</a>";}; ?>
                         </div>
 

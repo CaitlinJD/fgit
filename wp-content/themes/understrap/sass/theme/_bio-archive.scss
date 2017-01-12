@@ -39,6 +39,13 @@
 
 
 .tax-partnercategory {
+  .load-more {
+    margin: 1em 30px 1em;
+    @media only screen and (min-width: 576px) {
+      margin: 2em 10% 1em;
+    }
+  }
+
   .container {
     margin: 0;
     width: 100%;
@@ -140,6 +147,6 @@
     }
   .end-content {
     margin: 3.5em 0;
-}
+  }
 
 }

@@ -8,7 +8,6 @@
 get_header();
 
 $container   = get_theme_mod( 'understrap_container_type' );
-$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 ?>
 
 <div class="wrapper search-wrapper">
@@ -17,10 +16,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 		<div class="row">
 
-			<!-- Do the left sidebar check and opens the primary div -->
-			<?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
-
-			<main class="site-main" id="main">
+			<main class="site-main col-xs-12 col-sm-9" id="main">
 
 				<?php if ( have_posts() ) : ?>
 
@@ -51,10 +47,12 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 				<?php endif; ?>
 
+				<!-- The pagination component -->
+				<?php understrap_pagination(); ?>
+
 			</main><!-- #main -->
 
-			<!-- The pagination component -->
-			<?php understrap_pagination(); ?>
+
 
 		</div><!-- #primary -->
 

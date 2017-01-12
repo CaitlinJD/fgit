@@ -107,63 +107,6 @@
       font-size: 32px;
     }
 
-<<<<<<< HEAD
-.twitter-wrapper{
-
-    h3
-    {
-        font-family: $secondary-font;
-        color: $primary-color;
-        font-size: 32px;
-    }
-
-    .twit-feed-container
-    {
-            overflow: scroll;
-            overflow-x: hidden;
-            height: 300px;
-
-        .tweet-div
-        {
-            padding: 10px;
-            border-bottom: 1px solid #D3D3D3;
-
-            .user-pic
-            {
-                margin-right: 10px; 
-                width: 30px; 
-                height: 30px; 
-                align: left;
-                display: inline; 
-                border-radius: 20px;
-            }
-
-            h4
-            {
-                display: inline;
-                font-size: 12px;
-                font-weight: bold;
-                span
-                {
-                    
-                    color: grey;
-                }
-            }
-
-            p
-            {
-                font-size: 12px;
-                margin-bottom: 1em;
-                margin-top: 1em;
-            }
-
-             a
-            {
-                font-size: 13px;
-                margin-top: 1em;
-                display: block;
-            }
-=======
     .twit-feed-container {
       overflow: scroll;
       overflow-x: hidden;
@@ -180,7 +123,6 @@
           align: left;
           display: inline;
           border-radius: 20px;
->>>>>>> remotes/CaitlinJD/master
         }
 
         h4 {
@@ -237,8 +179,6 @@
     h2 {
       color: #fff;
     }
-<<<<<<< HEAD
-=======
   }
 
   .home-article {
@@ -248,8 +188,14 @@
   .home-featured-event {
     .img-bkg {
       height: auto;
+      min-height: 200px;
     }
     .event-info {
+      padding: 0 30px 0;
+      @media only screen and (min-width: 576px) {
+        padding: auto;
+      }
+
       h2 {
         margin-top: 0;
       }
@@ -286,5 +232,12 @@
     }
   }
 
->>>>>>> remotes/CaitlinJD/master
+  .article-container {
+    margin-bottom: 2em;
+    @media only screen and (min-width: 576px) {
+
+    }
+
+  }
+
 }

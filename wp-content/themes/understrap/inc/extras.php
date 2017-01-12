@@ -132,18 +132,6 @@ function prefix_insert_after_paragraph( $insertion, $paragraph_id, $content ) {
     return implode( '', $paragraphs );
 }
 
-$var = new raw_twitter_build;
-$var -> build_tweet();
-
-$var = new raw_facebook_build;
-$var -> build_facebook_post();
-
-$var = new raw_insta_build;
-$var -> build_insta_post();
-
-
-
-
 
 // Custom pagination for load more
 function custom_pagination($wp_query) {
@@ -151,6 +139,9 @@ function custom_pagination($wp_query) {
     $total_posts = $wp_query->found_posts;
     $posts_per_page = $past_evt_query['posts_per_page'];
     $current_page = $past_evt_query['paged'];
+    $post_type = $past_evt_query['post_type'];
+
+    //echo "<pre>"; print_r($past_evt_query); echo "</pre>";
 
     $total_pages = ceil ($total_posts / $posts_per_page );
 
@@ -162,11 +153,39 @@ function custom_pagination($wp_query) {
     // Load more
     if ( $current_page < $total_pages ) {
         $url = home_url(add_query_arg(array(),$wp->request));
-        $url .= '/event/page/';
+        $url .= '/'.$post_type.'/page/';
         $url .= $current_page + 1;
         echo "<div class='load-more'><a href='".$url."'>LOAD MORE</a></div>";
     }
 }
+
+
+// Custom pagination for post categories
+function custom_pagination_category($wp_query) {
+    $past_evt_query = $wp_query->query_vars;
+    $total_posts = $wp_query->found_posts;
+    $posts_per_page = $past_evt_query['posts_per_page'];
+    $current_page = $past_evt_query['paged'];
+    $category = $past_evt_query['category_name'];
+
+    //echo "<pre>"; print_r($past_evt_query); echo "</pre>";
+
+    $total_pages = ceil ($total_posts / $posts_per_page );
+
+    // return if only 1 page
+    if ($total_pages == 1 || $total_pages < 0) {
+        return;
+    }
+
+    // Load more
+    if ( $current_page < $total_pages ) {
+        $url = home_url(add_query_arg(array(),$wp->request));
+        $url .= '/category/'.$category.'/page/';
+        $url .= $current_page + 1;
+        echo "<div class='load-more'><a href='".$url."'>LOAD MORE</a></div>";
+    }
+}
+
 
 
 // Cron job
@@ -183,28 +202,29 @@ function my_activation() {
 add_action('wp', 'my_activation');
 
 function do_this_hourly() {
+
     // Eventbrite
-    if (class_exists('build_event')) {
+    if (class_exists('event_build')) {
         $var = new event_build;
         $var->build_event();
     }
 
     // Twitter
-    if (class_exists('build_tweet')) {
+    if (class_exists('raw_twitter_build')) {
         $var = new raw_twitter_build;
         $var->build_tweet();
+
     }
 
     // Instagram
-    if ( class_exists('build_insta_post')) {
+    if ( class_exists('raw_insta_build')) {
         $var = new raw_insta_build;
         $var->build_insta_post();
     }
 
     // Facebook
-    if (class_exists('build_facebook_post')) {
+    if (class_exists('raw_facebook_build')) {
         $var = new raw_facebook_build;
         $var->build_facebook_post();
     }
 }
-

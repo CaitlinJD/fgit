@@ -17,7 +17,10 @@
     padding: 2em 1.5em 2em 1.5em;
     color: white;
     margin-bottom: 2em;
-    
+
+    hr {
+        margin-left: 0;
+    }
     h3
     {
         font-family: $secondary-font;
@@ -58,5 +61,18 @@
         font-size: $paragraph-primary-size;
         line-height: 26px;
         margin-bottom: 1em;
+    }
+}
+
+.page-template-membership {
+    a {
+        color: $primary-color;
+    }
+
+    a.article-button {
+        color: #fff;
+    }
+    a:hover.article-button {
+        text-decoration: none;
     }
 }

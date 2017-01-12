@@ -30,14 +30,14 @@ if ( class_exists( 'WooCommerce' ) ) {
 
     <div id="content" tabindex="-1">
 
-    <main class="site-main" id="main">	
-            
-             
+    <main class="site-main" id="main">
+
+
                 <div class="row flex-items-xs-center">
                     <div class="col-xs-10 col-lg-9">
                         <div class="row">
                             <div class="col-xs-12 col-md-9 col-lg-8 page-intro membership-main-content">
-                            <?php while ( have_posts() ) : the_post(); ?>	
+                            <?php while ( have_posts() ) : the_post(); ?>
                                 <h2 class="page-title"><?php the_title(); ?></h2>
                             <p><?php the_content(); ?></p>
                             <?php endwhile; ?>
@@ -50,32 +50,36 @@ if ( class_exists( 'WooCommerce' ) ) {
                     <div class="col-xs-11 col-md-11 sponsor-logo-section">                        
                         <div class="row flex-items-xs-center space-between">
                         
-                        <?php $membership_info = get_post_meta( get_the_ID(), 'membership_information', true );
+                        <?php $membership_info = get_uf( 'membership_information' );
+                            if ( $membership_info ) {
 
-                            foreach($membership_info as $membership_type){                             
-                                $membership_title = $membership_type['membership_title'];
-                                $membership_subheading = $membership_type['membership_subheading'];
-                                $membership_content = $membership_type['membership_content'];
-                                $membership_price = $membership_type['membership_price'];
-                                $price_info = $membership_type['membership_additional_price_info'];
-                                $membership_link = $membership_type['membership_link'];
-                                $membership_link_title = $membership_type['membership_link_title'];
-                                $membership_file = $membership_type['membership_file_download'];
-                                $membership_file = $membership_type['membership_file_download'];
-                                
-                                echo "<div class='col-xs-12 col-md-4'>"; 
-                                echo "<div class='article-container info-box'>"; 
-                                echo "<h3>".$membership_title."</h3>";
-                                echo "<hr>";
-                                echo "<p class='subheading'>".$membership_subheading."</p>";
-                                echo "<p>".$membership_content."</p>";
-                                echo "<p class='membership-price'>".$membership_price."</p>";
-                                echo "<p class='price-info'>".$price_info."</p>";
-                                if( !$membership_link==''){echo "<a class='article-button' href='".$membership_link."'>".$membership_link_title."</a>";};
-                                if( !$membership_file==''){echo "<a class='article-button' href='".$membership_file."' download>".$membership_link_title."</a>";};
-                                echo "</div></div>"; 
+                                foreach ($membership_info as $membership_type) {
+                                    $membership_title = $membership_type['membership_title'];
+                                    $membership_subheading = $membership_type['membership_subheading'];
+                                    $membership_content = $membership_type['membership_content'];
+                                    $membership_price = $membership_type['membership_price'];
+                                    $price_info = $membership_type['membership_additional_price_info'];
+                                    $membership_link = $membership_type['membership_link'];
+                                    $membership_link_title = $membership_type['membership_link_title'];
+                                    $membership_file = $membership_type['membership_file_download'];
+                                    $membership_file = $membership_type['membership_file_download'];
 
-
+                                    echo "<div class='col-xs-12 col-md-4'>";
+                                    echo "<div class='article-container info-box'>";
+                                    echo "<h3>" . $membership_title . "</h3>";
+                                    echo "<hr>";
+                                    echo "<p class='subheading'>" . $membership_subheading . "</p>";
+                                    echo "<p>" . $membership_content . "</p>";
+                                    echo "<p class='membership-price'>" . $membership_price . "</p>";
+                                    echo "<p class='price-info'>" . $price_info . "</p>";
+                                    if (!$membership_link == '') {
+                                        echo "<a class='article-button' target='_blank' href='" . $membership_link . "'>" . $membership_link_title . "</a>";
+                                    };
+                                    if (!$membership_file == '') {
+                                        echo "<a class='article-button' target='_blank' href='" . $membership_file . "' download>" . $membership_link_title . "</a>";
+                                    };
+                                    echo "</div></div>";
+                                }
                             }
                         ?>
 
