@@ -15,8 +15,8 @@
                 <div class ="row around-xs">
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <a href="<?php uf('insta_post_url') ?>">
-                            <div class="insta-box" style="background-image: url(<?php the_content(); ?>" >                                             
+                        <a href="<?php uf('insta_post_url') ?>" target="_blank">
+                            <div class="insta-box" style="background-image: url('<?php the_content(); ?>')" >
                                 <p>&#9825; <?php uf('insta_post_likes') ?></p>
                             </div>
                             </a>        

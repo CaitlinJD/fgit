@@ -16,7 +16,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
              
                 <div class="row home-banner section-container">
-                    <div class="banner-img"  style="background-image: url(<?php echo uf('banner_image'); ?>"></div>
+                    <div class="banner-img"  style="background-image: url('<?php echo uf('banner_image'); ?>')"></div>
 
                     <div class="offset-xs-1 offset-md-1 col-xs-8 col-md-6 col-lg-5 title-section">
                     

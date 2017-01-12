@@ -63,7 +63,18 @@ $container   = get_theme_mod( 'understrap_container_type' );
                     <div class="col-xs-12 entry-content">
                         <div class="row">
                             <?php while ( have_posts() ) : the_post(); ?>
+                                <!-- testing -->
+<!--
+                            <div class="test-container col-xs-12 align-items-center">
+                                <div class="test-img col-xs-12" style="background: url('<?php //echo the_post_thumbnail_url('full') ?>') center right/cover no-repeat">
+                                </div>
+                                <div class="test-content overlay col-xs-12 col-sm-5 push-sm-1 text-xs-center">
+                                    <h1>Name Heading</h1>
+                                    <a href="#">Link Text</a>
+                                </div>
+                            </div>
 
+-->
                                 <?php get_template_part( 'loop-templates/content', get_post_type() ); ?>
 
                             <?php endwhile; ?>
