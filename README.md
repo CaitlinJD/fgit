@@ -21,4 +21,3 @@ Custom Wordpress theme and plugins developed for the Fashion Group International
 ### Contributors
   -	Caitin Dyk
   -	Mia Salaveria
-  - Charlie Mayer
