@@ -16,21 +16,22 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
              
                 <div class="row home-banner section-container">
-                    <div class="banner-img"  style="background-image: url('<?php echo uf('banner_image'); ?>')"></div>
+                    <div class="banner-img"  style="background-image: url('<?php echo uf('banner_image'); ?>');">
+                        <div class="banner-overlay">
+                            <div class="offset-xs-1 offset-md-1 col-xs-10 col-md-6 col-lg-5 title-section">
 
-                    <div class="offset-xs-1 offset-md-1 col-xs-8 col-md-6 col-lg-5 title-section">
-                    
-                        <h2 class="banner-title">
-                        <?php echo uf( 'banner_title'); ?>
-                        </h2>
-                        <?php if (get_uf('banner_link')) : ?>
-                            <a id="home-banner-button" class="article-button" href="<?php echo get_uf('banner_link'); ?>">
-                                <?php echo (get_uf('banner_link_text')? get_uf('banner_link_text') : 'Learn More'); ?>
-                            </a>
-                        <?php endif; ?>
+                                 <h2 class="banner-title">
+                                    <?php echo uf( 'banner_title'); ?>
+                                 </h2>
+                                <?php if (get_uf('banner_link')) : ?>
+                                    <a id="home-banner-button" class="article-button" href="<?php echo get_uf('banner_link'); ?>">
+                                        <?php echo (get_uf('banner_link_text')? get_uf('banner_link_text') : 'Learn More'); ?>
+                                    </a>
+                                    <?php endif; ?>
+                                </div>
+                        </div>
                     </div>
-
-                </div> 
+                </div>
 
                 <div class="row flex-items-sm-center section-container home-secondary-content">
                     <div class="col-md-9">

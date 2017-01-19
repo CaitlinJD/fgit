@@ -7897,6 +7897,9 @@ button,
 .page-template-membership a:hover.article-button {
   text-decoration: none; }
 
+.home body {
+  color: blue; }
+
 .home .home-banner {
   margin: 1em 0;
   position: relative;
@@ -7913,19 +7916,21 @@ button,
     background-position: center;
     width: 100%;
     height: 100%;
-    filter: brightness(50%);
     background-repeat: no-repeat;
     background-size: cover; }
-  .home .home-banner .title-section {
-    position: absolute; }
+  .home .home-banner .banner-overlay {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5) 100%);
+    height: 100%;
+    display: flex;
+    align-items: center; }
 
 .home .banner-title {
-  margin-top: 1em;
+  margin-top: 2em;
   font-family: "Playfair Display", serif;
   font-size: 24px;
   line-height: 30px;
   color: #fff;
-  margin-bottom: 0.5em; }
+  margin-bottom: 1em; }
   @media only screen and (min-width: 576px) {
     .home .banner-title {
       margin-top: 1em;
@@ -8523,7 +8528,6 @@ button,
 
 .tax-partnercategory article {
   position: relative;
-  height: 370px;
   color: #fff;
   display: -webkit-flex;
   display: flex;
@@ -8549,6 +8553,7 @@ button,
     @media only screen and (min-width: 576px) {
       .tax-partnercategory article .overlay {
         position: absolute;
+        top: 80px;
         border-bottom: none; } }
   .tax-partnercategory article .relative-position {
     height: 100%;
@@ -8797,6 +8802,9 @@ h3 {
   #footer-menu {
     flex-direction: row; } }
 
+.home body {
+  color: blue; }
+
 .home .home-banner {
   margin: 1em 0;
   position: relative;
@@ -8813,19 +8821,21 @@ h3 {
     background-position: center;
     width: 100%;
     height: 100%;
-    filter: brightness(50%);
     background-repeat: no-repeat;
     background-size: cover; }
-  .home .home-banner .title-section {
-    position: absolute; }
+  .home .home-banner .banner-overlay {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5) 100%);
+    height: 100%;
+    display: flex;
+    align-items: center; }
 
 .home .banner-title {
-  margin-top: 1em;
+  margin-top: 2em;
   font-family: "Playfair Display", serif;
   font-size: 24px;
   line-height: 30px;
   color: #fff;
-  margin-bottom: 0.5em; }
+  margin-bottom: 1em; }
   @media only screen and (min-width: 576px) {
     .home .banner-title {
       margin-top: 1em;
@@ -9031,7 +9041,6 @@ h3 {
 
 .tax-partnercategory article {
   position: relative;
-  height: 370px;
   color: #fff;
   display: -webkit-flex;
   display: flex;
@@ -9057,6 +9066,7 @@ h3 {
     @media only screen and (min-width: 576px) {
       .tax-partnercategory article .overlay {
         position: absolute;
+        top: 80px;
         border-bottom: none; } }
   .tax-partnercategory article .relative-position {
     height: 100%;
