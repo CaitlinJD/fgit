@@ -28,7 +28,6 @@
  
             </div>
 
-            <?php custom_pagination_category($wp_query) ?>
 
             </div>
         </div>

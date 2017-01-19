@@ -133,8 +133,6 @@ function prefix_insert_after_paragraph( $insertion, $paragraph_id, $content ) {
 }
 
 
-
-
 // Custom pagination for load more
 function custom_pagination($wp_query) {
     $past_evt_query = $wp_query->query_vars;
@@ -209,27 +207,24 @@ function do_this_hourly() {
     if (class_exists('event_build')) {
         $var = new event_build;
         $var->build_event();
-        wp_delete_post(1476, true);
     }
 
     // Twitter
     if (class_exists('raw_twitter_build')) {
         $var = new raw_twitter_build;
         $var->build_tweet();
-        wp_delete_post(1474, true);
+
     }
 
     // Instagram
     if ( class_exists('raw_insta_build')) {
         $var = new raw_insta_build;
         $var->build_insta_post();
-        wp_delete_post(1470, true);
     }
 
     // Facebook
     if (class_exists('raw_facebook_build')) {
         $var = new raw_facebook_build;
         $var->build_facebook_post();
-        wp_delete_post(1466, true);
     }
 }

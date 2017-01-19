@@ -29,23 +29,10 @@ $container   = get_theme_mod( 'understrap_container_type' );
 				<?php if ( have_posts() ) : ?>
 
 					<header class="page-header">
-						<div class="col-xs-12 col-sm-8 col-md-6 no-padding">
-							<?php if ( get_post_type() != 'event') : ?>
-								<!-- Default heading -->
-								<?php
-								the_archive_title( '<h1 class="page-title red-font">', '</h1>' );
-								the_archive_description( '<div class="taxonomy-description">', '</div>' );
-								?>
-
-							<?php else : ?>
-								<!-- Event post type heading -->
-								<?php $category = get_term_by( 'slug', get_query_var('term'), get_query_var('taxonomy') );
-								echo "<h1 class=\"page-title red-font\">".$category->name."</h1>";
-								echo "<p class='taxonomy-description bold'>".$category->description."</p>";
-								?>
-							<?php endif; ?>
-						</div> <!-- end of col -->
-
+						<?php
+						the_archive_title( '<h1 class="page-title">', '</h1>' );
+						the_archive_description( '<div class="taxonomy-description">', '</div>' );
+						?>
 					</header><!-- .page-header -->
 
 					<div class="upcoming-events">
