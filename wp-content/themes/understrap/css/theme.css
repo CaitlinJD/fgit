@@ -8610,7 +8610,8 @@ button,
 */
 /** GENERAL STYLES **/
 body {
-  font-size: 16; }
+  font-size: 16;
+  overflow-x: hidden; }
 
 p {
   font-size: 1em;
@@ -8801,6 +8802,44 @@ h3 {
 @media only screen and (min-width: 576px) {
   #footer-menu {
     flex-direction: row; } }
+
+#wrapper-footer {
+  overflow: hidden; }
+  #wrapper-footer .row {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0; }
+
+.form-container {
+  margin-top: 15px;
+  border: 2px solid #fff;
+  padding: 0;
+  border-radius: 7px;
+  overflow: hidden;
+  height: 40px; }
+  .form-container .input-containers {
+    margin: 0;
+    padding: 0; }
+  .form-container input {
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 0;
+    height: 40px; }
+  .form-container input[type="email"] {
+    background-color: #bc2c2d;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9em; }
+  .form-container input[type="submit"] {
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: white;
+    color: #bc2c2d;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.85em;
+    border: 8px solid #fff; }
 
 .home body {
   color: blue; }

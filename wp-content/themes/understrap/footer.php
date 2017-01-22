@@ -13,11 +13,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="wrapper-footer">
 
-		<div class="row flex-items-sm-middle">
+		<div class="row flex-items-sm-middle footer-line">
 			<div class="footer-newsletter col-md-12">
-			<a name="footer">
-				<?php dynamic_sidebar( 'footerfull' ); ?>
-				</div>
+				<a name="footer">
+					<?php dynamic_sidebar( 'footerfull' ); ?>
+				</a>
 			</div>
 		</div>
 
